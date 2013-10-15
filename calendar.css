@@ -13,7 +13,7 @@
 	position: absolute;
 	/*left: 635px;
 	top: 115px;*/
-	width: 350px;
+	width: 344px;
 	height: 239px;
 	z-index: 2;
 }
@@ -23,7 +23,13 @@
 	height: 38px;
 	float: left;
 	position: relative;
-	border: #bbbbbb solid 1px;
+
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-color: #bbbbbb;
+	border-style: solid;
     background-image: -moz-linear-gradient( 90deg, rgb( 76, 186, 255 ) 0%, rgb( 76, 186, 255 ) 0%, rgb( 49, 154, 213 ) 0%, rgb( 64, 113, 183 ) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb( 76, 186, 255 ) 0%, rgb( 76, 186, 255 ) 0%, rgb( 49, 154, 213 ) 0%, rgb( 64, 113, 183 ) 100%);
   	font-size: 16px;
@@ -35,12 +41,19 @@
 }
 
 .calendar-welcome {
-	width: 122px;
+	width: 132px;
 	height: 38px;
 	position: relative;
 	float: left;
-	border: 1px solid #b9b9b9;
-    background-image: url(img/calendarHello.png);
+	border-style: solid;
+	border-color: #b9b9b9;
+	
+	border-left-width: 0px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+
+    /*background-image: url(img/calendarHello.png);*/
     font-size: 12px;
     font-family: "Arial";
     color: rgb( 255, 255, 255 );
@@ -59,14 +72,15 @@
 	float: left;
 	position: relative;
 	border-collapse:collapse;
+
 }
 
 .calendar-selecteddate {
-	width:124px;
+	width:133px;
 	border:0px;
 	position: relative;
 	float: left;
-	height: 150px;
+	height: 199px;
 	background-color: rgb( 242, 242, 242 );
     box-shadow: -1px 0px 0px 0px rgb( 187, 187, 187 );
 }
@@ -92,6 +106,7 @@
     color: rgb( 73, 73, 73 );
     text-align: center;
     background-color: white;
+
 }
 
 .calendarlayout tr {
