@@ -1,211 +1,184 @@
 * {
-	margin: 0 auto;
-	
+  margin: 0 auto;
 }
-
-
-
-/*CALENDAR*/
-
-.calendarlayout {
-	border: solid 3px rgba( 255, 255, 255, 0.3 );
-	border-radius: 3px;
-	position: absolute;
-	left: 635px;
-	top: 115px;
-	width: 344px;
-	height: 239px;
-	z-index: 4;
-}
-
-.calendar-header {
-	width: 209px;
-	height: 38px;
-	float: left;
-	position: relative;
-	border: 1px  #bbb solid;
-	background-image: -moz-linear-gradient( 90deg, rgb( 76, 186, 255 ) 0%, rgb( 76, 186, 255 ) 0%, rgb( 49, 154, 213 ) 0%, rgb( 64, 113, 183 ) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb( 76, 186, 255 ) 0%, rgb( 76, 186, 255 ) 0%, rgb( 49, 154, 213 ) 0%, rgb( 64, 113, 183 ) 100%);
-  	font-size: 16px;
-    font-family: "Arial";
-    color: rgb( 255, 255, 255 );
-    font-weight: bold;
-    text-align: center;
-    line-height: 40px;
-}
-
-.calendar-welcome {
-	width: 132px;
-	height: 38px;
-	position: relative;
-	float: left;
-	border-style: solid;
-	border-color: #b9b9b9;
-	
-	border-left-width: 0px;
-	border-right-width: 1px;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-
-    /*background-image: url(img/calendarHello.png);*/
-    font-size: 12px;
-    font-family: "Arial";
-    color: rgb( 255, 255, 255 );
-    font-weight: bold;
-    text-align: center;
-    line-height: 40px;
-    text-shadow: 0px -1px 0px rgb( 119, 119, 119 );
-}
-
-
-
 .calendargrid {
-	width:211px;
-	height: 199px;
-	padding: 0px;	
-	float: left;
-	position: relative;
-	border-collapse:collapse;
-	border-color: #FFFFFF;
-	border-top-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
-
-
+  border-bottom-width: 0px;
+  border-collapse: collapse;
+  border-color: #FFFFFF;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  bottom: 0px;
+  height: 199px;
+  left: 0px;
+  padding: 0px;
+  position: absolute;
+  width: 211px;
 }
-
-
-.calendar-selecteddate {
-	width:133px;
-	border:0px;
-	position: relative;
-	float: left;
-	height: 199px;
-	
-	background: url(img/mypart.png);
-	background-repeat: repeat-y;
-    box-shadow: -1px 0px 0px 0px rgb( 187, 187, 187 );
-
-}
-
-.calendar-selecteddate H1 {
-	position: relative;
-  font-size: 30px;
+.calendar-header {
+  background-image: -moz-linear-gradient( 90deg, rgb( 76, 186, 255 ) 0%, rgb( 76, 186, 255 ) 0%, rgb( 49, 154, 213 ) 0%, rgb( 64, 113, 183 ) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb( 76, 186, 255 ) 0%, rgb( 76, 186, 255 ) 0%, rgb( 49, 154, 213 ) 0%, rgb( 64, 113, 183 ) 100%);
+  border: 1px #bbb solid;
+  color: rgb( 255, 255, 255 );
   font-family: "Arial";
-  color: rgb( 41, 133, 190 );
+  font-size: 16px;
   font-weight: bold;
+  height: 38px;
+  left: 0px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 209px;
+}
+.calendarlayout {
+  border: solid 3px rgba( 255, 255, 255, 0.3 );
+  border-radius: 3px;
+  height: 239px;
+  left: 635px;
+  position: absolute;
+  top: 115px;
+  width: 344px;
+  z-index: 4;
+}
+.calendarlayout .nocur {
+  background-color: rgb( 255, 255, 255 );
+  background-image: -moz-linear-gradient( 90deg, rgb( 255, 255, 255 ) 0%, rgb( 255, 255, 255 ) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb( 255, 255, 255 ) 0%, rgb( 255, 255, 255 ) 100%);
+  border-color: rgb( 187, 187, 187 );
+  border-style: solid;
+  border-width: 1px;
+}
+.calendarlayout td {
+  background-image: -moz-linear-gradient( 90deg, rgb( 224, 224, 224 ) 0%, rgb( 249, 249, 249 ) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb( 224, 224, 224 ) 0%, rgb( 249, 249, 249 ) 100%);
+  border: 1px solid #bbbbbb;
+  color: rgb( 61, 61, 61 );
+  font-family: "Arial";
+  font-size: 12px;
+  height: 28px;
+  padding: 0;
   text-align: center;
   text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
-  text-align:center;
-  background: url(img/mypart.png);
-
+  width: 29px;
 }
-
-.calendar-selecteddate H2 {
-	position: relative;
-  font-size: 14px;
-  font-family: "Arial";	
-  color: rgb( 115, 114, 114 );
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
-  background: url(img/mypart.png);
-
-}
-
-
-.calendar-selecteddate H3{
+.calendarlayout th {
+  background-color: white;
+  color: rgb( 73, 73, 73 );
+  font-family: "Arial";
   font-size: 10px;
-  font-family: "Arial";
-  color: rgb( 136, 136, 136 );
-  line-height: 2;
+  height: 18px;
   text-align: center;
-  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
-  padding-top: 13px;
-
 }
-
-
-.calendar-selecteddate ul {
-
-	position: relative;
-	top: 0;
-	right: 0;
-	padding-top: 15px;
-	padding-left:25px;
+.calendarlayout tr {
+  border: 1px solid #bbbbbb;
 }
-.calendar-selecteddate ul li {
-	list-style-image:url(img/list-point.png);
-
-  	font-size: 12px;
-  	font-family: "Arial";
-  	color: rgb( 61, 61, 61 );
-  	line-height: 1.667;
-  	text-align: left;
-  	text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
-  	font-weight: bold;
-  	background:transparent; 
-  	display: list-item;
-  	height: 12px;
-  	padding-top: 8px;
-
+.calendar-selecteddate {
+  background: url(img/mypart.png);
+  background-repeat: repeat-y;
+  border: 0px;
+  bottom: 0px;
+  box-shadow: -1px 0px 0px 0px rgb( 187, 187, 187 );
+  height: 199px;
+  position: absolute;
+  right: 0px;
+  width: 133px;
 }
-
-
-
 .calendar-selecteddate .line {
   background-image: url("img/calendar-line.png");
-  position: absolute;
+  height: 2px;
   left: 10px;
+  position: absolute;
   top: 85px;
   width: 120px;
-  height: 2px;
+}
+.calendar-selecteddate H1 {
+  background: url(img/mypart.png);
+  color: rgb( 41, 133, 190 );
+  font-family: "Arial";
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
+}
+.calendar-selecteddate H2 {
+  background: url(img/mypart.png);
+  color: rgb( 115, 114, 114 );
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
+}
+.calendar-selecteddate H3 {
+  color: rgb( 136, 136, 136 );
+  font-family: "Arial";
+  font-size: 10px;
+  line-height: 2;
+  padding-top: 13px;
+  text-align: center;
+  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
+}
+.calendar-selecteddate ul {
+  padding-left: 25px;
+  padding-top: 15px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.calendar-selecteddate ul li {
+  background: transparent;
+  color: rgb( 61, 61, 61 );
+  display: list-item;
+  font-family: "Arial";
+  font-size: 12px;
+  font-weight: bold;
+  height: 12px;
+  line-height: 1.667;
+  list-style-image: url(img/list-point.png);
+  padding-top: 8px;
+  text-align: left;
+  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
+}
+.calendar-welcome {
+  border-bottom-width: 1px;
+  border-color: #b9b9b9;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 1px;
+  color: rgb( 255, 255, 255 );
+
+  font-family: "Arial";
+  font-size: 12px;
+  font-weight: bold;
+  height: 38px;
+  line-height: 40px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  text-shadow: 0px -1px 0px rgb( 119, 119, 119 );
+  top: 0px;
+  width: 133px;
 }
 
-.calendarlayout td {
-	width:29px;
-	height:28px;
-    font-size: 12px;
-    font-family: "Arial";
-    color: rgb( 61, 61, 61 );
-    text-align: center;
-    text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
-    border: 1px solid #bbbbbb;
-    padding:0;
-    background-image: -moz-linear-gradient( 90deg, rgb( 224, 224, 224 ) 0%, rgb( 249, 249, 249 ) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb( 224, 224, 224 ) 0%, rgb( 249, 249, 249 ) 100%);
+.back-arrow {
+  background-image: url(img/arrow-left.png);
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 9px;
+  height: 9px;   
 }
 
-.calendarlayout th {
-	height: 18px;  
-	font-size: 10px;
-    font-family: "Arial";
-    color: rgb( 73, 73, 73 );
-    text-align: center;
-    background-color: white;
-
+.forw-arrow {
+  background-image: url(img/arrow-right.png);
+  position: absolute;
+  left: 180px;
+  top: 15px;
+  width: 9px;
+  height: 9px;
 }
-
-.calendarlayout tr {
-	 border: 1px solid #bbbbbb;
-
-}
-
-.calendarlayout .nocur {  
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb( 187, 187, 187 );
-    background-color: rgb( 255, 255, 255 );
-    background-image: -moz-linear-gradient( 90deg, rgb( 255, 255, 255 ) 0%, rgb( 255, 255, 255 ) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb( 255, 255, 255 ) 0%, rgb( 255, 255, 255 ) 100%);
-}
-
-
-
-
-
-
-
 
