@@ -23,7 +23,7 @@ function infillMonth() {
 
 	//текущая дата
 	var currentDay = new Date();	
-	//currentDay = new Date("21 Dec 2013");
+	currentDay = new Date("21 Dec 2012");
 	//получили первый день месяца
 	var firstDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), 1);
 	//firstDay = firstDay.getDate();
@@ -39,7 +39,7 @@ function infillMonth() {
 
 
 		var weak = Math.ceil((i + shiftDay) / 7);
-		var day = (i+1) % 7;
+		var day = (i-1 + shiftDay) % 7;
 
 		month[weak][day] = nextDay;
 	};
