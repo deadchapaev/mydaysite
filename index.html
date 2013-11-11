@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -49,7 +49,6 @@
 						<li>побегать</li>
 					</ul>
 					<H3>больше событий</H3>
-
 			    </div>
 								
 			</div>	
@@ -61,11 +60,11 @@
 				<b>спланировать</b> свой день<br>	
 			</div>
 			<div class="buttonbar-content">
-				<ul>
-					<li><a href="#">ГЛАВНАЯ</a></li>
-					<li><a href="#">КОНТАКТЫ</a></li>
-					<li><a href="#">ВЫЙТИ</a></li>
-					<li><a href="#">О НАС</a></li>
+				<ul id = "navigation">
+					<li class = "main"><a href="#">ГЛАВНАЯ</a></li>
+					<li class = "contacts"><a href="#">КОНТАКТЫ</a></li>
+					<li class = "exit"><a href="#">ВЫЙТИ</a></li>
+					<li class = "about"><a href="#">О НАС</a></li>
 				</ul>				
 			</div>
 			<div class="authorization">
@@ -96,21 +95,23 @@
 						любимое событие: <b>заварить чай</b><br>
 					</div>
 					
-		
 				</div>
-				<div class="userbar-right"></div>
-				<div class="userbar-left"></div>
+				
 			</div>
+
 			<div class="buttonbar">
 				<div class="buttonbar-content">
-					<ul>
-						<li><a href="#">добавить</a></li>
-						<li><a href="#">редактировать</a></li>
-					</ul>				
+
+					<ul class="buttonmenu">
+						<li><a href="#"><img src="img/buttons/iconadd.png" alt="добавить"></a></li>
+						<li><a href="#"><img src="img/buttons/iconedit.png" alt="редактировать"></a></li>
+						<li><a href="#"><img src="img/buttons/iconpref.png" alt="настройки"></a></li>
+					</ul>
 				</div>
-				<div class="buttonbar-right"></div>
-				<div class="buttonbar-left"></div>
 			</div>
+
+		<div class="contentcontent">
+
 			<div class="menu">
 				<div class="menu-content">
 					<ul class="usrmenulvl1">
@@ -143,16 +144,43 @@
 						</li>
 					</ul>
 				</div>
-				<div class="menu-top"></div>
-				<div class="menu-bottom"></div>
+				
 			</div>
 			<div class="userspace">
-				<div class="userspace-content">
-					<br>
+				<div class="usrsp-content">
+					<div class="usrsp-textblock">
+						<div class="usrsp-title">
+							<b>Заварить чай</b>
+						</div>
+						<div class="usrsp-comment">
+							<b>ежедневно</b>
+							<p><b>10:00, 15:00, 21:00</b></p>
+						</div>
+						<div class="usrsp-text">
+							<p>Уж очень холодно стало и я решил каждый день заваривать чай, чтобы согреться! Ингвар советовал зелёный, но я выбрал чёрный с бергамотом. Кстати, а вы знали, что:</p>  	
+
+						    <p>Родина чая – Юго-Западный Китай и примыкающие к нему районы Верхней Бирмы и Северного Вьетнама.</p>
+
+							<p>Интересно, что само слово "чай" пришло к нам через тюркские языки из северокитайского cha, в то время как источником названия в Западной Европе послужило южнокитайское te. Как это получилось, проследить так же трудно, как и установить точное время появления напитка в разных регионах.</p>
+						</div>
+					</div>
+					<div class="usrsp-picblock">
+						<div class="usrsp-pic">
+							<img src="img/teaimg.jpg"></img>
+						</div>
+					</div>
 				</div>
-				<div class="userspace-top"></div>
-				<div class="userspace-bottom"></div>
 			</div>
+		</div>
+
+		</div>
+		<div class="footer">
+			<ul id = "navigation-footer">
+					<li class = "main"><a href="#">ГЛАВНАЯ</a></li>
+					<li class = "contacts"><a href="#">КОНТАКТЫ</a></li>
+					<li class = "exit"><a href="#">ВЫЙТИ</a></li>
+					<li class = "about"><a href="#">О НАС</a></li>
+				</ul>	
 		</div>
 	</div>
 
