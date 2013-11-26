@@ -108,35 +108,20 @@ body {
 }
 
 .userbar {
-	background-color: "ffffff";
-	position: relative;
-    border-radius: 5px;
-    box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
-    left: 0px;
-    width: 1020px;
-    height: 80px;
-    
-}
-.userbar-content {
-	position:absolute;
-}
-.userbar, .userbar-content {
-	height:80px;
-}
+	
+	background-color: #e8e8e8;
+	background-repeat:repeat-y;
+   	border-radius: 0px 0px 15px 15px;
+   	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
+    height:130px;
 
-.userbar-content {
-	width:1000px;	
-	left:10px;
-	padding-top:0px;
-	margin-left:-25px;
-	padding-left:40px;
-	padding-top:2px;
-}
+ }
+
+
 .userinfo {
+	padding-top: 10px;
 	position:relative;
 	float:left;
-
-
 	height:80px;
 	width:250px;
 }
@@ -145,11 +130,11 @@ body {
 	position:relative;
 	float:left;
 	padding-top:3px;
-
 	height:70px;
 	width:70px;
-
+	margin-left: 10px;
 }
+
 .username, .userphone, .usersite  {
 	position:relative;
 	/*border: 1px solid red;*/
@@ -175,6 +160,7 @@ body {
 }
 
 .userstatistic {
+
 	width:250px;
 	height:80px;
 	position:relative;
@@ -183,7 +169,7 @@ body {
 	font-size:12px;
 	color:#2b2b2b;
 	padding-left:10px;
-	padding-top:10px;
+	padding-top:20px;
 
 }
 .userbarseparator {
@@ -194,44 +180,27 @@ body {
 	float:left;
 	margin-top:10px;
 	background-repeat:no-repeat;
+	top: 10px;
 }
-
-.buttonbar {
-  border-radius: 5px;
-  background-image: -moz-linear-gradient( 90deg, rgb(237,237,237) 0%, rgb(249,249,249) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(237,237,237) 0%, rgb(249,249,249) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(237,237,237) 0%, rgb(249,249,249) 100%);
-  box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
-  position: absolute;
-  width: 1020px;
-  height: 52px;
- }
 
 .buttonmenu {
 	list-style: none;
-	margin-top: 3px;
-	margin-left: -20px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	margin: 0px;
+	padding: 0px;
+z-index: 5;
 }
 
-.buttonmenu img {
-	
-}
-
-.buttonmenu li{
-	float: left;
-}
-
-
-.buttonmenu li a {
-
-background-repeat: no-repeat;
-background-position: right;
-padding-right: 10px;
-padding-left: 10px;
-display: block;
-text-decoration: none;
-font-size: 12px;
-color: #371C1C;
+.userbutton {
+	list-style: none;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 5;
 }
 
 /*MENU*/
@@ -275,7 +244,6 @@ color: #371C1C;
 	cursor:pointer;
 	list-style: none;
 	padding-top:8px;
-
 	padding-left:15px;
 	margin-left:-32px;
 	font-family: arial, verdana, sans-serif;
@@ -450,7 +418,6 @@ color: #371C1C;
 	display: inline-block;
 	text-align:center;
 	font-size:10px;
-	
 }
 
 .footer li a:link,

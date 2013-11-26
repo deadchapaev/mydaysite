@@ -1,0 +1,117 @@
+* {
+	margin: 0 auto;
+}
+body {
+	background-color:#efefef;
+}
+
+.container, .header , .content, .userbar, .footer, .contentcontent{
+	width:1020px;
+}
+
+.header {
+	height:304px;
+	
+	/*border:1px solid #FFFFFF;*/
+	position:relative;
+	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
+
+}
+
+
+.container {
+  background-image: url("img/auth/bck.png");
+  
+ 
+  width: 1026px;
+  height: 991px;
+  
+}
+
+
+/*HEADER*/
+.logo {
+	height:100px;
+	width:400px;
+	float:left;
+	position:absolute;
+	left:110px;
+	top:50px;
+	/*border:1px solid black;*/
+	font-family:  verdana, arial, sans-serif;
+	/*font-weight: bold;*/
+	display: inline-block;
+	text-align:center;
+	font-size:60px;
+	color:#efefef;
+}
+.logotxt {
+	height:110px;
+	width:350px;
+	float:left;
+	position:absolute;
+	left:150px;
+	top:130px;
+
+	font-family:  verdana, arial, sans-serif;
+	/*font-weight: bold;*/
+	display: inline-block;
+	text-align:right;
+	font-size:24px;
+	color:#efefef;
+}
+
+
+
+.header ul {
+	position:absolute;
+	top:20px;
+	right:20px;
+	
+}
+
+.header li {
+	margin:-2px;
+	height:25px;
+	width:100px;
+	position:relative;
+	background-repeat:repeat-x;
+	cursor:pointer;
+	list-style: none;
+	padding-top:8px;
+	font-family:  verdana, arial,sans-serif;
+	display: inline-block;
+	text-align:center;
+	font-size:13px;
+	background-image:url(img/menubg.png);
+}
+
+
+.header li a:link,
+.header li a:visited,
+.header li a:hover ,
+.header li a:active {
+	color:#efefef;
+	text-decoration:none;
+}
+
+.authorization {
+	height:20px;
+	width:200px;
+	float:left;
+	position:absolute;
+	right:60px;
+	top:53px;
+	font-family:  verdana, arial, sans-serif;
+	/*font-weight: bold;*/
+	display: inline-block;
+	text-align:right;
+	font-size:11px;
+	color:#efefef;
+}
+
+.logoimg {
+	opacity: 0.15;
+	padding-top: 15px;
+
+}
