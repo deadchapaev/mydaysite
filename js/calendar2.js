@@ -96,6 +96,8 @@ function Day(vDate) {
 //заполняет грид
 function operation(day){
 
+	//TODO:достаточно определить день, с которого начинать отсчет, и сделать 6х7 некстов
+	//определяя, текущий ли месяц, и сегодняшняя ли дата?
 	var curTable =  document.getElementsByClassName('calendargrid')[0];
 	var rows = curTable.rows;
 	var maxI = day.getLastDay().getDateObj().getDate();
