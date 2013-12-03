@@ -43,6 +43,23 @@
     		return $result;
 		}
 
+    	/**
+    	* удаление пользователя
+    	*/
+		public function deleteUser($userId) {
+
+			$sql = "DELETE FROM user 
+			          WHERE id = ?";
+    	
+    		$stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+    		$stmt->bind_param('i', $userId);
+			$stmt->execute();
+			$result = $stmt->affected_rows;
+			$stmt->close;
+
+    		return $result;
+		}
+
 		/**
 		* существует ли такой юзер в базе?
 		*/
