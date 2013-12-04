@@ -4,7 +4,7 @@
 		
 		function actionDefault() {
 
-			$this->view->generate('contacts_view.php', 'ViewTemplate.php', 'User!');
+			$this->view->generate('contacts_view.php', 'ViewMain.php');
 		}
 
 	}

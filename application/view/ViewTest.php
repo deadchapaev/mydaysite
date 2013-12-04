@@ -1,7 +1,8 @@
-<html>
-<head></head>
-<body>
-	Hello!
+<?php
+	require_once 'application/core/class.View.php';
+	class ViewTest extends View {
+		
+	}
 
-</body>
-</html>
+
+?>
