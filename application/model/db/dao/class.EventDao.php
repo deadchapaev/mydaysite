@@ -1,6 +1,6 @@
 <?php
-	require_once "dbapi/class.Db.php";
-	require_once "dbapi/class.Event.php";
+	require_once "application/model/db/connect/class.Db.php";
+	require_once "application/model/db/entity/class.Event.php";
 	
 	class EventDao {
 		
@@ -14,33 +14,35 @@
 			$stmt = Db::getInstance()->getDbConnect()->prepare($sql);
 			$stmt->bind_param('ss', $date, $groupId);
 			$stmt->execute();
-			$stmt->store_result();
-
-			$result = $this->getEventArray($stmt);
+			$result = $this->getEventArray($stmt->get_result());
 			$stmt->close;
 			return $result;
 		}
 
 		//преобразовывает результирующий набор строк в массив объектов
-		private function getEventArray($stmt){
-			$stmt->bind_result($id, $groupid, $event, $detail, $createdate, $eventdate, $eventimage);
-			$result = array();
-			$i = 0;
-			while ($stmt->fetch()) {
-    			$eventObj = new Event();
-    			$result[$i++] = $eventObj;
-				
-				$eventObj->id = $id;
-				$eventObj->groupid = $groupid;
-				$eventObj->event = $event;
-				$eventObj->detail = $detail;
-				$eventObj->createdate = $createdate;
-				$eventObj->eventdate = $eventdate;
-				$eventObj->eventimage = $eventimage;		
-			}
+		private function getEventArray($res){
 
+			$result = array();
+			for ($rowNum = 0; $rowNum < $res->num_rows; $rowNum++) {
+ 		    	$res->data_seek($rowNum);
+				$result[$rowNum] = $this->getEvent($res->fetch_assoc());
+			}
 			return $result;
 		}
 
+		//преобразовывает строку в объект
+		private function getEvent($row) {
+
+			$event = new Event();
+			$event->id = $row['id'];
+			$event->groupid = $row['groupid'];
+			$event->event = $row['event'];
+			$event->detail = $row['detail'];
+			$event->createdate = $row['createdate'];
+			$event->eventdate = $row['eventdate'];
+			$event->eventimage = $row['eventimage'];	
+
+			return $event;
+		}
 	}
 ?>

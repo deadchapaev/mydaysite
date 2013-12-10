@@ -1,7 +1,7 @@
 <html>
 <head></head>
 <body>
-	Hello!
+	This is template page. You can setup any value to variable '$value'.
 
 </body>
 </html>

@@ -1,11 +1,6 @@
 <html>
 <head></head>
 <body>
-	Hello!
-
-	<?php
-		require_once 'application/view/ViewTest.php';
-	?>
-
+	Welcome to the start page of project!
 </body>
 </html>

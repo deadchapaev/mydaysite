@@ -13,6 +13,6 @@
 		* Будет вызываться по умолчанию
 		*/
 
-		function actionDefault()	{
+		function actionDefault() {
 		}
 }
