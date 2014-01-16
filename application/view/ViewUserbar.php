@@ -10,10 +10,9 @@
     создано событий: <b>66</b><br>
     любимое событие: <b>заварить чай</b><br>
   </div>
-  <div class = "userbutton">
-    <ul class="buttonmenu">
-      <a href="addeventform.html">
-      <li class="addbutton">Новое событие</li>
-    </ul>
-  </div>
+   <div class = "userbuttonadd">
+        <ul>
+          <li><a href="addeventform.html">Новое событие</a></li>
+        </ul>
+      </div>
 </div>

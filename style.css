@@ -161,16 +161,16 @@ body {
 	padding: 0px;
 	height: 50px;
 }
-.userbutton {
+.userbuttonadd {
 	list-style: none;
 	position: absolute;
-	left: 0px;
+	left: -41px;
 	bottom: 0px;
 	margin: 0px;
 	padding:0px;
 	
 }
-.userbutton li {
+.userbuttonadd li {
 	height: 34px;
 	width: 220px;
 	position: relative;
@@ -192,8 +192,13 @@ body {
 	
 }
 
-.userbutton li:hover {
+.userbuttonadd li:hover {
 	background-image: url(img/buttons/button-hover.png);
+}
+
+.userbuttonadd a:link, .userbuttonadd a:visited, .userbuttonadd a:hover, .userbuttonadd a:active {
+	color: #efefef;
+	text-decoration: none;
 }
 /*MENU*/
 
