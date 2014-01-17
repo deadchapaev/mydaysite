@@ -22,8 +22,6 @@
     	if (null != $content_view)  {
     		include 'application/view/'.$content_view; 	
     	}
-
-    	
     ?>
   
   	<?php include "ViewFooter.php"; ?>
