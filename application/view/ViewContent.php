@@ -2,10 +2,11 @@
   <?php include "ViewUserbar.php"; ?>
   <div class="contentcontent">
     <?php include "ViewLeftmenu.php"; ?>
-          <div class="userspace">
+          
           
     
       <?php foreach($data as $event) {?>
+      <div class="userspace">
           <div class="usrsp-content">  
             <div class="usrsp-textblock">
               <div class="usrsp-title"> <b><?php echo $event->event; ?></b> </div>
@@ -20,10 +21,11 @@
               <div class="usrsp-pic"> <img src="img/teaimg.jpg"></img> </div>
             </div>
           </div>
+           </div> 
       <?}php?>
           
 
-        </div>  
+        
 
     
   </div>
