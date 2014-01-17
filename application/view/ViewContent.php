@@ -1,8 +1,7 @@
 <div class="content">
   <?php include "ViewUserbar.php"; ?>
   <div class="contentcontent">
-    <?php include "ViewLeftmenu.php"; ?>
-          
+    <?php include "ViewLeftmenu.php"; ?>         
           
     
       <?php foreach($data as $event) {?>
@@ -21,12 +20,13 @@
               <div class="usrsp-pic"> <img src="img/teaimg.jpg"></img> </div>
             </div>
           </div>
+           <div style="clear: both"></div>
            </div> 
       <?}php?>
           
 
         
 
-    
+    <div style="clear: both"></div>
   </div>
 </div>

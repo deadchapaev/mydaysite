@@ -7,6 +7,9 @@ body {
 .container, .header, .content, .userbar, .footer, .contentcontent {
 	width: 1020px;
 }
+.container {
+	position:relative;
+}
 .header {
 	height: 304px;
 	background-image: url(img/header.png);
@@ -15,7 +18,6 @@ body {
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
 }
 .content {
-	min-height: 510px;
 	position: relative;
 }
 /*HEADER*/
@@ -287,11 +289,11 @@ body {
 	border-radius: 10px;
 	background-color: rgb( 232, 232, 232 );
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
-	position: absolute;
-	top: 140px;
-	left: 262px;
+	position: relative;
+	top: 0px;
+	left: 120px;
 	width: 757px;
-	height: 359px;
+	height: auto;
 }
 .usrsp-content {
 	background-color: rgb( 244, 244, 244 );
@@ -355,7 +357,7 @@ body {
 	border-radius: 10px;
 }
 .contentcontent {
-	height: 350px;
+	height: auto;
 }
 .footer {
 	background-image: url("img/footer.jpg");

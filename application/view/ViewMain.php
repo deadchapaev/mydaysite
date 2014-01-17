@@ -11,8 +11,8 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="calendar.css">
-<link rel="stylesheet" type="text/css" href="auth.css">
-<link rel="stylesheet" type="text/css" href="addevent.css">
+<!--link rel="stylesheet" type="text/css" href="auth.css">
+<link rel="stylesheet" type="text/css" href="addevent.css"-->
 </head>
 <body>
 <div class="container">
@@ -25,6 +25,7 @@
     ?>
   
   	<?php include "ViewFooter.php"; ?>
+  	 <div style="clear: both"></div>
 </div>
 </body>
 </html>
