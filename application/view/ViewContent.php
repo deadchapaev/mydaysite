@@ -3,10 +3,10 @@
   <div class="contentcontent">
     <?php include "ViewLeftmenu.php"; ?>
           <div class="userspace">
-          <div class="usrsp-content">  
+          
     
       <?php foreach($data as $event) {?>
-
+          <div class="usrsp-content">  
             <div class="usrsp-textblock">
               <div class="usrsp-title"> <b><?php echo $event->event; ?></b> </div>
               <div class="usrsp-comment"> <b>ежедневно</b>
@@ -19,9 +19,9 @@
             <div class="usrsp-picblock">
               <div class="usrsp-pic"> <img src="img/teaimg.jpg"></img> </div>
             </div>
-
-      <?}php?>
           </div>
+      <?}php?>
+          
 
         </div>  
 

@@ -295,7 +295,7 @@ body {
 }
 .usrsp-content {
 	background-color: rgb( 244, 244, 244 );
-	position: inherit;
+	position: relative;
 	width: 746px;
 	height: 348px;
 	left: 6px;
