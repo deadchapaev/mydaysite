@@ -16,9 +16,7 @@
                 <?php echo $event->detail; ?>
               </div>
             </div>
-            <div class="usrsp-picblock">
-              <div class="usrsp-pic"> <img src="img/teaimg.jpg"></img> </div>
-            </div>
+
           </div>
            <div style="clear: both"></div>
            </div> 

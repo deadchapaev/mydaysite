@@ -290,7 +290,7 @@ body {
 	background-color: rgb( 232, 232, 232 );
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
 	position: relative;
-	top: 0px;
+
 	left: 120px;
 	width: 757px;
 	height: auto;
@@ -299,9 +299,10 @@ body {
 	background-color: rgb( 244, 244, 244 );
 	position: relative;
 	width: 746px;
-	height: 348px;
+	height: 200px;
 	left: 6px;
 	top: 5px;
+	
 	border-radius: 10px;
 	margin-top: 10px;
 }
