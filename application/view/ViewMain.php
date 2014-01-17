@@ -18,7 +18,13 @@
 <div class="container">
 	<?php include "ViewHeader.php"; ?>
         
-    <?php include "ViewAddevent.php"; ?>
+    <?php 
+    	if (null != $content_view)  {
+    		include 'application/view/'.$content_view; 	
+    	}
+
+    	
+    ?>
   
   	<?php include "ViewFooter.php"; ?>
 </div>
