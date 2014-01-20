@@ -1,5 +1,5 @@
 <?php
-	require_once "dbapi/class.Db.php";
+	require_once "application/model/db/connect/class.Db.php";
 
 	class EventgroupDao {
 
