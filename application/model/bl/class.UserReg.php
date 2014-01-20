@@ -1,5 +1,6 @@
 <?php
-    
+    include "application/model/db/dao/class.UserDao.php";
+        
     if (isset($_POST['emailr'])) { $email = $_POST['emailr']; if ($email == '') { unset($email);} } 
     if (isset($_POST['passir'])) { $pass=$_POST['passir']; if ($pass =='') { unset($pass);} }
     if (isset($_POST['loginr'])) { $login=$_POST['loginr']; if ($nik =='') { unset($nik);} }
@@ -16,18 +17,19 @@
     //удаляем лишние пробелы
     $login = trim($login);
     $pass = trim($pass);
- // подключаемся к базе
-
-    include "application/model/db/dao/class.UserDao.php";
-    $userDao = new UserDao();
     
-    if ($userDao->checkPresentUserName($login) == 'false' ) {
+     // подключаемся к базе
+       
+    $userDao = new UserDao();
+   
+    if (!$userDao->checkPresentUserName($login)) {
+
         $rez = $userDao->registerUser($login, $pass, $email);
-        
-        if ($rez == 'TRUE') {
+        echo $rez;
+        if ($rez>0) {
             echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";
-        } else {
-            echo "Ошибка! Вы не зарегистрированы.";
         }
+        } else {
+            echo "Ошибка! Вы не зарегистрированы";
     }
  ?>

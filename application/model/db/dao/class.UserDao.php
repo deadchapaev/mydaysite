@@ -24,7 +24,7 @@
 			$result = $stmt->num_rows;		
 			$stmt->close;
 
-			return ($result == 1 ? true : false);  
+			return ($result == 1 ? TRUE : FALSE);  
 		}
 
     	
@@ -41,7 +41,7 @@
 			$stmt->execute();
 			$result = $stmt->affected_rows;
 			$stmt->close;
-
+			
     		return $result;
 		}
 
@@ -66,6 +66,7 @@
 		* существует ли такой юзер в базе?
 		*/
 		public function checkPresentUserName($login) {
+
 			$sql = "SELECT * 
 				      FROM user a
 					 WHERE a.login = ?";
@@ -76,8 +77,7 @@
 			$stmt->store_result();
 			$result = $stmt->num_rows;		
 			$stmt->close;
-
-			return ($result == 1 ? true : false);  
+			return ($result == 1 ? TRUE : FALSE);  
 
 		}
 
@@ -96,7 +96,7 @@
 			$result = $stmt->num_rows;		
 			$stmt->close;
 
-			return ($result == 1 ? true : false);  
+			return ($result == 1 ? TRUE : FALSE);  
 
 		}
 
