@@ -7,7 +7,7 @@
 
 		function actionReg() {
             include 'application/model/bl/class.UserReg.php'; 
-            $this->view->generate( 'ViewAuth.php', 'ViewMain.php', null);
+            $this->view->generate( 'ViewContent.php', 'ViewMain.php', null);
         }  
 
 	}
