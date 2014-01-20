@@ -30,7 +30,7 @@ body {
 	height: 34px;
 	width: 220px;
 	position: relative;
-	background-image: url(img/buttons/button.png);
+	background-image: url(/img/buttons/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	list-style: none;
@@ -48,5 +48,5 @@ body {
 	left: 470px;
 }
 .send li:hover {
-	background-image: url(img/buttons/button-hover.png);
+	background-image: url(/img/buttons/button-hover.png);
 }

@@ -124,7 +124,7 @@ body {
 	height: 34px;
 	width: 220px;
 	position: relative;
-	background-image: url(img/buttons/button.png);
+	background-image: url(/img/buttons/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	list-style: none;
@@ -141,7 +141,7 @@ body {
 	font-size: 16px;
 }
 .submit li:hover {
-	background-image: url(img/buttons/button-hover.png);
+	background-image: url(/img/buttons/button-hover.png);
 }
 .right-submit {
 	list-style: none;
@@ -154,7 +154,7 @@ body {
 	height: 34px;
 	width: 220px;
 	position: relative;
-	background-image: url(img/buttons/button.png);
+	background-image: url(/img/buttons/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	list-style: none;
@@ -171,7 +171,7 @@ body {
 	font-size: 16px;
 }
 .right-submit li:hover {
-	background-image: url(img/buttons/button-hover.png);
+	background-image: url(/img/buttons/button-hover.png);
 }
 
 .buttonbar-content-bottom ul {
@@ -191,7 +191,7 @@ body {
 	display: inline-block;
 	text-align: center;
 	font-size: 13px;
-	background-image: url(img/menubg.png);
+	background-image: url(/img/menubg.png);
 }
 
 .buttonbar-content-bottom li a:link, .buttonbar-content-bottom li a:hover, .buttonbar-content-bottom li a:visited, .buttonbar-content-bottom li a:active{

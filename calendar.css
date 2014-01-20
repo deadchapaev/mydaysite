@@ -74,7 +74,7 @@
   border: 1px solid #bbbbbb;
 }
 .calendar-selecteddate {
-  background: url(img/mypart.png);
+  background: url(/img/mypart.png);
   background-repeat: repeat-y;
   border: 0px;
   bottom: 0px;
@@ -85,7 +85,7 @@
   width: 133px;
 }
 .calendar-selecteddate .line {
-  background-image: url("img/calendar-line.png");
+  background-image: url(/img/calendar-line.png);
   height: 2px;
   left: 10px;
   position: absolute;
@@ -93,7 +93,7 @@
   width: 120px;
 }
 .calendar-selecteddate H1 {
-  background: url(img/mypart.png);
+  background: url(/img/mypart.png);
   color: rgb( 41, 133, 190 );
   font-family: "Arial";
   font-size: 30px;
@@ -103,7 +103,7 @@
   text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
 }
 .calendar-selecteddate H2 {
-  background: url(img/mypart.png);
+  background: url(/img/mypart.png);
   color: rgb( 115, 114, 114 );
   font-family: "Arial";
   font-size: 14px;
@@ -137,7 +137,7 @@
   font-weight: bold;
   height: 12px;
   line-height: 1.667;
-  list-style-image: url(img/list-point.png);
+  list-style-image: url(/img/list-point.png);
   padding-top: 8px;
   text-align: left;
   text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
@@ -165,7 +165,7 @@
 }
 
 .back-arrow {
-  background-image: url(img/arrow-left.png);
+  background-image: url(/img/arrow-left.png);
   position: absolute;
   left: 15px;
   top: 15px;
@@ -174,7 +174,7 @@
 }
 
 .forw-arrow {
-  background-image: url(img/arrow-right.png);
+  background-image: url(/img/arrow-right.png);
   position: absolute;
   left: 180px;
   top: 15px;

@@ -12,7 +12,7 @@ body {
 }
 .header {
 	height: 304px;
-	background-image: url(img/header.png);
+	background-image: url(/img/header.png);
 	/*border:1px solid #FFFFFF;*/
 	position: relative;
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
@@ -68,7 +68,7 @@ body {
 	display: inline-block;
 	text-align: center;
 	font-size: 13px;
-	background-image: url(img/menubg.png);
+	background-image: url(/img/menubg.png);
 }
 .header li a:link, .header li a:visited, .header li a:hover, .header li a:active {
 	color: #efefef;
@@ -145,7 +145,7 @@ body {
 	padding-top: 20px;
 }
 .userbarseparator {
-	background-image: url(img/userbarseparator.png);
+	background-image: url(/img/userbarseparator.png);
 	width: 4px;
 	height: 50px;
 	position: relative;
@@ -176,7 +176,7 @@ body {
 	height: 34px;
 	width: 220px;
 	position: relative;
-	background-image: url(img/buttons/button.png);
+	background-image: url(/img/buttons/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	list-style: none;
@@ -195,7 +195,7 @@ body {
 }
 
 .userbuttonadd li:hover {
-	background-image: url(img/buttons/button-hover.png);
+	background-image: url(/img/buttons/button-hover.png);
 }
 
 .userbuttonadd a:link, .userbuttonadd a:visited, .userbuttonadd a:hover, .userbuttonadd a:active {
@@ -209,7 +209,7 @@ body {
 	width: 231px;
 	position: absolute;
 	min-height: 70px;
-	background-image: url(img/menu-center.png);
+	background-image: url(/img/menu-center.png);
 	background-repeat: repeat-y;
 	border-radius: 15px;
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
@@ -233,7 +233,7 @@ body {
 	min-height: 34px;
 	width: 199px;
 	position: relative;
-	background-image: url(img/buttons/button.png);
+	background-image: url(/img/buttons/button.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	list-style: none;
@@ -245,7 +245,7 @@ body {
 	color: #efefef;
 }
 .usrmenulvl1item:hover {
-	background-image: url(img/buttons/button-hover.png);
+	background-image: url(/img/buttons/button-hover.png);
 }
 .usrmenulvl1item-active {
 	min-height: 34px;
@@ -260,13 +260,13 @@ body {
 	font-family: arial, verdana, sans-serif;
 	font-weight: bold;
 	color: #efefef;
-	background-image: url(img/buttons/button-active.png);
+	background-image: url(/img/buttons/button-active.png);
 }
 .usrmenulvl2item, .usrmenulvl2item:hover {
 	height: 36px;
 	width: 197px;
 	position: relative;
-	background-image: url(img/buttons/cascademenu.png);
+	background-image: url(/img/buttons/cascademenu.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 	list-style: none;
@@ -278,7 +278,7 @@ body {
 	color: #2b2b2b;
 }
 .usrmenulvl2item:hover {
-	background-image: url(img/buttons/cascademenu.png);
+	background-image: url(/img/buttons/cascademenu.png);
 }
 .usrmenulvl2item a:link, .usrmenulvl2item a:visited, .usrmenulvl2item a:hover, .usrmenulvl2item a:active {
 	color: #efefef;
@@ -342,7 +342,7 @@ body {
 	position: absolute;
 	width: 225px;
 	height: 330px;
-	background-image: url(img/menu-center.png);
+	background-image: url(/img/menu-center.png);
 	right: 5px;
 	top: 15px;
 }
@@ -358,7 +358,7 @@ body {
 	height: auto;
 }
 .footer {
-	background-image: url("img/footer.jpg");
+	background-image: url(/img/footer.jpg);
 	position: absolute;
 	height: 283px;
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
