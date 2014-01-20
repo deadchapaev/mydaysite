@@ -1,6 +1,6 @@
 <div class="userbar">
   <div class="userinfo">
-    <div class="useravatar"> <img alt="Это вы" src="img/avatar.png"> </div>
+    <div class="useravatar"> <img alt="Это вы" src="/img/avatar.png"> </div>
     <div class="username"> Геоня Артём </div>
     <div class="userphone"> +380666666666 </div>
     <div class="usersite"> www.google.com </div>
