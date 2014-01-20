@@ -1,0 +1,39 @@
+.addivent-block {
+	position: relative;
+	height: 380px;
+	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
+}
+.input-title {
+	text-align: center;
+	padding-top: 50px;
+}
+.input-text {
+	text-align: center;
+}
+.send {
+	padding-top: 15px;
+}
+.send li {
+	height: 34px;
+	width: 220px;
+	position: relative;
+	background-image: url(/img/buttons/button.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	list-style: none;
+	padding-top: 10px;
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 6px;
+	margin-left: 9px;
+	color: #efefef;
+	font-family: arial, verdana, sans-serif;
+	font-weight: bold;
+	color: #efefef;
+	font-size: 16px;
+	left: 470px;
+}
+.send li:hover {
+	background-image: url(/img/buttons/button-hover.png);
+}
