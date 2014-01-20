@@ -9,10 +9,10 @@
 <script type="text/javascript" src="js/menu3.js" charset="utf-8"></script>
 <script type="text/javascript" src="js/calendar2.js" charset="utf-8"></script>
 
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="calendar.css">
-<link rel="stylesheet" type="text/css" href="auth.css">
-<link rel="stylesheet" type="text/css" href="addevent.css"-->
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="calendar.css"/>
+<link rel="stylesheet" type="text/css" href="auth.css"/>
+<!--link rel="stylesheet" type="text/css" href="addevent.css"/-->
 </head>
 <body>
 <div class="container">
