@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="calendar.css">
-<!--link rel="stylesheet" type="text/css" href="auth.css">
+<link rel="stylesheet" type="text/css" href="auth.css">
 <link rel="stylesheet" type="text/css" href="addevent.css"-->
 </head>
 <body>

@@ -290,19 +290,16 @@ body {
 	background-color: rgb( 232, 232, 232 );
 	box-shadow: 0 0 1px 0 rgb( 0, 0, 0 );
 	position: relative;
-
-	left: 120px;
-	width: 757px;
+	left: 130px;
+	width: 759px;
 	height: auto;
 }
 .usrsp-content {
 	background-color: rgb( 244, 244, 244 );
 	position: relative;
-	width: 746px;
-	height: 200px;
-	left: 6px;
-	top: 5px;
-	
+	width: 750px;
+	height: 190px;
+	top: 0px;
 	border-radius: 10px;
 	margin-top: 10px;
 }

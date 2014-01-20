@@ -100,6 +100,7 @@ body {
 	width: 440px;
 	position: relative;
 	height:105px;
+	top: 20px;
 }
 
 .input-right {
@@ -192,8 +193,8 @@ body {
 	font-size: 13px;
 	background-image: url(img/menubg.png);
 }
+
 .buttonbar-content-bottom li a:link, .buttonbar-content-bottom li a:hover, .buttonbar-content-bottom li a:visited, .buttonbar-content-bottom li a:active{
 	text-decoration:none;
 	color:#FFF;
 }
-
