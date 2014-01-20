@@ -25,11 +25,13 @@
     if (!$userDao->checkPresentUserName($login)) {
 
         $rez = $userDao->registerUser($login, $pass, $email);
-        echo $rez;
         if ($rez>0) {
             echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";
-        }
         } else {
             echo "Ошибка! Вы не зарегистрированы";
+        }
+        
+    } else {
+        echo "Ошибка! Вы не зарегистрированы";
     }
  ?>
