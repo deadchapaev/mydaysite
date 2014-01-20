@@ -25,7 +25,7 @@
     <div class="right-text">заполните пожалуйста регистрационную форму, чтобы <br>
       зарегистрироваться на нашем сайте</div>
 
-    <form action="save_user.php" method="post">
+    <form action="UserReg" method="post">
 
     <div class="input-right"> <BR>
       <BR>

@@ -1,7 +1,9 @@
 <?php
-	require_once "dbapi/dbaccess/class.Db.php";
-	require_once "dbapi/entity/class.User.php";
+	require_once "application/model/db/connect/class.Db.php";
+	require_once "application/model/db/entity/class.User.php";
 	
+
+
 	class UserDao {
 
     	/**

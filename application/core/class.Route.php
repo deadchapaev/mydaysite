@@ -37,21 +37,23 @@
 			$controller_path = "application/controller/".$controller_file;			
 			if(file_exists($controller_path)) {	
 
+				
 				include $controller_path;
 								
 				// создаем контроллер
 				$controller = new $controller_name;
 				$action = $action_name;
-		
+				
 				if(method_exists($controller, $action)) {
 					// вызываем действие контроллера
+					
 					$controller->$action();
 				} else {
-					Route::ErrorPage404();
+					//Route::ErrorPage404();
 				}				
 				
 			} else {
-				Route::ErrorPage404();
+				//Route::ErrorPage404();
 			}	
 		}
 
