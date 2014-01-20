@@ -1,7 +1,7 @@
     <div class="calendarlayout">
       <div class="calendar-header">
         <div class="back-arrow"> </div>
-        Сентябрь 2013
+        <div class="month-year-header">Сентябрь 2013</div>
         <div class="forw-arrow"> </div>
       </div>
       <div class="calendar-welcome"></div>
