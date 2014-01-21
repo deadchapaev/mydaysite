@@ -36,7 +36,8 @@ if (!$userDao->userAuthentication($login, $password)) {
 
 } else {
     //если ошибка авторизации то редиректим на страничку ошибки
-    header('Location:/Error');
+	$_SESSION['msg']='Ошибка авторизации!';
+    header('Location:/Info/Error');
     exit;
 }
 

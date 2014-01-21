@@ -2,9 +2,9 @@
     <div class="message">
         <div class="messagetxt">
             <?php
-            if (!(null === $_SESSION['errMsg'])) {
-                echo $_SESSION['errMsg'];
-                unset($_SESSION["errMsg"]);
+            if (!(null === $_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset($_SESSION["msg"]);
             } else {
                 echo 'Неизвестная ошибка!';
             }
@@ -13,7 +13,7 @@
 
         <div class="messagebutton">
             <ul>
-                <a href="/auth">
+                <a href="/">
                     <li>Назад</li>
                 </a>
             </ul>

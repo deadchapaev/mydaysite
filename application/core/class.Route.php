@@ -46,8 +46,10 @@
 				if(method_exists($controller, $action)) {
 					// вызываем действие контроллера
 					
+					
 					$controller->$action();
 				} else {
+					
 					Route::ErrorPage404();
 				}				
 				
@@ -57,10 +59,10 @@
 		}
 
 		function ErrorPage404()	{
-        	$_SESSION['errMsg']='Страница не найдена!';
+        	$_SESSION['msg']='Страница не найдена!';
         	header('HTTP/1.1 404 Not Found');
 			header("Status: 404 Not Found"); 
-    		header('Location:/Error');
+    		header('Location:/Info/Error');
     	}
     
 }
