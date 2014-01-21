@@ -48,7 +48,7 @@ if (!$userDao->checkPresentUserName($login)) {
     }
 
 } else {
-    //если ошибка авторизации то редиректим на страничку ошибки
+    $_SESSION['errMsg']='Ошибка авторизации!';
     header('Location:/Error');
     exit;
 }
