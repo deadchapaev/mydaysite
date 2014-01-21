@@ -1,10 +1,10 @@
 <?php
-	require_once 'application/core/class.View.php';
-	echo $data;
+require_once 'application/core/class.View.php';
+echo $data;
 
-	$x = 0;
+$x = 0;
 
-	if (null === $x) {
-		echo 'Пусто!';
-	}
+if (null === $x) {
+    echo 'Пусто!';
+}
 ?>
