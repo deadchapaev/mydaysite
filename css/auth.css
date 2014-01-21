@@ -99,7 +99,7 @@
     width: 440px;
     position: relative;
     height: 105px;
-    top: 20px;
+
 }
 
 .input-right {
@@ -111,5 +111,39 @@
     width: 440px;
     right: 100px;
     margin-top: -15px;
+}
+
+button.submitb, button.submit-r {
+    height: 42px;
+    width: 215px;
+    background-image: url(/img/buttons/button.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    text-align: center;
+    color: #efefef;
+    font-family: arial, verdana, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    position: relative;
+}
+
+button.submitb {
+    top: 10px;
+    left: 110px;
+}
+
+button.submit-r {
+    top: 120px;
+
+}
+
+button.submitb:hover, button.submit-r:hover {
+    background-image: url(/img/buttons/button-hover.png);
+}
+
+button.submitb:link, button.submitb:visited, button.submitb:hover, button.submitb:active, button.submit-r:link, button.submit-r:visited, button.submit-r:hover, button.submit-r:active, {
+    color: #efefef;
+    text-decoration: none;
 }
 

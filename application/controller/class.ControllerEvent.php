@@ -7,6 +7,10 @@
 		
 		function actionAdd() {		
 			$this->view->generate('ViewEventAdd.php', 'ViewMain.php', null);
+		}
+
+		function actionAddGroup() {		
+			$this->view->generate('ViewGroupAdd.php', 'ViewMain.php', null);
 		}		
 	}
 ?>

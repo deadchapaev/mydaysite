@@ -15,9 +15,10 @@
                     <INPUT type="password" name="passin" size="30">
                     <BR>
                 </div>
-                    <BR>
-                    <BR>
-                <INPUT type="submit" name="submit" value="Войти">
+                <!--                <INPUT type="submit" name="submit" value="Войти">-->
+                <button class="submitb" type="submit">Войти</button>
+
+
             </form>
         </div>
 
@@ -56,7 +57,7 @@
                     <INPUT type="text" name="fathr" size="30">
                     <BR>
                     <BR>
-                    <INPUT type="submit" name="submit-r" value="Зарегистрироваться">
+                    <button class="submit-r" type="submit">Зарегестрироваться</button>
                 </div>
                 <div class="right-text-bottom">После того как Вы нажмёте кнопку “Зарегистрироваться” на ваш <BR>
                     e-mail сразу будет выслано письмо со ссылкой о подтверждении <BR>
