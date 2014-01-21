@@ -48,19 +48,19 @@
 					
 					$controller->$action();
 				} else {
-					//Route::ErrorPage404();
+					Route::ErrorPage404();
 				}				
 				
 			} else {
-				//Route::ErrorPage404();
+				Route::ErrorPage404();
 			}	
 		}
 
 		function ErrorPage404()	{
-        	$host = 'http://'.$_SERVER['HTTP_HOST'].'/';
+        	$_SESSION['errMsg']='Страница не найдена!';
         	header('HTTP/1.1 404 Not Found');
-			header("Status: 404 Not Found");
-			header('Location:'.$host.'404');
+			header("Status: 404 Not Found"); 
+    		header('Location:/Error');
     	}
     
 }
