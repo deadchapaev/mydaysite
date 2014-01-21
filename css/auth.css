@@ -73,7 +73,6 @@
     font-weight: bold;
     width: 241px;
     height: 100px;
-
 }
 
 .right-title {
@@ -114,93 +113,3 @@
     margin-top: -15px;
 }
 
-.submit {
-    list-style: none;
-    position: relative;
-    left: 31px;
-    padding-top: 10px;
-
-}
-
-.submit li {
-    height: 34px;
-    width: 220px;
-    position: relative;
-    background-image: url(/img/buttons/button.png);
-    background-repeat: no-repeat;
-    cursor: pointer;
-    list-style: none;
-    padding-top: 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 6px;
-    margin-left: 9px;
-    color: #efefef;
-    font-family: arial, verdana, sans-serif;
-    font-weight: bold;
-    color: #efefef;
-    font-size: 16px;
-}
-
-.submit li:hover {
-    background-image: url(/img/buttons/button-hover.png);
-}
-
-.right-submit {
-    list-style: none;
-    position: relative;
-    height: 50px;
-    width: 440px;
-    left: 65px;
-}
-
-.right-submit li {
-    height: 34px;
-    width: 220px;
-    position: relative;
-    background-image: url(/img/buttons/button.png);
-    background-repeat: no-repeat;
-    cursor: pointer;
-    list-style: none;
-    padding-top: 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 6px;
-    margin-left: 9px;
-    color: #efefef;
-    font-family: arial, verdana, sans-serif;
-    font-weight: bold;
-    color: #efefef;
-    font-size: 16px;
-}
-
-.right-submit li:hover {
-    background-image: url(/img/buttons/button-hover.png);
-}
-
-.buttonbar-content-bottom ul {
-    position: relative;
-    left: 320px;
-}
-
-.buttonbar-content-bottom li {
-    margin: -2px;
-    height: 25px;
-    width: 100px;
-    position: relative;
-    background-repeat: repeat-x;
-    cursor: pointer;
-    list-style: none;
-    font-family: verdana, arial, sans-serif;
-    display: inline-block;
-    text-align: center;
-    font-size: 13px;
-    background-image: url(/img/menubg.png);
-}
-
-.buttonbar-content-bottom li a:link, .buttonbar-content-bottom li a:hover, .buttonbar-content-bottom li a:visited, .buttonbar-content-bottom li a:active {
-    text-decoration: none;
-    color: #FFF;
-}

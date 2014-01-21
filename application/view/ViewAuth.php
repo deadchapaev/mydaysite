@@ -6,20 +6,21 @@
                 e-mail и пароль для входа
             </div>
 
-            <div class="input"> email
-                <INPUT type="text" name="emailin" size="30">
-                <BR>
-                <BR>
-                пароль
-                <INPUT type="password" name="passin" size="30">
-                <BR>
-            </div>
-            <div class="submit">
-                <ul class="submit-button">
-                    <li class="submit">Подтвердить</li>
-                </ul>
-            </div>
+            <form action="/Auth/Login" method="post">
+                <div class="input"> email
+                    <INPUT type="text" name="emailin" size="30">
+                    <BR>
+                    <BR>
+                    пароль
+                    <INPUT type="password" name="passin" size="30">
+                    <BR>
+                </div>
+                    <BR>
+                    <BR>
+                <INPUT type="submit" name="submit" value="Войти">
+            </form>
         </div>
+
 
         <div class="right-content">
             <div class="right-title"><b>Регистрация</b></div>
@@ -55,7 +56,7 @@
                     <INPUT type="text" name="fathr" size="30">
                     <BR>
                     <BR>
-                    <input type="submit" name="submit-r" value="Зарегистрироваться">
+                    <INPUT type="submit" name="submit-r" value="Зарегистрироваться">
                 </div>
                 <div class="right-text-bottom">После того как Вы нажмёте кнопку “Зарегистрироваться” на ваш <BR>
                     e-mail сразу будет выслано письмо со ссылкой о подтверждении <BR>

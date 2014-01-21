@@ -10,5 +10,10 @@
             $this->view->generate('ViewContent.php', 'ViewMain.php', null);
         }  
 
+        function actionLogin() {
+            include 'application/model/bl/class.UserLogin.php'; 
+            $this->view->generate('ViewContent.php', 'ViewMain.php', null);
+        }  
+
 	}
 ?>
