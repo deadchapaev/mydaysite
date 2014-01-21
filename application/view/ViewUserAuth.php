@@ -6,7 +6,7 @@
                 e-mail и пароль для входа
             </div>
 
-            <form action="/Auth/Login" method="post">
+            <form action="/User/Login" method="post">
                 <div class="input"> email
                     <INPUT type="text" name="emailin" size="30">
                     <BR>
@@ -29,7 +29,7 @@
                 зарегистрироваться на нашем сайте
             </div>
 
-            <form action="/Auth/Reg" method="post">
+            <form action="/User/Reg" method="post">
 
                 <div class="input-right"><BR>
                     <BR>

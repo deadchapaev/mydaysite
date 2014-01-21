@@ -1,8 +1,8 @@
 <?php
 	require_once 'application/core/class.Controller.php';
-	class ControllerAuth extends Controller {
+	class ControllerUser extends Controller {
 		function actionDefault() {
-			$this->view->generate('ViewAuth.php', 'ViewMain.php', null);
+			$this->view->generate('ViewUserAuth.php', 'ViewMain.php', null);
 		}
 
 		function actionReg() {
