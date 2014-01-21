@@ -26,6 +26,24 @@
 			return $result;
 
 		}
+
+    	/**
+     	* регистрация пользователя
+     	*/
+    	public function addUserGroup($userId, $groupName)  {
+
+        	$sql = "INSERT INTO eventgroup (userid, groupname)
+		        	VALUES (?, ?)";
+
+        	$stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        	$stmt->bind_param('is', $userId, $groupName);
+        	$stmt->execute();
+        	$result = $stmt->affected_rows;
+        	$stmt->close;
+
+        	return $result;
+    	}
+
 	}
 
 ?>
