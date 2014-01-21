@@ -6,7 +6,7 @@
     <title>MakeMyDay</title>
 
     <script type="text/javascript" src="/js/jquery-1.3.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/js/menu3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/menu.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/calendar.js" charset="utf-8"></script>
 
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
