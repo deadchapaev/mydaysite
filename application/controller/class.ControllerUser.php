@@ -1,5 +1,6 @@
 <?php
 require_once 'application/core/class.Controller.php';
+require_once '/application/model/bl/class.UserBl.php';
 class ControllerUser extends Controller
 {
     function actionDefault()
@@ -9,14 +10,16 @@ class ControllerUser extends Controller
 
     function actionReg()
     {
-        include 'application/model/bl/class.UserReg.php';
+        $userBl = new UserBl();
+        $userBl->register();
         $this->view->generate('ViewContent.php', 'ViewMain.php', null);
     }
 
     function actionLogin()
     {
-        include 'application/model/bl/class.UserLogin.php';
-        $this->view->generate('ViewContent.php', 'ViewMain.php', null);
+        $userBl = new UserBl();
+        $userBl->login();
+        $this->view->generate('ViewEvent.php', 'ViewMain.php', null);
     }
 
 }

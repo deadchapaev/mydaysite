@@ -10,16 +10,17 @@ class UserDao
      * Запрос авторизации.
      * TODO: скорее всего будет возвращать ид сессии
      */
-    public function userAuthentication($login, $password)
+    public function userAuthentication($email, $password)
     {
 
         $sql = "SELECT *
 				      FROM user a
-					 WHERE a.login = ?  
-					   AND a.pass = password(?)";
+					 WHERE a.email = ?
+		               AND a.pass = ?";
+        //AND a.pass = password(?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('ss', $login, $password);
+        $stmt->bind_param('ss', $email, $password);
         $stmt->execute();
         $stmt->store_result();
         $result = $stmt->num_rows;
@@ -35,8 +36,8 @@ class UserDao
     public function registerUser($login, $password, $email)
     {
 
-        $sql = "INSERT INTO user (login, pass, email)
-		        	VALUES (?, password(?), ?)";
+        $sql = "INSERT INTO user(login, pass, email)
+		        	VALUES(?, ?, ?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
         $stmt->bind_param('sss', $login, $password, $email);
@@ -72,8 +73,8 @@ class UserDao
     {
 
         $sql = "SELECT *
-				      FROM user a
-					 WHERE a.login = ?";
+    FROM user a
+					 WHERE a . login = ?";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
         $stmt->bind_param('s', $login);
@@ -91,8 +92,8 @@ class UserDao
     public function checkPresentEmain($uMail)
     {
         $sql = "SELECT *
-				      FROM user a
-					 WHERE a.email = ?";
+    FROM user a
+					 WHERE a . email = ?";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
         $stmt->bind_param('s', $uMail);
@@ -111,8 +112,8 @@ class UserDao
     public function getUser($userId)
     {
         $sql = "SELECT *
-				      FROM user a
-					 WHERE a.id = ?";
+    FROM user a
+					 WHERE a . id = ?";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
         $stmt->bind_param('i', $userId);
