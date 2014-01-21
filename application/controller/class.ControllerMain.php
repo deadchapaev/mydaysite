@@ -9,7 +9,7 @@
 		}
 
 		function actionDefault() {
-			$this->view->generate( 'ViewContent.php', 'ViewMain.php', $this->model->getData());
+			$this->view->generate( 'ViewEvent.php', 'ViewMain.php', $this->model->getData());
 		}		
 	}
 ?>

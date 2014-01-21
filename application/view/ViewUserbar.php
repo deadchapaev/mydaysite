@@ -12,7 +12,7 @@
   </div>
    <div class = "userbuttonadd">
         <ul>
-          <li><a href="addeventform.html">Новое событие</a></li>
+          <li><a href="/Event/Add">Новое событие</a></li>
         </ul>
       </div>
 </div>

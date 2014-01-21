@@ -4,11 +4,10 @@
             <?php
                 if (!(null ===$_SESSION['errMsg'])) {
                     echo $_SESSION['errMsg'];
-                    //unset($_SESSION["errMsg"]);    
+                    unset($_SESSION["errMsg"]);    
                 } else {
                     echo 'Неизвестная ошибка!';
-                }
-                
+                }                
             ?>
         </div>
 

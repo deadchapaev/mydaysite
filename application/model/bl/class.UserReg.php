@@ -48,7 +48,7 @@ if (!$userDao->checkPresentUserName($login)) {
     }
 
 } else {
-    $_SESSION['errMsg']='Ошибка авторизации!';
+    $_SESSION['errMsg']='Ошибка регистрации!';
     header('Location:/Error');
     exit;
 }
