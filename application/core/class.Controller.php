@@ -1,18 +1,21 @@
 <?php
 
-	class Controller {
-	
-		public $model;
-		public $view;
-	
-		function __construct() {
-			$this->view = new View();
-		}
-	
-		/**
-		* Будет вызываться по умолчанию
-		*/
+class Controller
+{
 
-		function actionDefault() {
-		}
+    public $model;
+    public $view;
+
+    function __construct()
+    {
+        $this->view = new View();
+    }
+
+    /**
+     * Будет вызываться по умолчанию
+     */
+
+    function actionDefault()
+    {
+    }
 }

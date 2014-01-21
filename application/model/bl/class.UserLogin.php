@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include "application/model/db/dao/class.UserDao.php";
 
 if (isset($_POST['emailin'])) {
@@ -13,6 +13,7 @@ if (isset($_POST['passin'])) {
         unset($pass);
     }
 }
+
 
 if (empty($email) or empty($pass)) //если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
 {
@@ -36,7 +37,7 @@ if (!$userDao->userAuthentication($login, $password)) {
 
 } else {
     //если ошибка авторизации то редиректим на страничку ошибки
-	$_SESSION['msg']='Ошибка авторизации!';
+    $_SESSION['msg'] = 'Ошибка авторизации!';
     header('Location:/Info/Error');
     exit;
 }

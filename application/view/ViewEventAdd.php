@@ -22,7 +22,7 @@
         <a href="/Main">
             <li class="send-button">Назад</li>
         </a>
-       <!-- <li class="send-button">Принять</li>-->
+        <!-- <li class="send-button">Принять</li>-->
     </ul>
 
 </div>

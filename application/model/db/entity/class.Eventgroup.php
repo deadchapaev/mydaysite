@@ -1,7 +1,9 @@
 <?php
-	class Eventgroup {
-		public $id;
-		public $userid;
-		public $groupname;
-	}
+class Eventgroup
+{
+    public $id;
+    public $userid;
+    public $groupname;
+}
+
 ?>
