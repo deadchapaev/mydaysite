@@ -1,7 +1,15 @@
 <div class="content">
     <div class="message">
         <div class="messagetxt">
-            Ошибка! Вы не зарегистрированы!
+            <?php
+                if (!(null ===$_SESSION['errMsg'])) {
+                    echo $_SESSION['errMsg'];
+                    //unset($_SESSION["errMsg"]);    
+                } else {
+                    echo 'Неизвестная ошибка!';
+                }
+                
+            ?>
         </div>
 
         <div class="messagebutton">
@@ -12,4 +20,5 @@
 
     </div>
 
+    
 </div>
