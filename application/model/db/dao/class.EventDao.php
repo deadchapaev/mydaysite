@@ -21,6 +21,21 @@ class EventDao
         return $result;
     }
 
+    public function addEvent($event, $detail = "", $groupid = 0)
+    {
+
+        $sql = "INSERT INTO event (groupid, event, detail)
+                VALUES (?, ?, ?)";
+
+        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        $stmt->bind_param('iss', $groupid, $event, $detail);
+        $stmt->execute();
+        $result = $stmt->affected_rows;
+        $stmt->close;
+        return $result;
+    }
+
+
     //преобразовывает результирующий набор строк в массив объектов
     private function getEventArray($res)
     {
@@ -44,7 +59,6 @@ class EventDao
         $event->detail = $row['detail'];
         $event->createdate = $row['createdate'];
         $event->eventdate = $row['eventdate'];
-        $event->eventimage = $row['eventimage'];
 
         return $event;
     }

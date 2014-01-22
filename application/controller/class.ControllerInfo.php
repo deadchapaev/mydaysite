@@ -11,6 +11,7 @@ class ControllerInfo extends Controller
     {
         $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
     }
+
 }
 
 ?>

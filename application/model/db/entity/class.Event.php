@@ -7,7 +7,6 @@ class Event
     public $detail;
     public $createdate;
     public $eventdate;
-    public $eventimage;
 }
 
 ?>

@@ -2,6 +2,7 @@
     <div class="message">
         <div class="messagetxt">
             <?php
+
             if (!(null === $_SESSION['msg'])) {
                 echo $_SESSION['msg'];
                 unset($_SESSION["msg"]);

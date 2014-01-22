@@ -18,7 +18,7 @@ class ControllerUser extends Controller
     function actionReg()
     {
         $this->getModel()->register();
-        $this->getView()->generate('ViewContent.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
     }
 
     function actionLogin()

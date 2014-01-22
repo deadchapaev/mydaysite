@@ -13,20 +13,25 @@ class ModelEvent extends Model
     function addEvent() {
 
         $var = $this->getInputVarArray();
-
-        /*if (isset($var['email']) && isset($var['pass'])) {
-            if ($this->userDao->userAuthentication($var['email'], $var['pass'])) {
-                $_SESSION['msg'] = 'Вы успешно вошли в систему!';
+        //$_SESSION['msg'] = 'Вы успешно добавили событие!';
+        echo 'hello!';
+        //header('Location:/');
+        if (isset($var['event'])) {
+            $rez = $this->eventDao->addEvent($var['event'], $var['detail']);
+            if ($rez > 0) {
+                $_SESSION['msg'] = 'Вы успешно добавили событие!';
                 header('Location:/Info');
             } else {
-                //если ошибка авторизации то редиректим на страничку ошибки
-                $_SESSION['msg'] = 'Ошибка авторизации!';
+                $_SESSION['msg'] = 'Событие не добавлено!';
                 header('Location:/Info/Error');
             }
 
         } else {
-            exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
-        }*/
+            $_SESSION['msg'] = 'Недостаточно данных!';
+            header('Location:/Info/Error');
+        }
+
+
     }
 
 

@@ -14,9 +14,15 @@ class ControllerEvent extends Controller
         $this->getView()->generate('ViewEvent.php', 'ViewMain.php', null);
     }
 
+    function actionAddWs()
+    {
+        header('Location:/');
+        $this->getModel()->addEvent();
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
+    }
+
     function actionAdd()
     {
-        $this->getModel()->addEvent();
         $this->getView()->generate('ViewEventAdd.php', 'ViewMain.php', null);
     }
 

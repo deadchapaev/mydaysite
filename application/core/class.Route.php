@@ -22,6 +22,9 @@ class Route
             if ((strrpos($action_name, '?'))) {
                 $action_name = substr($action_name, 0, strrpos($action_name, '?'));
             }
+            if ((strrpos($action_name, '.ws'))) {
+                $action_name = str_replace('.ws', 'Ws', $action_name);
+            }
         }
 
         // добавляем префиксы

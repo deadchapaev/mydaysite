@@ -61,6 +61,22 @@ class GetPostAnalyzer
             }
         }
 
+        //print_r($_POST);
+        if (isset($_POST['event'])) {
+
+            $event = $_POST['event'];
+            if (null != $event && "" != $event) {
+                    $this->var['event'] = $event;
+            }
+        }
+
+        if (isset($_POST['detail'])) {
+            $detail = $_POST['detail'];
+            if (null != $detail && "" != $detail) {
+                $this->var['detail'] = $detail;
+            }
+        }
+
         return $this->var;
     }
 
