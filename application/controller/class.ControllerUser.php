@@ -1,25 +1,30 @@
 <?php
 require_once 'application/core/class.Controller.php';
-require_once '/application/model/bl/class.UserBl.php';
 class ControllerUser extends Controller
 {
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->setModel(new ModelUser());
+
+    }
+
     function actionDefault()
     {
-        $this->view->generate('ViewUserAuth.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewUserAuth.php', 'ViewMain.php', null);
     }
 
     function actionReg()
     {
-        $userBl = new UserBl();
-        $userBl->register();
-        $this->view->generate('ViewContent.php', 'ViewMain.php', null);
+        $this->getModel()->register();
+        $this->getView()->generate('ViewContent.php', 'ViewMain.php', null);
     }
 
     function actionLogin()
     {
-        $userBl = new UserBl();
-        $userBl->login();
-        $this->view->generate('ViewEvent.php', 'ViewMain.php', null);
+        $this->getModel()->login();
+        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', null);
     }
 
 }

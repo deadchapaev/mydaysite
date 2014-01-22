@@ -1,5 +1,5 @@
 <?php
-
+require_once '/application/model/bl/class.GetPostAnalyzer.php';
 class Route
 {
 
@@ -28,7 +28,7 @@ class Route
 
         // подцепляем файл с классом модели (файла модели может и не быть)
         $model_file = $model_name . '.php';
-        $model_path = "application/models/" . $model_file;
+        $model_path = "application/model/" . $model_file;
         if (file_exists($model_path)) {
             include $model_path;
         }
@@ -38,17 +38,23 @@ class Route
         $controller_path = "application/controller/" . $controller_file;
         if (file_exists($controller_path)) {
 
-
             include $controller_path;
+
+            //анализ входящих запросов
+            $getPostAnalyzer = new GetPostAnalyzer();
+            $inputVarArray = $getPostAnalyzer->getVarArray();
 
             // создаем контроллер
             $controller = new $controller_name;
             $action = $action_name;
 
+            if (method_exists($controller, 'setInputVarArray')) {
+                $controller->setInputVarArray($inputVarArray);
+
+            }
+
             if (method_exists($controller, $action)) {
                 // вызываем действие контроллера
-
-
                 $controller->$action();
             } else {
 

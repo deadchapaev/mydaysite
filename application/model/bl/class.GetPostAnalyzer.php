@@ -16,7 +16,6 @@ class GetPostAnalyzer
             if (null != $email && "" != $email) {
                 $this->var['email'] = $email;
             }
-
         }
 
         if (isset($_POST['emailin'])) {
@@ -39,7 +38,6 @@ class GetPostAnalyzer
         }
 
         if (isset($_POST['passir'])) {
-
             $pass = $_POST['passir'];
             if (null != $pass && "" != $pass) {
                 $pass = stripslashes($pass);

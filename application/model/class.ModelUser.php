@@ -1,23 +1,22 @@
 <?php
 require_once "/application/model/db/dao/class.UserDao.php";
 require_once "/application/model/bl/class.GetPostAnalyzer.php";
-class UserBl
+class ModelUser extends Model
 {
 
     private $userDao;
-    private $getPostVar;
 
     function __construct()
     {
         $this->userDao = new UserDao();
-        $this->getPostVar = new GetPostAnalyzer();
     }
 
 
     public function login()
     {
 
-        $var = $this->getPostVar->getVarArray();
+        $var = $this->getInputVarArray();
+
         if (isset($var['email']) && isset($var['pass'])) {
             if ($this->userDao->userAuthentication($var['email'], $var['pass'])) {
                 $_SESSION['msg'] = 'Вы успешно вошли в систему!';
@@ -37,7 +36,7 @@ class UserBl
 
     public function register()
     {
-        $var = $this->getPostVar->getVarArray();
+        $var = $this->getInputVarArray();
         if (isset($var['email']) && isset($var['pass']) && isset($var['login'])) {
             if (!$this->userDao->checkPresentUserName($var['login'])) {
 
