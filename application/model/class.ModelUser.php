@@ -14,48 +14,51 @@ class ModelUser extends Model
 
     public function login()
     {
-
+        $rezVar['err'] = false;
         $var = $this->getInputVarArray();
 
         if (isset($var['email']) && isset($var['pass'])) {
             if ($this->userDao->userAuthentication($var['email'], $var['pass'])) {
-                $_SESSION['msg'] = 'Вы успешно вошли в систему!';
-                header('Location:/Info');
+                $rezVar['msg'] = 'Вы успешно вошли в систему!';
             } else {
                 //если ошибка авторизации то редиректим на страничку ошибки
-                $_SESSION['msg'] = 'Ошибка авторизации!';
-                header('Location:/Info/Error');
+                $rezVar['msg'] = 'Ошибка авторизации!';
+                $rezVar['err'] = true;
             }
 
         } else {
-            exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
+            $rezVar['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
+            $rezVar['err'] = true;
         }
 
-
+        return $rezVar;
     }
 
     public function register()
     {
+        $rezVar['err'] = false;
         $var = $this->getInputVarArray();
         if (isset($var['email']) && isset($var['pass']) && isset($var['login'])) {
             if (!$this->userDao->checkPresentUserName($var['login'])) {
 
                 $rez = $this->userDao->registerUser($var['login'], $var['pass'], $var['email']);
                 if ($rez > 0) {
-                    $_SESSION['msg'] = 'Спасибо за регистрацию,' . $var['login'] . '!';
-                    header('Location:/Info');
+                    $rezVar['msg'] = 'Вы успешно зарегистрировались!';
                 } else {
-                    echo "Ошибка! Вы не зарегистрированы";
+                    $rezVar['msg'] = 'Ошибка регистрации!';
+                    $rezVar['err'] = true;
                 }
 
             } else {
-                $_SESSION['msg'] = 'Ошибка регистрации! Такой пользователь уже есть!';
-                header('Location:/Info/Error');
+                $rezVar['msg'] = 'Ошибка регистрации! Такой пользователь уже есть!';
+                $rezVar['err'] = true;
             }
         } else {
-            $_SESSION['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
-            header('Location:/Info/Error');
+            $rezVar['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
+            $rezVar['err'] = true;
         }
+
+        return $rezVar;
 
 
     }

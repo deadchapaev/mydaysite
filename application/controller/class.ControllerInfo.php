@@ -4,6 +4,7 @@ class ControllerInfo extends Controller
 {
     function actionDefault()
     {
+        //print_r($_COOKIE);
         $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
     }
 

@@ -3,12 +3,10 @@
         <div class="messagetxt">
             <?php
 
-            if (!(null === $_SESSION['msg'])) {
-                echo $_SESSION['msg'];
-                unset($_SESSION["msg"]);
-            } else {
-                echo 'Неизвестная ошибка!';
+            if (!(null === $data['msg'])) {
+                echo $data['msg'];
             }
+
             ?>
         </div>
 

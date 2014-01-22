@@ -17,14 +17,12 @@ class ControllerUser extends Controller
 
     function actionReg()
     {
-        $this->getModel()->register();
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->getModel()->register());
     }
 
     function actionLogin()
     {
-        $this->getModel()->login();
-        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->getModel()->login());
     }
 
 }
