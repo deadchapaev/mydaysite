@@ -19,6 +19,9 @@ class Route
         // получаем имя экшена
         if (!empty($routes[2])) {
             $action_name = $routes[2];
+            if ((strrpos($action_name, '?'))) {
+                $action_name = substr($action_name, 0, strrpos($action_name, '?'));
+            }
         }
 
         // добавляем префиксы
