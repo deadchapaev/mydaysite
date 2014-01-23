@@ -21,14 +21,14 @@ class EventDao
         return $result;
     }
 
-    public function addEvent($event, $detail = "", $groupid = 0)
+    public function addEvent(Event $event)
     {
 
         $sql = "INSERT INTO event (groupid, event, detail)
                 VALUES (?, ?, ?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('iss', $groupid, $event, $detail);
+        $stmt->bind_param('iss', $event->groupid, $event->event, $event->detail);
         $stmt->execute();
         $result = $stmt->affected_rows;
         $stmt->close;

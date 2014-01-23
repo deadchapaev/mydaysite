@@ -6,7 +6,7 @@
             <BR>
     </div>
     <div class="input-text">
-        <form action="textarea1.php" method="post">
+        <form action="/Eventgroup/Add.ws" method="post">
             <p><b>Введите описание назначения новой группы</b></p>
 
             <p>

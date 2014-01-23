@@ -1,5 +1,6 @@
 <?php
 require_once "application/model/db/connect/class.Db.php";
+require_once "application/model/db/entity/class.Eventgroup.php";
 
 class EventgroupDao
 {
@@ -30,16 +31,17 @@ class EventgroupDao
     }
 
     /**
-     * регистрация пользователя
+     * @param Eventgroup $eventgroup
+     * @return int
      */
-    public function addUserGroup($userId, $groupName)
+    public function addEventgroup(Eventgroup $eventgroup)
     {
 
         $sql = "INSERT INTO eventgroup (userid, groupname)
 		        	VALUES (?, ?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('is', $userId, $groupName);
+        $stmt->bind_param('is', $eventgroup->userid, $eventgroup->groupname);
         $stmt->execute();
         $result = $stmt->affected_rows;
         $stmt->close;
