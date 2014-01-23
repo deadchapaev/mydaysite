@@ -10,25 +10,25 @@ class ModelEvent extends Model
         $this->eventDao = new EventDao();
     }
 
-    function addEvent() {
-
-        $rezVar['err'] = false;
+    function addEvent()
+    {
+        $data['err'] = false;
         $var = $this->getInputVarArray();
         if (isset($var['event'])) {
             $rez = $this->eventDao->addEvent($var['event'], $var['detail']);
             if ($rez > 0) {
-                $rezVar['msg'] = 'Вы успешно добавили событие!';
+                $data['msg'] = 'Вы успешно добавили событие!';
             } else {
-                $rezVar['msg'] = 'Событие не добавлено!';
-                $rezVar['err'] = true;
+                $data['msg'] = 'Событие не добавлено!';
+                $data['err'] = true;
             }
 
         } else {
-            $rezVar['msg'] = 'Недостаточно данных!';
-            $rezVar['err'] = true;
+            $data['msg'] = 'Недостаточно данных!';
+            $data['err'] = true;
         }
 
-        return $rezVar;
+        return $data;
     }
 
 

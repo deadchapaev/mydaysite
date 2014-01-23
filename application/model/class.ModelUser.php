@@ -14,51 +14,51 @@ class ModelUser extends Model
 
     public function login()
     {
-        $rezVar['err'] = false;
+        $data['err'] = false;
         $var = $this->getInputVarArray();
 
         if (isset($var['email']) && isset($var['pass'])) {
             if ($this->userDao->userAuthentication($var['email'], $var['pass'])) {
-                $rezVar['msg'] = 'Вы успешно вошли в систему!';
+                $data['msg'] = 'Вы успешно вошли в систему!';
             } else {
                 //если ошибка авторизации то редиректим на страничку ошибки
-                $rezVar['msg'] = 'Ошибка авторизации!';
-                $rezVar['err'] = true;
+                $data['msg'] = 'Ошибка авторизации!';
+                $data['err'] = true;
             }
 
         } else {
-            $rezVar['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
-            $rezVar['err'] = true;
+            $data['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
+            $data['err'] = true;
         }
 
-        return $rezVar;
+        return $data;
     }
 
     public function register()
     {
-        $rezVar['err'] = false;
+        $data['err'] = false;
         $var = $this->getInputVarArray();
         if (isset($var['email']) && isset($var['pass']) && isset($var['login'])) {
             if (!$this->userDao->checkPresentUserName($var['login'])) {
 
                 $rez = $this->userDao->registerUser($var['login'], $var['pass'], $var['email']);
                 if ($rez > 0) {
-                    $rezVar['msg'] = 'Вы успешно зарегистрировались!';
+                    $data['msg'] = 'Вы успешно зарегистрировались!';
                 } else {
-                    $rezVar['msg'] = 'Ошибка регистрации!';
-                    $rezVar['err'] = true;
+                    $data['msg'] = 'Ошибка регистрации!';
+                    $data['err'] = true;
                 }
 
             } else {
-                $rezVar['msg'] = 'Ошибка регистрации! Такой пользователь уже есть!';
-                $rezVar['err'] = true;
+                $data['msg'] = 'Ошибка регистрации! Такой пользователь уже есть!';
+                $data['err'] = true;
             }
         } else {
-            $rezVar['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
-            $rezVar['err'] = true;
+            $data['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
+            $data['err'] = true;
         }
 
-        return $rezVar;
+        return $data;
 
 
     }
