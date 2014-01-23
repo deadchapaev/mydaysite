@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-01-22 23:49:45
+Date: 2014-01-23 22:04:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,42 +28,44 @@ CREATE TABLE `event` (
   `eventdate` timestamp NULL DEFAULT NULL COMMENT 'на когда запланировано?',
   PRIMARY KEY (`id`),
   KEY `eventgroup_id_fk` (`groupid`),
-  CONSTRAINT `eventgroup_id_fk` FOREIGN KEY (`groupid`) REFERENCES `eventgroup` (`id`)
+  CONSTRAINT `eventgroup_id_fk` FOREIGN KEY (`groupid`) REFERENCES `eventgroup` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of event
 -- ----------------------------
-INSERT INTO `event` VALUES ('10', '0', 'Выпить водки', 'Сегодня я собираюсь выпить водки', '2014-01-22 22:49:31', '2013-11-17 22:14:55');
-INSERT INTO `event` VALUES ('11', '0', 'Абырвалх', 'Ололоевич?', '2014-01-22 22:49:33', '2013-11-17 23:00:36');
-INSERT INTO `event` VALUES ('12', '0', 'Лытдыбр', 'Сделать записи в дневник', '2014-01-22 22:49:34', '2013-11-17 00:00:00');
-INSERT INTO `event` VALUES ('13', '0', 'Превед Креведко!', 'Йа медвед', '2014-01-22 22:49:37', '2013-11-17 23:00:36');
-INSERT INTO `event` VALUES ('14', '0', 'Привет событие!', '', '0000-00-00 00:00:00', null);
-INSERT INTO `event` VALUES ('15', '0', 'Привет, Йа пятачёг', '', '2014-01-22 22:52:43', null);
-INSERT INTO `event` VALUES ('16', '0', 'Привет, Йа пятачёг', 'Это моё первое событиё', '2014-01-22 22:53:29', null);
-INSERT INTO `event` VALUES ('17', '0', 'Привет, Йа пятачёг', 'Это моё первое событиё', '2014-01-22 22:54:38', null);
-INSERT INTO `event` VALUES ('18', '0', 'Я Чапай', 'Текст получай!', '2014-01-22 22:55:54', null);
-INSERT INTO `event` VALUES ('19', '0', 'Привет событие!', 'фывафывфыв', '2014-01-22 22:58:06', null);
-INSERT INTO `event` VALUES ('43', '0', 'Привет! Я правильное событие без кукисов!', 'А вот мой первый текст!', '2014-01-22 23:49:27', null);
+INSERT INTO `event` VALUES ('10', '1', 'Выпить водки', 'Сегодня я собираюсь выпить водки', '2014-01-23 22:02:03', '2013-11-17 22:14:55');
+INSERT INTO `event` VALUES ('11', '1', 'Абырвалх', 'Ололоевич?', '2014-01-23 22:02:04', '2013-11-17 23:00:36');
+INSERT INTO `event` VALUES ('12', '1', 'Лытдыбр', 'Сделать записи в дневник', '2014-01-23 22:02:05', '2013-11-17 00:00:00');
+INSERT INTO `event` VALUES ('13', '1', 'Превед Креведко!', 'Йа медвед', '2014-01-23 22:02:08', '2013-11-17 23:00:36');
+INSERT INTO `event` VALUES ('14', '1', 'Привет событие!', '', '2014-01-23 22:02:10', null);
+INSERT INTO `event` VALUES ('15', '1', 'Привет, Йа пятачёг', '', '2014-01-23 22:02:15', null);
+INSERT INTO `event` VALUES ('16', '2', 'Привет, Йа пятачёг', 'Это моё первое событиё', '2014-01-22 22:53:29', null);
+INSERT INTO `event` VALUES ('17', '2', 'Привет, Йа пятачёг', 'Это моё первое событиё', '2014-01-22 22:54:38', null);
+INSERT INTO `event` VALUES ('18', '2', 'Я Чапай', 'Текст получай!', '2014-01-22 22:55:54', null);
+INSERT INTO `event` VALUES ('19', '2', 'Привет событие!', 'фывафывфыв', '2014-01-22 22:58:06', null);
+INSERT INTO `event` VALUES ('43', '2', 'Привет! Я правильное событие без кукисов!', 'А вот мой первый текст!', '2014-01-22 23:49:27', null);
 
 -- ----------------------------
 -- Table structure for `eventgroup`
 -- ----------------------------
 DROP TABLE IF EXISTS `eventgroup`;
 CREATE TABLE `eventgroup` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
   `groupname` varchar(64) DEFAULT NULL,
+  `detail` varchar(2048) DEFAULT NULL COMMENT 'подробное описание события',
   PRIMARY KEY (`id`),
   KEY `user_id_fk` (`userid`),
-  CONSTRAINT `user_id_fk` FOREIGN KEY (`userid`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `user_id_fk` FOREIGN KEY (`userid`) REFERENCES `user` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of eventgroup
 -- ----------------------------
-INSERT INTO `eventgroup` VALUES ('0', '16', 'Чайные встречи');
-INSERT INTO `eventgroup` VALUES ('1', '16', 'По работе');
+INSERT INTO `eventgroup` VALUES ('1', '0', 'По работе', null);
+INSERT INTO `eventgroup` VALUES ('2', '0', 'Чайные встречи', null);
+INSERT INTO `eventgroup` VALUES ('4', '0', '123', '123');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -87,7 +89,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('16', 'chapa1', '123', null, null, null, '2014-01-21 21:23:54', null, 'hello1@pido.ru');
+INSERT INTO `user` VALUES ('0', 'chapa1', '123', null, null, null, '2014-01-23 22:03:48', null, 'hello1@pido.ru');
 INSERT INTO `user` VALUES ('66', 'chapa', '123', null, null, null, '2014-01-21 21:23:56', null, 'hello@pido.ru');
 INSERT INTO `user` VALUES ('67', 'chapaev32', '123', null, null, null, '2014-01-21 21:24:00', null, '123');
 INSERT INTO `user` VALUES ('68', 'chapaev321', '123123123', null, null, null, '2014-01-21 21:43:07', null, 'chapaevcs1@mail.ru');

@@ -66,7 +66,7 @@ class GetPostAnalyzer
 
             $event = $_POST['event'];
             if (null != $event && "" != $event) {
-                    $this->var['event'] = $event;
+                $this->var['event'] = $event;
             }
         }
 
@@ -74,6 +74,13 @@ class GetPostAnalyzer
             $detail = $_POST['detail'];
             if (null != $detail && "" != $detail) {
                 $this->var['detail'] = $detail;
+            }
+        }
+
+        if (isset($_POST['groupname'])) {
+            $groupname = $_POST['groupname'];
+            if (null != $groupname && "" != $groupname) {
+                $this->var['groupname'] = $groupname;
             }
         }
 

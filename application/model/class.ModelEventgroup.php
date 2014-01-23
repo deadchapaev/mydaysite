@@ -13,11 +13,10 @@ class ModelEventgroup extends Model
     function addEventgroup()
     {
         $data['err'] = false;
-        $var = $this->getInputVarArray();
-        $eventgroup = $this->getInputEventgroup();
 
-        if ($eventgroup->groupname != null && $eventgroup->userid != null) {
-            $rez = $this->eventDao->addEventgroup($eventgroup);
+        $eventgroup = $this->getInputEventgroup();
+        if ($eventgroup->groupname !== null && $eventgroup->userid !== null) {
+            $rez = $this->eventgroupDao->addEventgroup($eventgroup);
             if ($rez > 0) {
                 $data['msg'] = 'Вы успешно добавили группу!';
             } else {
@@ -39,10 +38,17 @@ class ModelEventgroup extends Model
     private function getInputEventgroup()
     {
         $eventgroup = new Eventgroup();
+
         $var = $this->getInputVarArray();
+
         if (isset($var['groupname'])) {
             $eventgroup->groupname = $var['groupname'];
         }
+
+        if (isset($var['detail'])) {
+            $eventgroup->detail = $var['detail'];
+        }
+
         if (isset($var['userid'])) {
             $eventgroup->userid = $var['userid'];
         }

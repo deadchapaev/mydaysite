@@ -49,6 +49,7 @@ class Route
             //анализ входящих запросов
             $getPostAnalyzer = new GetPostAnalyzer();
             $inputVarArray = $getPostAnalyzer->getVarArray();
+            $inputVarArray['userid'] = 0; //для временного юзера
 
             // создаем контроллер
             $controller = new $controller_name;

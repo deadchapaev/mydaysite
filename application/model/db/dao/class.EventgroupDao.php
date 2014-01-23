@@ -5,7 +5,7 @@ require_once "application/model/db/entity/class.Eventgroup.php";
 class EventgroupDao
 {
 
-    public function getUserGroups($userId)
+    public function getEventgroups($userId)
     {
 
         $sql = "SELECT *
@@ -15,15 +15,7 @@ class EventgroupDao
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
         $stmt->bind_param('i', $userId);
         $stmt->execute();
-        $stmt->store_result();
-        $stmt->bind_result($id, $userid, $groupname);
-
-        $result = array();
-        while ($stmt->fetch()) {
-            $result[$id] = array("userid" => $userid,
-                "groupname" => $groupname);
-        }
-
+        $result = $this->getEventgroupArray($stmt->get_result());
         $stmt->close;
 
         return $result;
@@ -37,16 +29,40 @@ class EventgroupDao
     public function addEventgroup(Eventgroup $eventgroup)
     {
 
-        $sql = "INSERT INTO eventgroup (userid, groupname)
-		        	VALUES (?, ?)";
+        $sql = "INSERT INTO eventgroup (userid, groupname, detail)
+		        	VALUES (?, ?, ?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('is', $eventgroup->userid, $eventgroup->groupname);
+        $stmt->bind_param('iss', $eventgroup->userid, $eventgroup->groupname, $eventgroup->detail);
         $stmt->execute();
         $result = $stmt->affected_rows;
         $stmt->close;
 
         return $result;
+    }
+
+    //преобразовывает результирующий набор строк в массив объектов
+    private function getEventgroupArray($res)
+    {
+
+        $result = array();
+        for ($rowNum = 0; $rowNum < $res->num_rows; $rowNum++) {
+            $res->data_seek($rowNum);
+            $result[$rowNum] = $this->getEventgroup($res->fetch_assoc());
+        }
+        return $result;
+    }
+
+    //преобразовывает строку в объект
+    private function getEventgroup($row)
+    {
+        $eventgroup = new Eventgroup();
+        $eventgroup->id = $row['id'];
+        $eventgroup->groupname = $row['groupname'];
+        $eventgroup->detail = $row['detail'];
+        $eventgroup->userid = $row['userid'];
+
+        return $eventgroup;
     }
 
 }
