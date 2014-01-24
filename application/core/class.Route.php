@@ -55,7 +55,6 @@ class Route
             // создаем контроллер
             $controller = new $controller_name;
             $user = Route::authorization($inputVarArray);
-            print_r($user);
             $controller->setUser($user);
 
 
