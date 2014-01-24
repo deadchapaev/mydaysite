@@ -1,0 +1,32 @@
+.footer {
+    background-image: url(/img/footer.jpg);
+    position: absolute;
+    height: 283px;
+    box-shadow: 0 0 1px 0 rgb(0, 0, 0);
+}
+
+.footer ul {
+    position: absolute;
+    margin-left: 25%;
+    padding-top: 25%;
+}
+
+.footer li {
+    margin: -2px;
+    height: 25px;
+    width: 100px;
+    position: relative;
+    background-repeat: repeat-x;
+    cursor: pointer;
+    list-style: none;
+    padding-top: 8px;
+    font-family: verdana, arial, sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+}
+
+.footer li a:link, .footer li a:visited, .footer li a:hover, .footer li a:active {
+    color: #efefef;
+    text-decoration: none;
+}

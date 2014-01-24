@@ -14,8 +14,9 @@
 }
 
 .calendar-header {
-    background-image: -moz-linear-gradient(90deg, rgb(76, 186, 255) 0%, rgb(76, 186, 255) 0%, rgb(49, 154, 213) 0%, rgb(64, 113, 183) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(76, 186, 255) 0%, rgb(76, 186, 255) 0%, rgb(49, 154, 213) 0%, rgb(64, 113, 183) 100%);
+    /*background-image: -moz-linear-gradient(90deg, rgb(76, 186, 255) 0%, rgb(76, 186, 255) 0%, rgb(49, 154, 213) 0%, rgb(64, 113, 183) 100%);*/
+    /*background-image: -webkit-linear-gradient(90deg, rgb(76, 186, 255) 0%, rgb(76, 186, 255) 0%, rgb(49, 154, 213) 0%, rgb(64, 113, 183) 100%);*/
+    background-color:#009999;
     border: 1px #bbb solid;
     color: rgb(255, 255, 255);
     font-family: "Arial";
@@ -100,7 +101,7 @@
 
 .calendar-selecteddate H1 {
     background: url(/img/mypart.png);
-    color: rgb(41, 133, 190);
+    color:#006666;
     font-family: "Arial";
     font-size: 30px;
     font-weight: bold;
@@ -111,7 +112,7 @@
 
 .calendar-selecteddate H2 {
     background: url(/img/mypart.png);
-    color: rgb(115, 114, 114);
+    color:#009999;
     font-family: "Arial";
     font-size: 14px;
     font-weight: bold;
@@ -121,7 +122,7 @@
 }
 
 .calendar-selecteddate H3 {
-    color: rgb(136, 136, 136);
+    color:#33cccc;
     font-family: "Arial";
     font-size: 10px;
     line-height: 2;
@@ -140,7 +141,7 @@
 
 .calendar-selecteddate ul li {
     background: transparent;
-    color: rgb(61, 61, 61);
+    color:#009999;
     display: list-item;
     font-family: "Arial";
     font-size: 12px;
@@ -160,8 +161,6 @@
     border-right-width: 1px;
     border-style: solid;
     border-top-width: 1px;
-    color: rgb(255, 255, 255);
-
     font-family: "Arial";
     font-size: 12px;
     font-weight: bold;
@@ -173,6 +172,7 @@
     text-shadow: 0px -1px 0px rgb(119, 119, 119);
     top: 0px;
     width: 133px;
+    background-color: #009999;
 }
 
 .back-arrow {

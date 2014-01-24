@@ -1,8 +1,7 @@
 <div class="content">
     <?php include "ViewUserbar.php"; ?>
     <div class="contentcontent">
-        <?php include "ViewLeftmenu.php"; ?>
-
+<!--  место для меню будет здесь-->
         <?php
         if (null != $data)
             foreach ($data as $event) {

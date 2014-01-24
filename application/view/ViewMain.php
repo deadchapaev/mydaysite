@@ -14,6 +14,11 @@
     <link rel="stylesheet" type="text/css" href="/css/auth.css"/>
     <link rel="stylesheet" type="text/css" href="/css/addevent.css"/>
     <link rel="stylesheet" type="text/css" href="/css/regresult.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/userbar.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/event.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+
 </head>
 <body>
 <div class="container">

@@ -1,17 +1,7 @@
 <div class="userbar">
-    <div class="userinfo">
-        <div class="useravatar"><img alt="Это вы" src="/img/avatar.png"></div>
-        <div class="username"> Геоня Артём</div>
-        <div class="userphone"> +380666666666</div>
-        <div class="usersite"> www.google.com</div>
-    </div>
-    <div class="userbarseparator"></div>
-    <div class="userstatistic"> на сайте: <b>365</b> дней<br>
-        создано событий: <b>66</b><br>
-        любимое событие: <b>заварить чай</b><br>
-    </div>
-    <div class="userbuttonadd">
-        <ul>
+
+    <div class="eventbuttons">
+        <ul class=userbuttonadd>
             <a href="/Event/Add">
                 <li>Новое событие</li>
             </a>
@@ -21,4 +11,35 @@
             </a>
         </ul>
     </div>
+
+    <div class="eventgroups">
+        <div class="leftarrow">
+            <a href=""/>
+        </div>
+        <ul class=usergroup>
+            <a href="">
+                <li>Работа</li>
+            </a>
+
+            <a href="">
+                <li>Отдых</li>
+            </a>
+
+            <a href="">
+                <li>Здоровье</li>
+            </a>
+
+            <a href="">
+                <li>Дом</li>
+            </a>
+
+            <a href="">
+                <li>Семья</li>
+            </a>
+        </ul>
+        <div class="rightarrow">
+            <a href=""/>
+        </div>
+    </div>
+
 </div>
