@@ -49,9 +49,7 @@ class ModelEventgroup extends Model
             $eventgroup->detail = $var['detail'];
         }
 
-        if (isset($var['userid'])) {
-            $eventgroup->userid = $var['userid'];
-        }
+        $eventgroup->userid = $this->getUser()->id;
 
         return $eventgroup;
     }

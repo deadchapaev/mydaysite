@@ -84,6 +84,10 @@ class GetPostAnalyzer
             }
         }
 
+        if (null !== session_id() && "" !== session_id()) {
+            $this->var['session'] = session_id();
+        }
+
         return $this->var;
     }
 

@@ -7,7 +7,6 @@ class ControllerUser extends Controller
     {
         parent::__construct();
         $this->setModel(new ModelUser());
-
     }
 
     function actionDefault()

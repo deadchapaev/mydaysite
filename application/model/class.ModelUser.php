@@ -2,7 +2,6 @@
 require_once "/application/model/db/dao/class.UserDao.php";
 class ModelUser extends Model
 {
-
     private $userDao;
 
     function __construct()
@@ -12,7 +11,6 @@ class ModelUser extends Model
 
     public function login()
     {
-
         $data['err'] = false;
         $user = $this->getInputUser();
         if (null !== $user->email && null !== $user->pass) {
@@ -74,7 +72,7 @@ class ModelUser extends Model
         if (null != $user->email && null != $user->pass && null != $user->login) {
             if (!$this->userDao->checkPresentUserName($user)) {
                 $rez = $this->userDao->registerUser($user);
-                if ($rez > 0) {
+                if ($rez !== null) {
                     $data['msg'] = 'Вы успешно зарегистрировались!';
                 } else {
                     $data['msg'] = 'Ошибка регистрации!';
@@ -92,7 +90,37 @@ class ModelUser extends Model
         return $data;
     }
 
+    public function findUser()
+    {
+        $user = $this->getInputUser();
+        $dbuser = $this->userDao->getUserBySession($user);
+        if (null === $dbuser) {
+            $dbuser = $this->userDao->userAuthentication($user);
+        }
 
+        if ($dbuser !== null) {
+            $dbuser->session = $user->session;
+            if ($this->userDao->updateUserSession($dbuser)) {
+                $user = $dbuser;
+            }
+        }
+        return $user;
+    }
+
+    public function unlogUser()
+    {
+        $user = $this->getInputUser();
+        $dbuser = $this->userDao->getUserBySession($user);
+        if (null !== $dbuser) {
+            $dbuser->session = null;
+            if ($this->userDao->updateUserSession($dbuser)) {
+                $user = $dbuser;
+            }
+        }
+
+        return $user;
+
+    }
 }
 
 ?>

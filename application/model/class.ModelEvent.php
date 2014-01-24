@@ -1,5 +1,5 @@
 <?php
-require_once  "/application/model/db/dao/class.EventDao.php";
+require_once "/application/model/db/dao/class.EventDao.php";
 class ModelEvent extends Model
 {
     private $eventDao;

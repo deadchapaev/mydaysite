@@ -18,10 +18,34 @@ class UserDao
         $stmt->bind_param('ss', $user->email, $user->pass);
         $stmt->execute();
         $stmt->store_result();
-        $result = $stmt->num_rows;
+        $result = $this->getUserArray($stmt);
         $stmt->close;
 
-        return ($result == 1 ? TRUE : FALSE);
+        return (count($result) > 0 ? $result[0] : null);
+    }
+
+    private function getUserArray($stmt)
+    {
+        $stmt->bind_result($id, $login, $pass, $name, $sname, $avatar, $regdate, $bdate, $email, $session);
+        $result = array();
+        $i = 0;
+        while ($stmt->fetch()) {
+            $userObj = new User();
+            $result[$i++] = $userObj;
+
+            $userObj->id = $id;
+            $userObj->login = $login;
+            $userObj->pass = $pass;
+            $userObj->name = $name;
+            $userObj->sname = $sname;
+            $userObj->avatar = $avatar;
+            $userObj->regdate = $regdate;
+            $userObj->bdate = $bdate;
+            $userObj->email = $email;
+            $userObj->session = $session;
+        }
+
+        return $result;
     }
 
     /**
@@ -94,6 +118,9 @@ class UserDao
 
     }
 
+
+    //преобразовывает результирующий набор строк в массив объектов
+
     /**
      * Получение пользоватея по его идентификатору
      */
@@ -112,32 +139,35 @@ class UserDao
 
     }
 
-
-    //преобразовывает результирующий набор строк в массив объектов
-
-    private function getUserArray($stmt)
+    public function getUserBySession(User $user)
     {
-        $stmt->bind_result($id, $login, $pass, $name, $sname, $avatar, $regdate, $bdate, $email, $session);
-        $result = array();
-        $i = 0;
-        while ($stmt->fetch()) {
-            $userObj = new User();
-            $result[$i++] = $userObj;
 
-            $userObj->id = $id;
-            $userObj->login = $login;
-            $userObj->pass = $pass;
-            $userObj->name = $name;
-            $userObj->sname = $sname;
-            $userObj->avatar = $avatar;
-            $userObj->regdate = $regdate;
-            $userObj->bdate = $bdate;
-            $userObj->email = $email;
-            $userObj->session = $session;
-        }
+        $sql = "SELECT * FROM user a WHERE a.session = ?";
 
-        return $result;
+        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        $stmt->bind_param('s', $user->session);
+        $stmt->execute();
+        $stmt->store_result();
+
+        $result = $this->getUserArray($stmt);
+        $stmt->close;
+
+        return (count($result) > 0 ? $result[0] : null);
     }
+
+    public function updateUserSession(User $user)
+    {
+        $sql = "UPDATE user t SET t.session = ? WHERE t.id = ?";
+
+        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        $stmt->bind_param('si',$user->session,  $user->id);
+        $stmt->execute();
+        $result = $stmt->affected_rows;
+        $stmt->close;
+        return ($result == 1 ? TRUE : FALSE);
+    }
+
+
 }
 
 ?>

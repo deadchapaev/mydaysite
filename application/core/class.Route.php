@@ -1,5 +1,6 @@
 <?php
 require_once '/application/model/bl/class.GetPostAnalyzer.php';
+require_once '/application/model/class.ModelUser.php';
 class Route
 {
 
@@ -36,7 +37,7 @@ class Route
         $model_file = $model_name . '.php';
         $model_path = "application/model/" . $model_file;
         if (file_exists($model_path)) {
-            include $model_path;
+            include_once $model_path;
         }
 
         // подцепляем файл с классом контроллера
@@ -44,7 +45,7 @@ class Route
         $controller_path = "application/controller/" . $controller_file;
         if (file_exists($controller_path)) {
 
-            include $controller_path;
+            include_once $controller_path;
 
             //анализ входящих запросов
             $getPostAnalyzer = new GetPostAnalyzer();
@@ -53,6 +54,8 @@ class Route
 
             // создаем контроллер
             $controller = new $controller_name;
+            $controller->setUser(Route::authorization($inputVarArray));
+
             $action = $action_name;
 
             if (method_exists($controller, 'setInputVarArray')) {
@@ -79,6 +82,17 @@ class Route
         header('HTTP/1.1 404 Not Found');
         header("Status: 404 Not Found");
         header('Location:/Info/Error');
+    }
+
+    function authorization($inputVarArray)
+    {
+        $modelUser = new ModelUser();
+        $modelUser->setInputVarArray($inputVarArray);
+        $user = $modelUser->findUser();
+        //$user = $modelUser->unlogUser();
+
+        return $user;
+
     }
 
 }
