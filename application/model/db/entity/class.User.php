@@ -10,6 +10,7 @@ class User
     public $regdate;
     public $bdate;
     public $email;
+    public $session;
 }
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 require_once "application/model/db/connect/class.Db.php";
-require_once "application/model/db/entity/class.Event.php";
+require_once  "application/model/db/entity/class.Event.php";
 
 class EventDao
 {
