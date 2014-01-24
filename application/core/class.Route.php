@@ -54,7 +54,10 @@ class Route
 
             // создаем контроллер
             $controller = new $controller_name;
-            $controller->setUser(Route::authorization($inputVarArray));
+            $user = Route::authorization($inputVarArray);
+            print_r($user);
+            $controller->setUser($user);
+
 
             $action = $action_name;
 
@@ -89,6 +92,7 @@ class Route
         $modelUser = new ModelUser();
         $modelUser->setInputVarArray($inputVarArray);
         $user = $modelUser->findUser();
+        
         //$user = $modelUser->unlogUser();
 
         return $user;

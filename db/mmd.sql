@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-01-24 15:48:52
+Date: 2014-01-24 16:39:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,7 +57,7 @@ CREATE TABLE `eventgroup` (
   `detail` varchar(2048) DEFAULT NULL COMMENT 'подробное описание события',
   PRIMARY KEY (`id`),
   KEY `user_id_fk` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of eventgroup
@@ -66,6 +66,10 @@ INSERT INTO `eventgroup` VALUES ('0', '0', 'По работе', null);
 INSERT INTO `eventgroup` VALUES ('3', '0', 'Чайные встречи', null);
 INSERT INTO `eventgroup` VALUES ('5', '0', '123', '123');
 INSERT INTO `eventgroup` VALUES ('6', '0', '123', '123');
+INSERT INTO `eventgroup` VALUES ('7', '71', '123', '123');
+INSERT INTO `eventgroup` VALUES ('8', '71', '123', '123');
+INSERT INTO `eventgroup` VALUES ('9', '71', '123', '123');
+INSERT INTO `eventgroup` VALUES ('10', '66', 'Привет группо!', 'Я от чапаев32!');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -90,11 +94,11 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('66', 'chapa', '123', null, null, null, '2014-01-21 21:23:56', null, 'hello@pido.ru', null);
+INSERT INTO `user` VALUES ('66', 'chapa', '123', null, null, null, '2014-01-24 16:38:21', null, 'hello@pido.ru', 'd2rpa284ulisilhmi2s3sbi5o4');
 INSERT INTO `user` VALUES ('67', 'chapaev32', '123', null, null, null, '2014-01-24 15:44:15', null, '123', '');
 INSERT INTO `user` VALUES ('68', 'chapaev321', '123123123', null, null, null, '2014-01-24 15:47:50', null, 'chapaevcs1@mail.ru', null);
 INSERT INTO `user` VALUES ('69', 'chapaev323', '123123123', null, null, null, '2014-01-21 21:44:03', null, 'chapaevcs3@mail.ru', null);
-INSERT INTO `user` VALUES ('71', '1234', '1234', null, null, null, '2014-01-22 23:17:20', null, '124', null);
+INSERT INTO `user` VALUES ('71', '1234', '1234', null, null, null, '2014-01-24 16:28:04', null, '124', '1gnigci48i54bh2rkt2891tcn4');
 INSERT INTO `user` VALUES ('89', '123', '123', null, null, null, '2014-01-22 23:31:56', null, '213', null);
 INSERT INTO `user` VALUES ('90', '12345', '12345', null, null, null, '2014-01-22 23:46:24', null, '12345', null);
 INSERT INTO `user` VALUES ('91', 'chapa1', '123', null, null, null, '2014-01-23 22:03:48', null, 'hello1@pido.ru', null);

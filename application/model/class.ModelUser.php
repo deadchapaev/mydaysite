@@ -100,9 +100,8 @@ class ModelUser extends Model
 
         if ($dbuser !== null) {
             $dbuser->session = $user->session;
-            if ($this->userDao->updateUserSession($dbuser)) {
-                $user = $dbuser;
-            }
+            $this->userDao->updateUserSession($dbuser);
+            $user = $dbuser;
         }
         return $user;
     }
