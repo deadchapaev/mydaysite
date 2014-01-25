@@ -1,38 +1,40 @@
 .userbar {
     top: 1px;
     background-color: #66cccc;
-    height: 88px;
+    height: 52px;
     position: relative;
 }
-.eventbuttons{
+
+.eventbuttons {
     height: 50px;
     width: inherit;
 }
+
 .userbuttonadd {
     top: 1px;
     padding: 0;
     margin: 0;
-    bottom:0px;
+    bottom: 0px;
     position: relative;
 }
 
-.userbuttonadd li{
+.userbuttonadd li {
     float: left;
     width: 200px;
     height: 50px;
     cursor: pointer;
     list-style: none;
-    display:block;
+    display: block;
     text-align: center;
     font-size: 13px;
-    background-color:#006666;
+    background-color: #006666;
     margin-right: 1px;
     position: relative;
     line-height: 45px;
     font-weight: bold;
 }
 
-.userbuttonadd li:hover{
+.userbuttonadd li:hover {
     background-color: #009999;
 }
 
@@ -41,17 +43,12 @@
     text-decoration: none;
 }
 
-.eventgroups {
-    width: inherit;
-    height: 35px;
- }
-
 .usergroup {
     position: relative;
     top: 2px;
     padding: 0;
     margin: 0;
-    bottom:0px;
+    bottom: 0px;
     left: 455px;
     top: -34px;
 }
@@ -62,41 +59,52 @@
     height: 35px;
     cursor: pointer;
     list-style: none;
-    display:block;
+    display: block;
     text-align: center;
     font-size: 13px;
-    background-color:#009999;
+    background-color: #009999;
     margin-right: 1px;
     position: relative;
     line-height: 30px;
     font-weight: bold;
 }
-.usergroup li:hover{
-    background-color: #33cccc;
+
+.usergroup li:hover {
+    /*background-color: #33cccc;*/
+    background-color: #ff7400;
 }
 
-.usergroup a:link, .usergroup a:visited, .usergroup a:active {
+.usergroup li:active {
+    background-color: #ff7400;
+}
+
+.usergroup a:link, .usergroup a:visited {
     color: #efefef;
     text-decoration: none;
 }
 
+
 .leftarrow {
     background-image: url(/img/arrow-left.png);
     position: absolute;
-    width: 9px;
-    height: 9px;
-    left: 440px;
-    top: 30px;
+    width: 25px;
+    height: 25px;
+    left: 430px;
+    top: 22px;
+
 }
 
-.righttarrow {
+.rightarrow {
     background-image: url(/img/arrow-right.png);
     position: absolute;
-    width: 9px;
-    height: 9px;
-    z-index: 666;
-    top: 30px;
-    left: 300px;
+    width: 25px;
+    height: 25px;
+    top: 22px;
+    left: 960px;
+}
+
+.leftarrow:hover, .rightarrow:hover {
+    cursor: pointer;
 }
 
 

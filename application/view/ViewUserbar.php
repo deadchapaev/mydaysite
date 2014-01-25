@@ -12,34 +12,36 @@
         </ul>
     </div>
 
-    <div class="eventgroups">
-        <div class="leftarrow">
-            <a href=""/>
-        </div>
-        <ul class=usergroup>
-            <a href="">
-                <li>Работа</li>
-            </a>
-
-            <a href="">
-                <li>Отдых</li>
-            </a>
-
-            <a href="">
-                <li>Здоровье</li>
-            </a>
-
-            <a href="">
-                <li>Дом</li>
-            </a>
-
-            <a href="">
-                <li>Семья</li>
-            </a>
-        </ul>
-        <div class="rightarrow">
-            <a href=""/>
-        </div>
+    <div class="leftarrow">
+        <a href=""><a/>
     </div>
+
+    <div class="rightarrow">
+        <a href=""><a/>
+    </div>
+
+    <ul class=usergroup>
+        <a href="">
+            <li>Работа</li>
+        </a>
+
+        <a href="">
+            <li>Отдых</li>
+        </a>
+
+        <a href="">
+            <li>Здоровье</li>
+        </a>
+
+        <a href="">
+            <li>Дом</li>
+        </a>
+
+        <a href="">
+            <li>Семья</li>
+        </a>
+    </ul>
+
+
 
 </div>

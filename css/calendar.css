@@ -176,20 +176,23 @@
 }
 
 .back-arrow {
-    background-image: url(/img/arrow-left.png);
+    background-image: url(/img/arrow-calleft.png);
     position: absolute;
     left: 15px;
-    top: 15px;
-    width: 9px;
-    height: 9px;
+    top: 13px;
+    width: 15px;
+    height: 15px;
 }
 
 .forw-arrow {
-    background-image: url(/img/arrow-right.png);
+    background-image: url(/img/arrow-calright.png);
     position: absolute;
     left: 180px;
-    top: 15px;
-    width: 9px;
-    height: 9px;
+    top: 13px;
+    width: 15px;
+    height: 15px;
 }
 
+.back-arrow:hover, .forw-arrow {
+    cursor: pointer;
+}

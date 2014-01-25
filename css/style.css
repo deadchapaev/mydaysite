@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #efefef;
+    background-color: rgba(102, 204, 204, 0.15);
 }
 
 .container, .content, .userbar, .footer, .contentcontent {
@@ -12,9 +12,12 @@ body {
 
 .container {
     position: relative;
-    
+
 }
 
+.content {
+    background-color:#FFFFFF;
+}
 
 
 

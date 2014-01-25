@@ -1,7 +1,8 @@
 <div class="content">
     <?php include "ViewUserbar.php"; ?>
+    <div style="clear: both"></div>
+
     <div class="contentcontent">
-<!--  место для меню будет здесь-->
         <?php
         if (null != $data)
             foreach ($data['event'] as $event) {
