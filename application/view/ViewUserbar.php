@@ -6,7 +6,7 @@
                 <li>Новое событие</li>
             </a>
 
-            <a href="/Event/AddGroup">
+            <a href="/Eventgroup">
                 <li>Новая группа</li>
             </a>
         </ul>
@@ -18,28 +18,26 @@
         </div>
         <ul class=usergroup>
             <a href="">
-                <li>Работа</li>
+                <li>Все</li>
             </a>
+            <?php
+            if (null !== $data && null !== $data['eventgroup'] && count($data['eventgroup']) > 0 && count($data['event'])) {
+                ?>
 
-            <a href="">
-                <li>Отдых</li>
-            </a>
+                <?php foreach ($data['eventgroup'] as $eventgroup) { ?>
+                    <a href="">
+                        <li><?php echo $eventgroup->groupname; ?></li>
+                    </a>
+                <?php } ?>
 
-            <a href="">
-                <li>Здоровье</li>
-            </a>
-
-            <a href="">
-                <li>Дом</li>
-            </a>
-
-            <a href="">
-                <li>Семья</li>
-            </a>
+            <?php
+            }
+            ?>
         </ul>
         <div class="rightarrow">
             <a href=""/>
         </div>
     </div>
+
 
 </div>

@@ -1,18 +1,18 @@
 <?php
 require_once 'application/core/class.Controller.php';
-require_once 'application/model/class.ModelMain.php';
+require_once 'application/model/class.ModelEvent.php';
 class ControllerMain extends Controller
 {
 
     function __construct()
     {
-        $this->model = new ModelMain();
-        $this->view = new View();
+        parent::__construct();
+        $this->setModel(new ModelEvent());
     }
 
     function actionDefault()
     {
-        $this->view->generate('ViewEvent.php', 'ViewMain.php', $this->model->getData());
+        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', $this->getModel()->getAllDayEvents());
     }
 }
 

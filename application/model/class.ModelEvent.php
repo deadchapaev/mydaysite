@@ -63,8 +63,9 @@ class ModelEvent extends Model
 
     public function getAllDayEvents()
     {
-        $data['event'] = $this->eventDao->getAllDayEvents($this->getUser()->id, '2013-11-17');
-        $data['eventgroup'] = $this->eventgroupDao->getAllDayEventgroups($this->getUser()->id, '2013-11-17');
+        $date = '2013-11-17';
+        $data['event'] = $this->eventDao->getAllDayEvents($this->getUser()->id, $date);
+        $data['eventgroup'] = $this->eventgroupDao->getAllDayEventgroups($this->getUser()->id, $date);
         return $data;
 
     }
