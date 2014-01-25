@@ -9,7 +9,7 @@
     </div>
     <div class="buttonbar-content">
         <ul>
-            <a href="#">
+            <a href="/">
                 <li>ГЛАВНАЯ</li>
             </a>
             <a href="#">
@@ -18,12 +18,31 @@
             <a href="#">
                 <li>О НАС</li>
             </a>
-            <a href="#">
-                <li>ВЫЙТИ</li>
-            </a>
 
+            <?php
+            if (null !== $data['user'] && null !== $data['user']->id) {
+                ?>
+                <a href="/User/Logout.ws">
+                    <li> ВЫЙТИ</li>
+                </a>
+            <?php
+            } else {
+                ?>
+                <a href="/User/">
+                    <li> ВОЙТИ</li>
+                </a>
+            <?php
+
+            }
+            ?>
 
         </ul>
     </div>
-    <div class="authorization"> Вы зашли как <b>Chapaev</b></div>
+
+    <?php
+    if (null !== $data['user'] && null !== $data['user']->id) {
+        ?>
+        <div class="authorization"> Вы зашли как <b><?php echo $data['user']->login; ?> </b></div>
+    <?php } ?>
+
 </div>
