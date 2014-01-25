@@ -6,37 +6,40 @@
                 <li>Новое событие</li>
             </a>
 
-            <a href="/Eventgroup">
+            <a href="/Event/AddGroup">
                 <li>Новая группа</li>
             </a>
         </ul>
     </div>
 
+    <div class="eventgroups">
+        <div class="leftarrow">
+            <a href=""/>
+        </div>
+        <ul class=usergroup>
+            <a href="">
+                <li>Работа</li>
+            </a>
 
-    <div class="leftarrow">
-        <a href=""/>
+            <a href="">
+                <li>Отдых</li>
+            </a>
+
+            <a href="">
+                <li>Здоровье</li>
+            </a>
+
+            <a href="">
+                <li>Дом</li>
+            </a>
+
+            <a href="">
+                <li>Семья</li>
+            </a>
+        </ul>
+        <div class="rightarrow">
+            <a href=""/>
+        </div>
     </div>
-    <ul class=usergroup>
-        <a href="">
-            <li>Все</li>
-        </a>
-        <?php
-        if (null !== $data && null !== $data['eventgroup'] && count($data['eventgroup']) > 0 && count($data['event'])) {
-            ?>
-
-            <?php foreach ($data['eventgroup'] as $eventgroup) { ?>
-                <a href="">
-                    <li><?php echo $eventgroup->groupname; ?></li>
-                </a>
-            <?php } ?>
-
-        <?php
-        }
-        ?>
-    </ul>
-    <div class="rightarrow">
-        <a href=""/>
-    </div>
-
 
 </div>
