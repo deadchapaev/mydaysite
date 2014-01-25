@@ -12,7 +12,8 @@ class ControllerMain extends Controller
 
     function actionDefault()
     {
-        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', $this->getModel()->getAllDayEvents());
+        $this->getModel()->getAllDayEvents($this->data);
+        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', $this->data);
     }
 }
 

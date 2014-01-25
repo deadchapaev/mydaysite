@@ -9,7 +9,7 @@ if (null !== $data['user']->id) {
                     <li>Новое событие</li>
                 </a>
 
-                <a href="/Event/AddGroup">
+                <a href="/Eventgroup">
                     <li>Новая группа</li>
                 </a>
             </ul>

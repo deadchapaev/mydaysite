@@ -54,11 +54,12 @@ class UserDao
     public function registerUser(User $user)
     {
 
-        $sql = "INSERT INTO user(login, pass, email) VALUES(?, ?, ?)";
+        $sql = "INSERT INTO user(login, pass, email, session) VALUES(?, ?, ?, ?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('sss', $user->login, $user->password, $user->email);
+        $stmt->bind_param('ssss', $user->login, $user->passr, $user->email, $user->session);
         $stmt->execute();
+        //echo($stmt->error);
         $result = $stmt->affected_rows;
         $stmt->close;
 
@@ -96,7 +97,7 @@ class UserDao
         $stmt->store_result();
         $result = $stmt->num_rows;
         $stmt->close;
-        return ($result == 1 ? TRUE : FALSE);
+        return ($result == 1 ? true : true);
 
     }
 
@@ -160,7 +161,7 @@ class UserDao
         $sql = "UPDATE user t SET t.session = ? WHERE t.id = ?";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('si',$user->session,  $user->id);
+        $stmt->bind_param('si', $user->session, $user->id);
         $stmt->execute();
         $result = $stmt->affected_rows;
         $stmt->close;

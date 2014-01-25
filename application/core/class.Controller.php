@@ -3,6 +3,7 @@ require_once 'application/core/class.Model.php';
 class Controller
 {
 
+    protected $data;
     private $model;
     private $view;
     private $inputVarArray;
@@ -11,18 +12,6 @@ class Controller
     function __construct()
     {
         $this->view = new View();
-
-    }
-
-    /**
-     * @param mixed $user
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
-        if ($this->getModel() != null) {
-            $this->getModel()->setUser($user);
-        }
     }
 
     /**
@@ -33,13 +22,17 @@ class Controller
         return $this->user;
     }
 
-
     /**
-     * @param mixed $model
+     * @param mixed $user
      */
-    public function setModel($model)
+    public function setUser($user)
     {
-        $this->model = $model;
+        $this->user = $user;
+        if ($this->getModel() != null) {
+            $this->getModel()->setUser($user);
+            $this->data['user'] = $user;
+
+        }
     }
 
     /**
@@ -51,11 +44,11 @@ class Controller
     }
 
     /**
-     * @param \View $view
+     * @param mixed $model
      */
-    public function setView($view)
+    public function setModel($model)
     {
-        $this->view = $view;
+        $this->model = $model;
     }
 
     /**
@@ -67,13 +60,20 @@ class Controller
     }
 
     /**
+     * @param \View $view
+     */
+    public function setView($view)
+    {
+        $this->view = $view;
+    }
+
+    /**
      * @return mixed
      */
     public function getInputVarArray()
     {
         return $this->inputVarArray;
     }
-
 
     /**
      * @param mixed $inputVarArray
@@ -86,10 +86,10 @@ class Controller
         }
     }
 
-
     /**
      * Будет вызываться по умолчанию
      */
+
 
     function actionDefault()
     {

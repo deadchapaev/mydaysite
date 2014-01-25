@@ -11,17 +11,19 @@ class ControllerEvent extends Controller
 
     function actionDefault()
     {
-        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', $this->getModel()->getAllDayEvents());
+        $this->getModel()->getAllDayEvents($this->data);
+        $this->getView()->generate('ViewEvent.php', 'ViewMain.php', $this->data);
     }
 
     function actionAddWs()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->getModel()->addEvent());
+        $this->getModel()->addEvent($this->data);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
     }
 
     function actionAdd()
     {
-        $this->getView()->generate('ViewEventAdd.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewEventAdd.php', 'ViewMain.php', $this->data);
     }
 }
 

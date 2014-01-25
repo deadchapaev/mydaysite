@@ -9,7 +9,7 @@ class ModelUser extends Model
         $this->userDao = new UserDao();
     }
 
-    public function login($data)
+    public function login(&$data)
     {
         $data['err'] = false;
         $user = $this->getInputUser();
@@ -26,8 +26,6 @@ class ModelUser extends Model
             $data['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
             $data['err'] = true;
         }
-
-        return $data;
     }
 
     private function getInputUser()
@@ -41,6 +39,10 @@ class ModelUser extends Model
         if (isset($var['pass'])) {
             $user->pass = $var['pass'];
         }
+        if (isset($var['passr'])) {
+            $user->passr = $var['passr'];
+        }
+
         if (isset($var['name'])) {
             $user->name = $var['name'];
         }
@@ -66,37 +68,46 @@ class ModelUser extends Model
         return $user;
     }
 
-    public function register($data)
+    public function register(&$data)
     {
         $data['err'] = false;
         $user = $this->getInputUser();
-        if (null != $user->email && null != $user->pass && null != $user->login) {
+
+        if (null != $user->email && null != $user->passr && null != $user->login) {
             if (!$this->userDao->checkPresentUserName($user)) {
                 $rez = $this->userDao->registerUser($user);
-                if ($rez !== null) {
-                    $data['msg'] = 'Вы успешно зарегистрировались!';
+                if ($rez !== null ) {
+                    $data['msg'] = 'Вы успешно зарегистрировались, ' . $user->login . '!';
+                    $this->findUser($data);
                 } else {
                     $data['msg'] = 'Ошибка регистрации!';
                     $data['err'] = true;
+                    $data['user'] = null;
+
                 }
             } else {
                 $data['msg'] = 'Ошибка регистрации! Такой пользователь уже есть!';
                 $data['err'] = true;
+                //$data['user'] = null;
+
             }
         } else {
             $data['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
             $data['err'] = true;
+            $data['user'] = null;
+
         }
 
-        return $data;
     }
 
-    public function findUser($data)
+    public function findUser(&$data)
     {
         $user = $this->getInputUser();
+
         $dbuser = $this->userDao->getUserBySession($user);
         if (null === $dbuser) {
             $dbuser = $this->userDao->userAuthentication($user);
+
         }
 
         if ($dbuser !== null) {
@@ -104,11 +115,12 @@ class ModelUser extends Model
             $this->userDao->updateUserSession($dbuser);
             $user = $dbuser;
         }
+
         $data['user'] = $user;
-        return $data;
+
     }
 
-    public function unlogUser($data)
+    public function logout(&$data)
     {
         $user = $this->getInputUser();
         $dbuser = $this->userDao->getUserBySession($user);
@@ -121,9 +133,6 @@ class ModelUser extends Model
         }
         $data['user'] = $user;
         $data['msg'] = 'Вы вышли из системы!';
-
-        return $data;
-
     }
 }
 

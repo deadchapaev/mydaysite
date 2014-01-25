@@ -10,7 +10,7 @@ class ModelEventgroup extends Model
         $this->eventgroupDao = new EventgroupDao();
     }
 
-    function addEventgroup()
+    function addEventgroup(&$data)
     {
         $data['err'] = false;
 
@@ -27,8 +27,6 @@ class ModelEventgroup extends Model
             $data['msg'] = 'Недостаточно данных!';
             $data['err'] = true;
         }
-
-        return $data;
     }
 
     /**

@@ -44,7 +44,7 @@ class GetPostAnalyzer
                 $pass = htmlspecialchars($pass);
                 $pass = trim($pass);
                 if ("" != $pass) {
-                    $this->var['pass'] = $pass;
+                    $this->var['passr'] = $pass;
                 }
             }
         }

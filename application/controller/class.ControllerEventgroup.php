@@ -11,12 +11,13 @@ class ControllerEventgroup extends Controller
 
     function actionDefault()
     {
-        $this->getView()->generate('ViewGroupAdd.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewGroupAdd.php', 'ViewMain.php', $this->data);
     }
 
     function actionAddWs()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->getModel()->addEventgroup());
+        $this->getModel()->addEventgroup($this->data);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
     }
 }
 

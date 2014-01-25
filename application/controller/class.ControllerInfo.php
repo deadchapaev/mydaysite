@@ -4,13 +4,12 @@ class ControllerInfo extends Controller
 {
     function actionDefault()
     {
-        //print_r($_COOKIE);
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
     }
 
     function actionError()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', null);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
     }
 
 }

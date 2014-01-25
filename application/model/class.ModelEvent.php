@@ -16,7 +16,7 @@ class ModelEvent extends Model
      * Добавляет событие в базу и возвращает результат согласно стандарту
      * @return mixed
      */
-    function addEvent()
+    function addEvent(&$data)
     {
         $event = $this->getInputEvent();
         $data['err'] = false;
@@ -32,8 +32,6 @@ class ModelEvent extends Model
             $data['msg'] = 'Недостаточно данных!';
             $data['err'] = true;
         }
-
-        return $data;
     }
 
     /**
@@ -61,14 +59,13 @@ class ModelEvent extends Model
         return $event;
     }
 
-    public function getAllDayEvents()
+    public function getAllDayEvents(&$data)
     {
         $date = '2013-11-17';
         $data['event'] = $this->eventDao->getAllDayEvents($this->getUser()->id, $date);
         $data['eventgroup'] = $this->eventgroupDao->getAllDayEventgroups($this->getUser()->id, $date);
-        return $data;
-
     }
+
 }
 
 

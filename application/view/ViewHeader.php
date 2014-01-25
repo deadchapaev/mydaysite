@@ -42,7 +42,7 @@
     <?php
     if (null !== $data['user'] && null !== $data['user']->id) {
         ?>
-        <div class="authorization"> Вы зашли как <b><?php echo $data['user']->login; ?> </b></div>
+        <div class="authorization"> Вы зашли как <a href="/User"> <b><?php echo $data['user']->login; ?> </b> </a></div>
     <?php } ?>
 
 </div>

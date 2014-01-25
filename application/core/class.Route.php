@@ -50,13 +50,12 @@ class Route
             //анализ входящих запросов
             $getPostAnalyzer = new GetPostAnalyzer();
             $inputVarArray = $getPostAnalyzer->getVarArray();
-            $inputVarArray['userid'] = 0; //для временного юзера
+            //$inputVarArray['userid'] = 0; //для временного юзера
 
             // создаем контроллер
             $controller = new $controller_name;
             $user = Route::authorization($inputVarArray);
             $controller->setUser($user);
-
 
             $action = $action_name;
 
@@ -82,8 +81,7 @@ class Route
     {
         $modelUser = new ModelUser();
         $modelUser->setInputVarArray($inputVarArray);
-        $data = $modelUser->findUser($data);
-
+        $modelUser->findUser($data);
         return $data['user'];
 
     }

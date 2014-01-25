@@ -11,19 +11,29 @@ class ControllerUser extends Controller
 
     function actionDefault()
     {
-        $this->getView()->generate('ViewUserAuth.php', 'ViewMain.php', null);
+        $this->getView()->generate((null !== $this->getUser()->id ? 'ViewUser.php' : 'ViewUserAuth.php'), 'ViewMain.php', $this->data);
     }
 
     function actionReg()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->getModel()->register());
+        //print_r($this->data);
+        $this->getModel()->register($this->data);
+
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
     }
 
     function actionLogin()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->getModel()->login());
+        $this->getModel()->login($this->data);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
+
     }
 
+    function actionLogoutWs()
+    {
+        $this->getModel()->logout($this->data);
+        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
+    }
 }
 
 ?>
