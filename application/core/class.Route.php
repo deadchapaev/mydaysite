@@ -78,24 +78,22 @@ class Route
         }
     }
 
+    function authorization($inputVarArray)
+    {
+        $modelUser = new ModelUser();
+        $modelUser->setInputVarArray($inputVarArray);
+        $data = $modelUser->findUser($data);
+
+        return $data['user'];
+
+    }
+
     function ErrorPage404()
     {
         $_SESSION['msg'] = 'Страница не найдена!';
         header('HTTP/1.1 404 Not Found');
         header("Status: 404 Not Found");
         header('Location:/Info/Error');
-    }
-
-    function authorization($inputVarArray)
-    {
-        $modelUser = new ModelUser();
-        $modelUser->setInputVarArray($inputVarArray);
-        $user = $modelUser->findUser();
-        
-        //$user = $modelUser->unlogUser();
-
-        return $user;
-
     }
 
 }

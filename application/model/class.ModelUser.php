@@ -9,13 +9,14 @@ class ModelUser extends Model
         $this->userDao = new UserDao();
     }
 
-    public function login()
+    public function login($data)
     {
         $data['err'] = false;
         $user = $this->getInputUser();
         if (null !== $user->email && null !== $user->pass) {
-            if ($this->userDao->userAuthentication($user)) {
-                $data['msg'] = 'Вы успешно вошли в систему!';
+            $user = $this->userDao->userAuthentication($user);
+            if (null !== $user) {
+                $data['msg'] = 'Вы успешно вошли в систему, ' . $user->login . '!';
             } else {
                 //если ошибка авторизации то редиректим на страничку ошибки
                 $data['msg'] = 'Ошибка авторизации!';
@@ -29,7 +30,7 @@ class ModelUser extends Model
         return $data;
     }
 
-    public function getInputUser()
+    private function getInputUser()
     {
         $user = new User();
         $var = $this->getInputVarArray();
@@ -65,7 +66,7 @@ class ModelUser extends Model
         return $user;
     }
 
-    public function register()
+    public function register($data)
     {
         $data['err'] = false;
         $user = $this->getInputUser();
@@ -90,7 +91,7 @@ class ModelUser extends Model
         return $data;
     }
 
-    public function findUser()
+    public function findUser($data)
     {
         $user = $this->getInputUser();
         $dbuser = $this->userDao->getUserBySession($user);
@@ -103,21 +104,25 @@ class ModelUser extends Model
             $this->userDao->updateUserSession($dbuser);
             $user = $dbuser;
         }
-        return $user;
+        $data['user'] = $user;
+        return $data;
     }
 
-    public function unlogUser()
+    public function unlogUser($data)
     {
         $user = $this->getInputUser();
         $dbuser = $this->userDao->getUserBySession($user);
         if (null !== $dbuser) {
             $dbuser->session = null;
             if ($this->userDao->updateUserSession($dbuser)) {
-                $user = $dbuser;
+                $user = null;
+
             }
         }
+        $data['user'] = $user;
+        $data['msg'] = 'Вы вышли из системы!';
 
-        return $user;
+        return $data;
 
     }
 }
