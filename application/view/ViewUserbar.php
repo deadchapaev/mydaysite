@@ -12,31 +12,30 @@
         </ul>
     </div>
 
-    <div class="eventgroups">
-        <div class="leftarrow">
-            <a href=""/>
-        </div>
-        <ul class=usergroup>
-            <a href="">
-                <li>Все</li>
-            </a>
-            <?php
-            if (null !== $data && null !== $data['eventgroup'] && count($data['eventgroup']) > 0 && count($data['event'])) {
-                ?>
 
-                <?php foreach ($data['eventgroup'] as $eventgroup) { ?>
-                    <a href="">
-                        <li><?php echo $eventgroup->groupname; ?></li>
-                    </a>
-                <?php } ?>
-
-            <?php
-            }
+    <div class="leftarrow">
+        <a href=""/>
+    </div>
+    <ul class=usergroup>
+        <a href="">
+            <li>Все</li>
+        </a>
+        <?php
+        if (null !== $data && null !== $data['eventgroup'] && count($data['eventgroup']) > 0 && count($data['event'])) {
             ?>
-        </ul>
-        <div class="rightarrow">
-            <a href=""/>
-        </div>
+
+            <?php foreach ($data['eventgroup'] as $eventgroup) { ?>
+                <a href="">
+                    <li><?php echo $eventgroup->groupname; ?></li>
+                </a>
+            <?php } ?>
+
+        <?php
+        }
+        ?>
+    </ul>
+    <div class="rightarrow">
+        <a href=""/>
     </div>
 
 
