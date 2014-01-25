@@ -22,7 +22,7 @@
 
 .content {
     background-color: #e8e8e8;
-
+    min-height: 500;
 }
 
 .left-content {
@@ -40,13 +40,10 @@
     background-color: #FFF;
     width: 440px;
     height: 525px;
-    position: absolute;
-    margin-left: 15px;
-    margin-top: 85px;
-    margin-right: 45px;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0.5px 0.5px 0.5px 0.5px;
-    right: 15px;
+    left: 240px;
 }
 
 .left-title {
