@@ -5,9 +5,11 @@
 
             if (!(null === $data['msg'])) {
                 echo $data['msg'];
+            } else {
+                echo 'Неизвестная ошибка!';
             }
-
             ?>
+
         </div>
 
         <div class="messagebutton">

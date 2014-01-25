@@ -31,6 +31,7 @@
     ?>
 
     <?php include "ViewFooter.php"; ?>
+
     <div style="clear: both"></div>
 </div>
 </body>
