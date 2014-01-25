@@ -14,10 +14,15 @@
 
     <?php
     if (null !== $data && null !== $data['eventgroup'] && count($data['eventgroup']) > 0 && count($data['event']) > 0) {
-        ?>
-        <div class="leftarrow">
-            <a href=""></a>
-        </div>
+        //Выводить ли стрелочки :)
+        $drowArrows = (count($data['eventgroup']) > 4);
+
+        if ($drowArrows) {
+            ?>
+            <div class="leftarrow">
+                <a href=""></a>
+            </div>
+        <?php } ?>
         <ul class=usergroup>
             <a href="">
                 <li>Все</li>
@@ -28,9 +33,14 @@
                 </a>
             <?php } ?>
         </ul>
-        <div class="rightarrow">
-            <a href=""></a>
-        </div>
+
+        <?php if ($drowArrows) {
+            ?>
+            <div class="rightarrow">
+                <a href=""></a>
+            </div>
+        <?php } ?>
+
     <?php
     }
     ?>
