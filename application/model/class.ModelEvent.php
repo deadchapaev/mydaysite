@@ -1,12 +1,15 @@
 <?php
 require_once "/application/model/db/dao/class.EventDao.php";
+require_once "/application/model/db/dao/class.EventgroupDao.php";
 class ModelEvent extends Model
 {
     private $eventDao;
+    private $eventgroupDao;
 
     function __construct()
     {
         $this->eventDao = new EventDao();
+        $this->eventgroupDao = new EventgroupDao();
     }
 
     /**
@@ -58,7 +61,13 @@ class ModelEvent extends Model
         return $event;
     }
 
+    public function getAllDayEvents()
+    {
+        $data['event'] = $this->eventDao->getAllDayEvents($this->getUser()->id, '2013-11-17');
+        $data['eventgroup'] = $this->eventgroupDao->getAllDayEventgroups($this->getUser()->id, '2013-11-17');
+        return $data;
 
+    }
 }
 
 

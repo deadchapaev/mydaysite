@@ -7,8 +7,8 @@ class ModelMain extends Model
     public function getData()
     {
         $eventDao = new EventDao();
-        $event = $eventDao->getEvents(0, '2013-11-17');
-        return $event;
+        $data['event'] = $eventDao->getAllDayEvents(0, '2013-11-17');
+        return $data;
     }
 
 }

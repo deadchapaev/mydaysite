@@ -22,6 +22,32 @@ class EventgroupDao
 
     }
 
+    private function getEventgroupArray($res)
+    {
+
+        $result = array();
+        for ($rowNum = 0; $rowNum < $res->num_rows; $rowNum++) {
+            $res->data_seek($rowNum);
+            $result[$rowNum] = $this->getEventgroup($res->fetch_assoc());
+        }
+        return $result;
+    }
+
+    //преобразовывает результирующий набор строк в массив объектов
+
+    private function getEventgroup($row)
+    {
+        $eventgroup = new Eventgroup();
+        $eventgroup->id = $row['id'];
+        $eventgroup->groupname = $row['groupname'];
+        $eventgroup->detail = $row['detail'];
+        $eventgroup->userid = $row['userid'];
+
+        return $eventgroup;
+    }
+
+    //преобразовывает строку в объект
+
     /**
      * @param Eventgroup $eventgroup
      * @return int
@@ -41,29 +67,26 @@ class EventgroupDao
         return $result;
     }
 
-    //преобразовывает результирующий набор строк в массив объектов
-    private function getEventgroupArray($res)
+    public function getAllDayEventgroups($userid, $date)
     {
+        $sql = "SELECT g.*
+                  FROM  eventgroup AS g
+                 WHERE g.userid = ?
+                   and exists (SELECT *
+                                 FROM event AS e
+                                WHERE e.groupid = g.id
+                                  and date(e.eventdate) = date(?))";
 
-        $result = array();
-        for ($rowNum = 0; $rowNum < $res->num_rows; $rowNum++) {
-            $res->data_seek($rowNum);
-            $result[$rowNum] = $this->getEventgroup($res->fetch_assoc());
-        }
+        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        $stmt->bind_param('is', $userId, $date);
+        $stmt->execute();
+        $result = $this->getEventgroupArray($stmt->get_result());
+        $stmt->close;
+
         return $result;
+
     }
 
-    //преобразовывает строку в объект
-    private function getEventgroup($row)
-    {
-        $eventgroup = new Eventgroup();
-        $eventgroup->id = $row['id'];
-        $eventgroup->groupname = $row['groupname'];
-        $eventgroup->detail = $row['detail'];
-        $eventgroup->userid = $row['userid'];
-
-        return $eventgroup;
-    }
 
 }
 

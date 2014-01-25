@@ -4,7 +4,7 @@
 <!--  место для меню будет здесь-->
         <?php
         if (null != $data)
-            foreach ($data as $event) {
+            foreach ($data['event'] as $event) {
                 ?>
                 <div class="userspace">
                     <div class="usrsp-content">

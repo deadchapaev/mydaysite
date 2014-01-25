@@ -5,38 +5,24 @@ require_once "application/model/db/entity/class.Event.php";
 class EventDao
 {
 
-    public function getEvents($groupId, $date)
+    public function getAllDayEvents($userid, $date)
     {
-
-        $sql = "SELECT *
-					  FROM event a
-					 WHERE date(a.eventdate) = date(?)
-				   	AND a.groupid = ?";
+        $sql = "SELECT e.*
+                  FROM  event AS e ,
+		                eventgroup AS g
+                  WHERE e.groupid = g.id
+                    and g.userid = ?
+                    and date(e.eventdate) = date(?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('ss', $date, $groupId);
+        $stmt->bind_param('ss', $userid, $date);
         $stmt->execute();
         $result = $this->getEventArray($stmt->get_result());
         $stmt->close;
         return $result;
+
     }
 
-    public function addEvent(Event $event)
-    {
-
-        $sql = "INSERT INTO event (groupid, event, detail)
-                VALUES (?, ?, ?)";
-
-        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('iss', $event->groupid, $event->event, $event->detail);
-        $stmt->execute();
-        $result = $stmt->affected_rows;
-        $stmt->close;
-        return $result;
-    }
-
-
-    //преобразовывает результирующий набор строк в массив объектов
     private function getEventArray($res)
     {
 
@@ -48,7 +34,6 @@ class EventDao
         return $result;
     }
 
-    //преобразовывает строку в объект
     private function getEvent($row)
     {
 
@@ -61,6 +46,41 @@ class EventDao
         $event->eventdate = $row['eventdate'];
 
         return $event;
+    }
+
+
+    //преобразовывает результирующий набор строк в массив объектов
+
+    public function getEvents($groupId, $date)
+    {
+
+        $sql = "SELECT *
+                  FROM event a
+				 WHERE date(a . eventdate) = date(?)
+				   AND a . groupid = ?";
+
+        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        $stmt->bind_param('ss', $date, $groupId);
+        $stmt->execute();
+        $result = $this->getEventArray($stmt->get_result());
+        $stmt->close;
+        return $result;
+    }
+
+    //преобразовывает строку в объект
+
+    public function addEvent(Event $event)
+    {
+
+        $sql = "INSERT INTO event(groupid, event, detail)
+                VALUES(?, ?, ?)";
+
+        $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
+        $stmt->bind_param('iss', $event->groupid, $event->event, $event->detail);
+        $stmt->execute();
+        $result = $stmt->affected_rows;
+        $stmt->close;
+        return $result;
     }
 }
 
