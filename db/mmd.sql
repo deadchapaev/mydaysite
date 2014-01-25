@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-01-25 09:30:01
+Date: 2014-01-25 17:16:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -63,8 +63,8 @@ CREATE TABLE `eventgroup` (
 -- ----------------------------
 -- Records of eventgroup
 -- ----------------------------
-INSERT INTO `eventgroup` VALUES ('0', '0', 'По работе', null);
-INSERT INTO `eventgroup` VALUES ('3', '0', 'Чайные встречи', null);
+INSERT INTO `eventgroup` VALUES ('0', '0', 'Работа', null);
+INSERT INTO `eventgroup` VALUES ('3', '0', 'Еда', null);
 INSERT INTO `eventgroup` VALUES ('5', '0', '123', '123');
 INSERT INTO `eventgroup` VALUES ('6', '0', '123', '123');
 INSERT INTO `eventgroup` VALUES ('7', '0', '123', '123');
@@ -97,8 +97,8 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('0', '1234', '1234', null, null, null, '2014-01-25 09:07:13', null, '124', '1gnigci48i54bh2rkt2891tcn4');
-INSERT INTO `user` VALUES ('66', 'chapa', '123', null, null, null, '2014-01-24 16:38:21', null, 'hello@pido.ru', 'd2rpa284ulisilhmi2s3sbi5o4');
+INSERT INTO `user` VALUES ('0', '1234', '1234', null, null, null, '2014-01-25 13:31:59', null, '1234', 'd2rpa284ulisilhmi2s3sbi5o4');
+INSERT INTO `user` VALUES ('66', 'chapa', '123', null, null, null, '2014-01-25 12:36:40', null, 'hello@pido.ru', '');
 INSERT INTO `user` VALUES ('67', 'chapaev32', '123', null, null, null, '2014-01-24 15:44:15', null, '123', '');
 INSERT INTO `user` VALUES ('68', 'chapaev321', '123123123', null, null, null, '2014-01-24 15:47:50', null, 'chapaevcs1@mail.ru', null);
 INSERT INTO `user` VALUES ('69', 'chapaev323', '123123123', null, null, null, '2014-01-21 21:44:03', null, 'chapaevcs3@mail.ru', null);
