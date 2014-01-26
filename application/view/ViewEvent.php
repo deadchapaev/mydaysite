@@ -7,7 +7,7 @@
         if (null != $data)
             foreach ($data['event'] as $event) {
                 ?>
-                <div class="userspace">
+                <div class="userspace" groupid="<?php echo $event->groupid; ?>">
                     <div class="usrsp-content">
                         <div class="usrsp-textblock">
                             <div class="usrsp-title"><b><?php echo $event->event; ?></b></div>
