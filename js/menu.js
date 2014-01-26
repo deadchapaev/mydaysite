@@ -25,7 +25,6 @@ $(document).ready(function () {
                     });
                 }
             } else {
-
                 //откроем все
                 $(this).slideDown(0, function () {
                 });
