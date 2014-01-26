@@ -14,7 +14,7 @@ $(document).ready(function () {
                 $(this).removeClass('checked');
             }
         });
-
+        //скорем-покажем выбранную группу
         $(".userspace").each(function (index) {
             if (null != $groupid) {
                 if ($groupid == $(this).attr('groupid')) {
