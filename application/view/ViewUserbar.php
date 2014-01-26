@@ -27,13 +27,13 @@ if (null !== $data['user']->id) {
                 </div>
             <?php } ?>
             <ul class="usergroup">
-                <!--a href=""-->
-                    <li class="checked">Все</li>
-                <!--/a-->
+
+                <li class="checked">Все</li>
+
                 <?php foreach ($data['eventgroup'] as $eventgroup) { ?>
-                    <!--a href=""-->
-                        <li groupid="<?php echo $eventgroup->id; ?>"><?php echo $eventgroup->groupname; ?></li>
-                    <!--/a-->
+
+                    <li groupid="<?php echo $eventgroup->id; ?>"><?php echo $eventgroup->groupname; ?></li>
+
                 <?php } ?>
             </ul>
 
