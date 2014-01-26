@@ -3,7 +3,6 @@
  */
 $(document).ready(function () {
 
-
     $('.usergroup > li').click(function ($this) {
 
         //получим идентификтаор группы
