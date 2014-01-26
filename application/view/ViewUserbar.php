@@ -26,9 +26,9 @@ if (null !== $data['user']->id) {
                     <a href=""></a>
                 </div>
             <?php } ?>
-            <ul class=usergroup>
+            <ul class="usergroup">
                 <!--a href=""-->
-                    <li>Все</li>
+                    <li class="checked">Все</li>
                 <!--/a-->
                 <?php foreach ($data['eventgroup'] as $eventgroup) { ?>
                     <!--a href=""-->

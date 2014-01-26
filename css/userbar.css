@@ -55,7 +55,7 @@
     width: 565px;
 }
 
-.usergroup li {
+.usergroup li, .checked {
     float: left;
     width: 100px;
     height: 35px;
@@ -70,6 +70,13 @@
     line-height: 30px;
     font-weight: bold;
 }
+
+.checked {
+    background-color: #777333 !important;
+
+}
+
+
 
 .usergroup li:hover {
     /*background-color: #33cccc;*/
