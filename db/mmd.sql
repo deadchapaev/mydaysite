@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2014-01-26 21:50:44
+Date: 2014-01-27 20:54:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,9 +37,9 @@ CREATE TABLE `event` (
 INSERT INTO `event` VALUES ('10', '0', 'Выпить водки', 'Сегодня я собираюсь выпить водки', '2014-01-23 22:02:03', '2013-11-17 22:14:55');
 INSERT INTO `event` VALUES ('11', '0', 'Абырвалх', 'Ололоевич?', '2014-01-23 22:02:04', '2013-11-17 23:00:36');
 INSERT INTO `event` VALUES ('12', '0', 'Лытдыбр', 'Сделать записи в дневник', '2014-01-23 22:02:05', '2013-11-17 00:00:00');
-INSERT INTO `event` VALUES ('13', '0', 'Превед Креведко!', 'Йа медвед', '2014-01-23 22:02:08', '2013-11-17 23:00:36');
-INSERT INTO `event` VALUES ('14', '0', 'Привет событие!', '', '2014-01-24 08:24:16', '2013-11-17 23:00:36');
-INSERT INTO `event` VALUES ('15', '0', 'Привет, Йа пятачёг', '', '2014-01-24 08:24:17', '2013-11-17 23:00:36');
+INSERT INTO `event` VALUES ('13', '8', 'Превед Креведко!', 'Йа медвед', '2014-01-27 19:40:29', '2013-11-17 23:00:36');
+INSERT INTO `event` VALUES ('14', '7', 'Привет событие!', '', '2014-01-27 19:40:24', '2013-11-17 23:00:36');
+INSERT INTO `event` VALUES ('15', '6', 'Привет, Йа пятачёг', '', '2014-01-27 19:40:22', '2013-11-17 23:00:36');
 INSERT INTO `event` VALUES ('16', '3', 'Скушать банан', 'Это моё первое событиё', '2014-01-26 17:50:22', '2013-11-17 23:00:36');
 INSERT INTO `event` VALUES ('17', '3', 'Купить хлеба', 'Это моё первое событиё', '2014-01-26 17:50:25', '2013-11-17 23:00:36');
 INSERT INTO `event` VALUES ('18', '5', 'Написать скрипт импорта', 'Текст получай!', '2014-01-26 17:49:22', '2013-11-17 23:00:36');
@@ -65,10 +65,10 @@ CREATE TABLE `eventgroup` (
 -- ----------------------------
 INSERT INTO `eventgroup` VALUES ('3', '0', 'Еда', null);
 INSERT INTO `eventgroup` VALUES ('5', '0', 'Работа', '123');
-INSERT INTO `eventgroup` VALUES ('6', '0', '123', '123');
-INSERT INTO `eventgroup` VALUES ('7', '0', '123', '123');
-INSERT INTO `eventgroup` VALUES ('8', '0', '123', '123');
-INSERT INTO `eventgroup` VALUES ('9', '0', '123', '123');
+INSERT INTO `eventgroup` VALUES ('6', '0', 'Группа 1', '123');
+INSERT INTO `eventgroup` VALUES ('7', '0', 'Группа 2', '123');
+INSERT INTO `eventgroup` VALUES ('8', '0', 'Группа 3', '123');
+INSERT INTO `eventgroup` VALUES ('9', '0', 'Группа 4', '123');
 INSERT INTO `eventgroup` VALUES ('10', '0', 'Привет группо!', 'Я от чапаев32!');
 INSERT INTO `eventgroup` VALUES ('11', '0', 'Привет группо!', 'Я от чапаев32!');
 INSERT INTO `eventgroup` VALUES ('12', '0', 'Привет группо!', 'Я от чапаев32!');
@@ -97,7 +97,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('0', 'chapaev', 'chapaev', null, null, null, '2014-01-26 13:24:46', null, 'chapaev', '7bnij5qfm4vc616jdo8ak2sfl0');
+INSERT INTO `user` VALUES ('0', 'chapaev', 'chapaev', null, null, null, '2014-01-27 19:32:49', null, 'chapaev', 'aud0d09sf4d1v656u7c5fkidk6');
 INSERT INTO `user` VALUES ('67', 'chapaev32', '123', null, null, null, '2014-01-26 00:37:56', null, '123', null);
 INSERT INTO `user` VALUES ('68', 'chapaev321', '123123123', null, null, null, '2014-01-25 22:40:11', null, 'chapaevcs1@mail.ru', null);
 INSERT INTO `user` VALUES ('69', 'chapaev323', '123123123', null, null, null, '2014-01-21 21:44:03', null, 'chapaevcs3@mail.ru', null);

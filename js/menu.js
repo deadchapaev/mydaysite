@@ -2,7 +2,10 @@
  * Функция для работы меню
  */
 $(document).ready(function () {
+    addMenuActions();
 
+});
+function addMenuActions() {
     $('.usergroup > li').click(function ($this) {
 
         //получим идентификтаор группы
@@ -34,5 +37,25 @@ $(document).ready(function () {
             }
         });
     });
+};
 
+$(".rightarrow").live('click', function () {
+    right_carusel();
+    addMenuActions();
 });
+
+$(".leftarrow").live('click', function () {
+    left_carusel();
+    addMenuActions();
+});
+function left_carusel() {
+    $a = $(".usergroup  li").size();
+    $(".usergroup  li").eq($a - 1).clone().prependTo(".usergroup");
+    $(".usergroup  li").eq($a).remove();
+}
+
+function right_carusel() {
+    $(".usergroup  li").eq(0).clone().appendTo(".usergroup");
+    $(".usergroup  li").eq(0).remove();
+
+}
