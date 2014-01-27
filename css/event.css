@@ -1,5 +1,9 @@
+
 .contentcontent {
     background-color: #FFFFFF;
+    -moz-user-select: text;
+    -khtml-user-select: text;
+    user-select: text;
 }
 
 .userspace {
