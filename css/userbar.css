@@ -49,10 +49,11 @@
     padding: 0;
     margin: 0;
     bottom: 0px;
-    left: 455px;
+    left: 455px !important;
     top: -34px;
     height: 35px;
-    width: 565px;
+    width: 505px;
+    overflow: hidden;
 }
 
 .usergroup li, .checked {
