@@ -21,8 +21,22 @@
                         </div>
 
                     </div>
+                    <div class="usrsp-buttons">
+                        <ul class="usrsp-but">
+                            <a href="/">
+                                <li>Просмотр</li>
+                            </a>
+
+                            <a href="/">
+                                <li>Удалить</li>
+                            </a>
+                        </ul>
+                    </div>
                     <div style="clear: both"></div>
                 </div>
+<!--                <div class="user-statistic-container">-->
+<!---->
+<!--                </div>-->
             <?php
             }
         ?>

@@ -1,26 +1,94 @@
-
 .contentcontent {
     background-color: #FFFFFF;
     -moz-user-select: text;
     -khtml-user-select: text;
     user-select: text;
-}
+    overflow: hidden;
 
-.userspace {
-    background-color: #FFFFFF;
-    min-height: 200px;
-}
-
-.userspace-content {
-    min-height: 150px;
-    background-color: #FFFFFF;
 }
 
 .content {
     background-color: #FFFFFF;
 }
 
+.userspace {
+    background-color: #FFFFFF;
+    min-height: 200px;
+    padding-left: 20px;
+    position: relative;
+    float: left;
+
+}
+
+.usrsp-content {
+    width: 600px;
+    min-height: 150px;
+    background-color: #FFFFFF;
+    /*border: dotted;*/
+    position: relative;
+}
+
 .usrsp-title {
     color: #006363;
+    margin-bottom: 1px;
+    width: 600px;
+    min-height: 35px;
+    background-color: #66cccc;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+.usrsp-comment {
+    font-size: 12px;
+    font-weight: 300;
+    min-height: 35px;
+    background-color: rgba(51, 204, 204, 0.24);
+    width: 200px;
+    position: relative;
+    left: -200px;
+}
+
+.usrsp-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.usrsp-buttons{
+    min-height: 50px;
+    position: relative;
+}
+
+.usrsp-but li {
+    float: right;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    list-style: none;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    background-color: #006363;
+    margin-right: 1px;
+    position: relative;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.usrsp-but li:hover {
+    background-color: #ff7400;
+}
+
+.usrsp-but a:link, .usrsp-but a:visited, .usrsp-but a:active {
+    color: #efefef;
+    text-decoration: none;
+}
+
+.user-statistic-container {
+    min-height: 200px;
+
+    background-color: #33cccc;
+    float: left;
+
 }
 
