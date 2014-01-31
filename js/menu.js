@@ -1,43 +1,37 @@
 /**
  * Функция для работы меню
  */
-$(document).ready(function () {
-    addMenuActions();
+$('.usergroup > li').live('click', function ($this) {
 
-});
-function addMenuActions() {
-    $('.usergroup > li').click(function ($this) {
+    //получим идентификтаор группы
+    $groupid = $(this).attr('groupid');
 
-        //получим идентификтаор группы
-        $groupid = $(this).attr('groupid');
+    $(this).removeClass('checked');
+    $(this).addClass('checked');
+    //поубираем чекед с соседних элементов
+    $(this).siblings().each(function (index) {
+        if ($(this).attr('groupid') != $groupid) {
+            $(this).removeClass('checked');
+        }
+    });
 
-        $(this).removeClass('checked');
-        $(this).addClass('checked');
-        //поубираем чекед с соседних элементов
-        $(this).siblings().each(function (index) {
-            if ($(this).attr('groupid') != $groupid) {
-                $(this).removeClass('checked');
-            }
-        });
-
-        //скорем-покажем выбранную группу
-        $(".userspace").each(function (index) {
-            if (null != $groupid) {
-                if ($groupid == $(this).attr('groupid')) {
-                    $(this).slideDown(0, function () {
-                    });
-                } else {
-                    $(this).slideUp(0, function () {
-                    });
-                }
-            } else {
-                //откроем все
+    //скорем-покажем выбранную группу
+    $(".userspace").each(function (index) {
+        if (null != $groupid) {
+            if ($groupid == $(this).attr('groupid')) {
                 $(this).slideDown(0, function () {
                 });
+            } else {
+                $(this).slideUp(0, function () {
+                });
             }
-        });
+        } else {
+            //откроем все
+            $(this).slideDown(0, function () {
+            });
+        }
     });
-};
+});
 
 $(".rightarrow").live('click', function () {
     right_carusel();
