@@ -4,19 +4,25 @@
 
 body {
     background-color: rgba(102, 204, 204, 0.15);
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 
 .container, .content, .userbar, .footer, .contentcontent {
     width: 1020px;
+
 }
 
 .container {
     position: relative;
+    box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 1);
 
 }
 
 .content {
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
 }
 
 

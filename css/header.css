@@ -2,9 +2,7 @@
     width: 1020px;
     height: 366px;
     background-color: #33cccc;
-    /*background-image: url(/img/header.png);*/
     position: relative;
-    /*box-shadow: 0 0 1px 0 rgb(0, 0, 0);*/
 }
 
 .logo {
@@ -38,13 +36,13 @@
 .buttonbar-content {
     list-style: none;
     position: relative;
-    top: 20px;
+    /*top: 20px;*/
     padding-left: 550px;
-    width:470px;
+    width: 470px;
 
 }
 
-.buttonbar-content li{
+.buttonbar-content li {
     margin: -2px;
     height: 25px;
     width: 100px;
@@ -57,10 +55,10 @@
     display: inline-block;
     text-align: center;
     font-size: 13px;
-    background-color:#009999;
+    background-color: #009999;
 }
 
-.buttonbar-content li:hover{
+.buttonbar-content li:hover {
     background-color: #66cccc;
 }
 
@@ -69,17 +67,12 @@
     text-decoration: none;
 }
 
-
 .authorization {
-    height: 20px;
-    width: 200px;
-    float: left;
-    position: absolute;
-    right: 60px;
-    top: 53px;
-    font-family: verdana, arial, sans-serif;
-    display: inline-block;
-    text-align: right;
-    font-size: 11px;
-    color: #006666;
+    top: 30px;
+}
+
+.authorization a {
+
+    text-decoration: none;
+    color: #006363;
 }

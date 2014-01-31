@@ -1,7 +1,7 @@
 .userbar {
     top: 1px;
     background-color: #66cccc;
-    height: 52px;
+    height: 50px;
     position: relative;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .userbuttonadd {
-    top: 1px;
+    /*top: 2px;*/
     padding: 0;
     margin: 0;
     bottom: 0px;
@@ -45,7 +45,7 @@
 
 .usergroup {
     position: relative;
-    top: 2px;
+    top: 0px;
     padding: 0;
     margin: 0;
     bottom: 0px;
@@ -59,7 +59,7 @@
 .usergroup li, .checked {
     float: left;
     width: 100px;
-    height: 35px;
+    height: 34px;
     cursor: pointer;
     list-style: none;
     display: block;
@@ -73,11 +73,8 @@
 }
 
 .checked {
-    background-color: #777333 !important;
-
+    background-color: #ff7400 !important;
 }
-
-
 
 .usergroup li:hover {
     /*background-color: #33cccc;*/
@@ -92,7 +89,6 @@
     color: #efefef;
     text-decoration: none;
 }
-
 
 .leftarrow {
     background-image: url(/img/arrow-left.png);
