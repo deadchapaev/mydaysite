@@ -96,6 +96,10 @@ function Day(vDate) {
         var monthArr = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
         return monthArr[date.getMonth()];
     }
+    this.getDayName = function () {
+        var monthArr = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+        return monthArr[this.getDayNum()];
+    }
 
 };
 
@@ -108,8 +112,10 @@ function operation(day) {
     var rows = curTable.rows;
     var maxI = day.getLastDay().getDateObj().getDate();
 
-    var myh = document.getElementsByClassName('month-year-header')[0];
-    myh.innerHTML = day.getMonthName() + ' ' + day.getDateObj().getFullYear();
+    $('.month-year-header').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
+    $('.calendar-selecteddate > h1').text(day.getDay());
+    $('.calendar-selecteddate > h2').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
+
 
     day = day.getFirstDay();
     for (var i = 1; i <= maxI; i++) {
