@@ -10,7 +10,7 @@
     width: inherit;
 }
 
-.userbuttonadd {
+.mainbutton {
     /*top: 2px;*/
     padding: 0;
     margin: 0;
@@ -18,7 +18,7 @@
     position: relative;
 }
 
-.userbuttonadd li {
+.mainbutton li {
     float: left;
     width: 200px;
     height: 50px;
@@ -34,23 +34,22 @@
     font-weight: bold;
 }
 
-.userbuttonadd li:hover {
+.mainbutton li:hover {
     background-color: #009999;
 }
 
-.userbuttonadd a:link, .userbuttonadd a:visited, .userbuttonadd a:active {
+.mainbutton a:link, .mainbutton a:visited, .mainbutton a:active {
     color: #efefef;
     text-decoration: none;
 }
 
 .usergroup {
     position: relative;
-    top: 0px;
     padding: 0;
     margin: 0;
     bottom: 0px;
     left: 455px !important;
-    top: -34px;
+    top: -33px;
     height: 33px;
     width: 505px;
     overflow: hidden;
@@ -70,6 +69,7 @@
     position: relative;
     line-height: 30px;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 .checked {

@@ -1,32 +1,200 @@
 .footer {
-    background-image: url(/img/footer.jpg);
-    position: absolute;
-    height: 283px;
+    /*background-image: url(/img/footer.jpg);*/
+    /*top: 10px;*/
+    position: relative;
+    min-height: 450px;
     box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 1);
+    margin-top: 30px;
 }
 
-.footer ul {
-    position: absolute;
-    margin-left: 25%;
-    padding-top: 25%;
+.footer-top {
+    position: relative;
+    background-color: #33cccc;
+    height: 200px;
+
 }
 
-.footer li {
+.learn-area {
+    position: relative;
+    top: 30px;
+    height: 200px;
+    /*border: dotted;*/
+}
+
+.learn-label {
+    text-align: center;
+    font-family: Verdana;
+    /*font-weight: bold;*/
+    color: #FFFFFF;
+    font-size: 28px;
+    height: 40px;
+}
+
+.learn-text {
+    text-align: center;
+    font-family: Verdana;
+    color: #006363;
+    font-size: 18px;
+    height: 30px;
+}
+
+.footer-button {
+    padding-top: 10px;
+}
+
+.learn-button {
+    position: relative;
+    height: 50px;
+    margin-left: 350px;
+    width: 200px;
+    font-size: 24px;
+}
+
+.learn-button li {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    list-style: none;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    background-color: #006666;
+    position: relative;
+    line-height: 45px;
+    font-family: Verdana;
+}
+
+.learn-button li:hover {
+    background-color: #009999;
+}
+
+.learn-button a:link, .learn-button a:visited, .learn-button a:active {
+    color: #efefef;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    position: relative;
+    height: 250px;
+    background-color: #006363;
+}
+
+.footer-bottom ul {
+    position: relative;
+    /*top: 85%;*/
+    float: right;
+}
+
+.navigation-footer li {
     margin: -2px;
-    height: 25px;
-    width: 100px;
+    height: 15px;
+    width: 75px;
     position: relative;
     background-repeat: repeat-x;
     cursor: pointer;
     list-style: none;
     padding-top: 8px;
-    font-family: verdana, arial, sans-serif;
+    font-family: verdana;
     display: inline-block;
     text-align: center;
     font-size: 10px;
+    color: #FFFFFF;
 }
 
-.footer li a:link, .footer li a:visited, .footer li a:hover, .footer li a:active {
-    color: #efefef;
+.navigation-footer li a:link, .navigation-footer li a:visited, .navigation-footer li a:active {
+    color: #FFFFFF;
     text-decoration: none;
+}
+
+.navigation-footer li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contacts {
+    position: relative;
+    float: left;
+    margin-top: 30px;
+}
+
+.footer-contacts ul {
+    height: 150px;
+    margin-top: 20px;
+
+}
+
+.footer-contacts li {
+
+    list-style: none;
+    height: 50px;
+    color: #FFFFFF;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: -25px;
+    /*display: table-row;*/
+}
+
+.footer-contacts li img {
+    position: relative;
+    top: 6px;
+    margin-right: 5px;
+}
+
+.footer-cont-label {
+    padding-top: 20px;
+    padding-left: 20px;
+    top: 20px;
+    font-family: verdana;
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.footer-bottom-left {
+    /*border: dotted;*/
+    width: 300px;
+    height: 235px;
+    position: relative;
+    float: left;
+}
+
+.footer-bottom-center {
+    /*border: dotted;*/
+    width: 300px;
+    position: relative;
+    float: left;
+    height: 235px;
+    margin-left: 35px;
+}
+
+.footer-bottom-right {
+    /*border: dotted;*/
+    width: 300px;
+    position: relative;
+    float: left;
+    height: 235px;
+    margin-left: 35px;
+}
+
+.footer-cont-label-center {
+    padding-top: 20px;
+    padding-left: 20px;
+    top: 20px;
+    font-family: verdana;
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.footer-cont-text-center {
+    padding-top: 20px;
+    padding-left: 20px;
+    top: 20px;
+    font-family: verdana;
+    font-style: italic;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.footer-end {
+    background-color: black;
 }

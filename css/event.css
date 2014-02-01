@@ -6,6 +6,7 @@
     overflow: hidden;
     padding-top: 0px;
     margin-top: 0px;
+    height: auto;
 
 }
 
@@ -15,9 +16,9 @@
 
 .userspace {
     background-color: #FFFFFF;
-    min-height: 200px;
+    min-height: 160px;
     padding-left: 20px;
-    margin-top: 5px;
+    margin-top: 20px;
     position: relative;
     float: left;
 
@@ -43,22 +44,26 @@
 }
 
 .usrsp-comment {
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 11px;
+    font-weight: bold;
+    color: #006666;
     min-height: 35px;
-    background-color: rgba(51, 204, 204, 0.24);
+    background-color: rgba(51, 204, 204, 0.38);
     width: 200px;
     position: relative;
     left: -200px;
 }
 
 .usrsp-text {
-    margin-top: 20px;
+    /*text-indent: 1em;*/
+    margin-top: 1px;
+    min-height: 77px;
     font-size: 14px;
+    background-color: rgba(51, 204, 204, 0.14);
 }
 
-.usrsp-buttons{
-    min-height: 50px;
+.usrsp-buttons {
+    min-height: 25px;
     position: relative;
 }
 
