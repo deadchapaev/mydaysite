@@ -62,6 +62,7 @@ function Day(vDate) {
         }
     }
 
+
     //Возвращает объект-Day первого дня месяца
     this.getFirstDay = function () {
         return new Day(new Date(date.getFullYear(), date.getMonth(), 1));
@@ -106,7 +107,8 @@ function Day(vDate) {
 //заполняет грид
 function operation(day) {
 
-    //TODO:достаточно определить день, с которого начинать отсчет, и сделать 6х7 некстов
+    inputDay = day;
+
     //определяя, текущий ли месяц, и сегодняшняя ли дата?
     var curTable = document.getElementsByClassName('calendargrid')[0];
     var rows = curTable.rows;
@@ -118,51 +120,29 @@ function operation(day) {
 
 
     day = day.getFirstDay();
-    for (var i = 1; i <= maxI; i++) {
-
-        var curRow = rows[day.getWeekNum()];
-        var cell = curRow.cells[day.getDayNum()];
-        if (day.isCurDate()) {
-            cell.innerHTML = "<b>" + day.getDay() + "</b>";
-        } else {
-            cell.innerHTML = day.getDay();
-        }
-        cell.className = "";
-
-        day = day.getNextDay();
+    if (day.getDayNum() == 0) {
+        day = day.getPrevDay();
+    }
+    while (day.getDayNum() != 0) {
+        day = day.getPrevDay();
     }
 
-    var x = 0;
-
-    //заполним дни после текущего месяца
-    var startWeekNum = day.getPrevDay().getWeekNum();
-    if (day.getPrevDay().getDayNum() == 6) {
-        startWeekNum = startWeekNum + 1;
-    }
-    for (var i = startWeekNum; i <= 6; i++) {
-
-        for (var j = day.getDayNum(); j <= 6; j++) {
-            var curRow = rows[i];
-            var cell = curRow.cells[day.getDayNum()];
-            cell.innerHTML = day.getDay();
-            cell.className = "nocur";
+    for (var i = 1; i < 7; i++) {
+        for (var j = 0; j < 7; j++) {
+            var cell = rows[i].cells[j];
+            if (day.getDateObj().getMonth() != inputDay.getDateObj().getMonth()) {
+                cell.className = "nocur";
+            } else {
+                cell.className = "";
+            }
+            if (day.isCurDate()) {
+                cell.innerHTML = "<b>" + day.getDay() + "</b>";
+            } else {
+                cell.innerHTML = day.getDay();
+            }
             day = day.getNextDay();
         }
     }
-
-    //заполним дни до текущего месяца
-    //получили первый день текущего месяца
-    day = day.getFirstDay().getPrevMonth().getPrevDay();
-
-    for (var j = day.getDayNum(); j >= 0; j--) {
-        var curRow = rows[1];
-        var cell = curRow.cells[day.getDayNum()];
-        cell.className = "nocur";
-        cell.innerHTML = day.getDay();
-        day = day.getPrevDay();
-
-    }
-
 
 }
 
@@ -197,4 +177,13 @@ $(document).ready(function () {
         localStorage.setItem('currentDay', day.getDateObj());
 
     }
+});
+
+$(".calendargrid td ").live('click', function () {
+    var day = new Date();
+    day = new Date(day.getFullYear(), day.getMonth(), $(this).text());
+    day = new Day(day);
+
+    operation(day);
+
 });
