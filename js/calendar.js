@@ -114,10 +114,7 @@ function operation(day) {
     var rows = curTable.rows;
     var maxI = day.getLastDay().getDateObj().getDate();
 
-    $('.month-year-header').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
-    $('.calendar-selecteddate > h1').text(day.getDay());
-    $('.calendar-selecteddate > h2').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
-
+    infillRightBar(day);
 
     day = day.getFirstDay();
     if (day.getDayNum() == 0) {
@@ -150,40 +147,56 @@ $(document).ready(function () {
     var currentDay = new Date();
     //currentDay = new Date("23 Jan 2013");
     localStorage.setItem('currentDay', currentDay);
+    localStorage.setItem('selectedDay', currentDay);
     //var month = infillMonth(currentDay);
     var day = new Day(currentDay);
 
     operation(day);
-
-
-    var divTag = document.getElementsByClassName('forw-arrow')[0];
-    divTag.onclick = function () {
-
-        var nextMonhtDate = new Date(localStorage.getItem('currentDay'));
-        var day = new Day(nextMonhtDate);
-        day = day.getNextMonth();
-        operation(day);
-        localStorage.setItem('currentDay', day.getDateObj());
-
-    }
-
-    divTag = document.getElementsByClassName('back-arrow')[0];
-    divTag.onclick = function () {
-
-        var prevMonhtDate = new Date(localStorage.getItem('currentDay'));
-        var day = new Day(prevMonhtDate);
-        day = day.getPrevMonth();
-        operation(day);
-        localStorage.setItem('currentDay', day.getDateObj());
-
-    }
 });
 
-$(".calendargrid td ").live('click', function () {
-    var day = new Date();
-    day = new Date(day.getFullYear(), day.getMonth(), $(this).text());
-    day = new Day(day);
 
+$(".forw-arrow").live('click', function () {
+
+    var nextMonhtDate = new Date(localStorage.getItem('selectedDay'));
+    var day = new Day(nextMonhtDate);
+    day = day.getNextMonth();
+    localStorage.setItem('selectedDay', day);
     operation(day);
+})
+;
+
+
+$(".back-arrow").live('click', function () {
+
+    var prevMonhtDate = new Date(localStorage.getItem('selectedDay'));
+    var day = new Day(prevMonhtDate);
+    day = day.getPrevMonth();
+    localStorage.setItem('selectedDay', day);
+    operation(day);
+//localStorage.setItem('currentDay', day.getDateObj());
+})
+;
+
+
+//вешаем обработчик на грид
+$(".calendargrid td ").live('click', function () {
+    if ($(this).attr('class') != 'nocur') {
+        var day = new Date(localStorage.getItem('selectedDay'));
+        //day = null;
+        if (null == day) {
+            day = new Date(localStorage.getItem('currentDay'));
+        }
+        day = new Date(day.getFullYear(), day.getMonth(), $(this).text());
+        localStorage.setItem('selectedDay', day);
+        infillRightBar(new Day(day));
+    }
+
 
 });
+//заполняет правую панель
+function infillRightBar(day) {
+    $('.month-year-header').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
+    $('.calendar-selecteddate > h1').text(day.getDay());
+    $('.calendar-selecteddate > h2').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
+
+}

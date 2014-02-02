@@ -55,6 +55,12 @@
     border-style: solid;
     border-width: 1px;
 }
+.calendarlayout td:hover {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 116, 0);
+
+}
 
 .calendarlayout td {
     background-image: -moz-linear-gradient(90deg, rgb(224, 224, 224) 0%, rgb(249, 249, 249) 100%);
