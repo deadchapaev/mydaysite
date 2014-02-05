@@ -160,10 +160,9 @@ $(".forw-arrow").live('click', function () {
     var nextMonhtDate = new Date(localStorage.getItem('selectedDay'));
     var day = new Day(nextMonhtDate);
     day = day.getNextMonth();
-    localStorage.setItem('selectedDay', day);
+    localStorage.setItem('selectedDay', day.getDateObj());
     operation(day);
-})
-;
+});
 
 
 $(".back-arrow").live('click', function () {
@@ -171,18 +170,16 @@ $(".back-arrow").live('click', function () {
     var prevMonhtDate = new Date(localStorage.getItem('selectedDay'));
     var day = new Day(prevMonhtDate);
     day = day.getPrevMonth();
-    localStorage.setItem('selectedDay', day);
+    localStorage.setItem('selectedDay', day.getDateObj());
     operation(day);
 //localStorage.setItem('currentDay', day.getDateObj());
-})
-;
+});
 
 
 //вешаем обработчик на грид
 $(".calendargrid td ").live('click', function () {
     if ($(this).attr('class') != 'nocur') {
         var day = new Date(localStorage.getItem('selectedDay'));
-        //day = null;
         if (null == day) {
             day = new Date(localStorage.getItem('currentDay'));
         }
