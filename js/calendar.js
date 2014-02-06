@@ -144,9 +144,15 @@ function operation(day) {
 }
 
 $(document).ready(function () {
-    var currentDay = new Date();
+    var currentDay =  localStorage.getItem('selectedDay');
+    if (null == currentDay) {
+        currentDay = new Date();
+    } else {
+        currentDay = new Date(currentDay);
+    }
+
     //currentDay = new Date("23 Jan 2013");
-    localStorage.setItem('currentDay', currentDay);
+    localStorage.setItem('currentDay', new Date());
     localStorage.setItem('selectedDay', currentDay);
     //var month = infillMonth(currentDay);
     var day = new Day(currentDay);
@@ -186,6 +192,11 @@ $(".calendargrid td ").live('click', function () {
         day = new Date(day.getFullYear(), day.getMonth(), $(this).text());
         localStorage.setItem('selectedDay', day);
         infillRightBar(new Day(day));
+        var date_day = ($(this).text().length == 1 ? '0' + $(this).text() : $(this).text());
+        var date_month = (day.getMonth() < 9 ? '0' + (day.getMonth() + 1) : day.getMonth() + 1 );
+        var date_year = day.getFullYear();
+        window.location = "/Event?sdate=" + date_day + '-' + date_month + '-' + date_year;
+
     }
 
 

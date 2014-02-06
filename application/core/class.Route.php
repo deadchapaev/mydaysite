@@ -10,7 +10,12 @@ class Route
         $controller_name = 'Main';
         $action_name = 'Default';
 
-        $routes = explode('/', $_SERVER['REQUEST_URI']);
+        $fullurl = $_SERVER['REQUEST_URI'];
+        if ((strrpos($fullurl, '?'))) {
+            $fullurl = substr($fullurl, 0, strrpos($fullurl, '?'));
+        }
+
+        $routes = explode('/', $fullurl);
 
         // получаем имя контроллера
         if (!empty($routes[1])) {
