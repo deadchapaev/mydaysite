@@ -88,8 +88,8 @@ class GetPostAnalyzer
             $this->var['session'] = session_id();
         }
 
-        if (isset($_POST['sdate'])) {
-            $sdate = $_POST['sdate'];
+        if (isset($_GET['sdate'])) {
+            $sdate = $_GET['sdate'];
             if (null != $sdate && "" != $sdate) {
                 $this->var['sdate'] = $sdate;
             }

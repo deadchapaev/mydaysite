@@ -144,7 +144,7 @@ function operation(day) {
 }
 
 $(document).ready(function () {
-    var currentDay =  localStorage.getItem('selectedDay');
+    var currentDay = localStorage.getItem('selectedDay');
     if (null == currentDay) {
         currentDay = new Date();
     } else {
@@ -195,7 +195,7 @@ $(".calendargrid td ").live('click', function () {
         var date_day = ($(this).text().length == 1 ? '0' + $(this).text() : $(this).text());
         var date_month = (day.getMonth() < 9 ? '0' + (day.getMonth() + 1) : day.getMonth() + 1 );
         var date_year = day.getFullYear();
-        window.location = "/Event?sdate=" + date_day + '-' + date_month + '-' + date_year;
+        window.location = "/Event?sdate=" + date_year + '-' + date_month + '-' + date_day;
 
     }
 
