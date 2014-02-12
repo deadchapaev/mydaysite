@@ -6,7 +6,7 @@
 
         <form action="/Eventgroup/Add.ws" method="post">
             <div class="input-title">
-                <INPUT type="text" name="groupname" size="50">
+                <INPUT type="text" name="groupname" size="70">
             </div>
 
             <div class="submit-buttons">
