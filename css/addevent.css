@@ -1,49 +1,109 @@
 .addivent-block {
     position: relative;
-    height: 380px;
-    box-shadow: 0 0 1px 0 rgb(0, 0, 0);
-
+    min-height: 200px;
     background-color: #FFFFFF;
     -moz-user-select: text;
     -khtml-user-select: text;
     user-select: text;
 }
 
-.input-title {
-    text-align: center;
-    padding-top: 50px;
-}
-
-.input-text {
-    text-align: center;
-
-}
-
-.send {
-    padding-top: 15px;
-
-}
-
-.send li {
-    height: 34px;
-    width: 220px;
+.left-block, .right-block {
+    float: left;
     position: relative;
-    background-image: url(/img/buttons/button.png);
-    background-repeat: no-repeat;
+    /*border: dotted;*/
+    min-height: 150px;
+    width: 500px;
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.right-block {
+    top: 20px;
+    background-color: #33cccc;
+}
+
+.right-text {
+    font-size: 16px;
+    font-style: italic;
+    font-family: Verdana;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.addlabel {
+    color: #006666;
+    text-align: center;
+    height: 30px;
+    width: 400px;
+    background-color: #33cccc;
+    position: relative;
+    top: 20px;
+    font-family: Verdana;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.input-title {
+    margin-left: 20px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.submit-but {
+    height: 25px;
+}
+
+.submit-buttons {
+
+    position: relative;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.submit-but li {
+    font-family: verdana;
+    width: 100px;
+    height: 25px;
     cursor: pointer;
     list-style: none;
-    padding-top: 10px;
     display: inline-block;
     text-align: center;
-    margin-top: 6px;
-    margin-left: 9px;
-    color: #efefef;
-    font-family: arial, verdana, sans-serif;
+    font-size: 13px;
+    background-color: #006363;
+    margin-right: 1px;
+    position: relative;
+    line-height: 25px;
     font-weight: bold;
-    font-size: 16px;
-    left: 470px;
+
 }
 
-.send li:hover {
-    background-image: url(/img/buttons/button-hover.png);
+.submit-but li:hover {
+    background-color: #ff7400;
 }
+
+.submit-but a:link, .submit-but a:visited, .submit-but a:active {
+    color: #efefef;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    line-height: 20px;
+    top: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff7400;
+    cursor: pointer;
+}
+
+
+
+
