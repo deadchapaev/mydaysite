@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/css/calendar.css"/>
     <link rel="stylesheet" type="text/css" href="/css/auth.css"/>
     <link rel="stylesheet" type="text/css" href="/css/addevent.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/addgroup.css"/>
     <link rel="stylesheet" type="text/css" href="/css/regresult.css"/>
     <link rel="stylesheet" type="text/css" href="/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="/css/userbar.css"/>

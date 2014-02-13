@@ -1,28 +1,37 @@
 <div class="addivent-block">
-    <form action="/Eventgroup/Add.ws" method="post">
-        <div class="input-title">
-            <p><b>Введите название новой группы</b><br>
-                <INPUT type="text" name="groupname" size="147">
-                <BR>
-                <BR>
-        </div>
-        <div class="input-text">
-
-            <p><b>Введите описание назначения новой группы</b></p>
-
-            <p>
-                <textarea rows="10" cols="110" name="detail"></textarea>
-            </p>
-
-            <p><input type="submit" value="Принять"></p>
-
+    <div class="left-block">
+        <div class="addlabel">
+            Введите название новой группы событий
         </div>
 
-        <ul class="send">
-            <a href="/Main">
-                <li class="send-button">Назад</li>
-            </a>
-            <!--<li class="send-button">Принять</li>-->
-        </ul>
-    </form>
+        <form action="/Eventgroup/Add.ws" method="post">
+            <div class="input-title">
+                <INPUT type="text" name="groupname" size="70">
+            </div>
+
+            <div class="submit-buttons">
+                <ul class="submit-but">
+                    <!--                    <a href="/">-->
+                    <!--                        <li>Добавить</li>-->
+                    <!--                    </a>-->
+
+                    <li><input type="submit" value="Добавить"></li>
+
+                    <a href="/event">
+                        <li>Назад</li>
+                    </a>
+                </ul>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <div class="right-block">
+        <div class="right-text">
+            Название группы событий следует выбирать исходя из рода планируемых Вами событий. В следующей версии сервиса
+            Вам будет предложен выпадающий список с основными вариантами названий групп событий.
+        </div>
+    </div>
 </div>

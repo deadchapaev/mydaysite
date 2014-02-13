@@ -1,49 +1,88 @@
-.addivent-block {
+.input-title-event, .group-choice-title {
     position: relative;
-    height: 380px;
-    box-shadow: 0 0 1px 0 rgb(0, 0, 0);
-
-    background-color: #FFFFFF;
-    -moz-user-select: text;
-    -khtml-user-select: text;
-    user-select: text;
-}
-
-.input-title {
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 25px;
+    width: 350px;
+    background-color: #33cccc;
+    font-family: verdana;
+    font-size: 18px;
+    color: #FFFFFF;
     text-align: center;
-    padding-top: 50px;
 }
 
-.input-text {
-    text-align: center;
+input[type="text"], textarea, select{
+    border: none;
+}
+
+.input-line-event, .input-text-event, .group-choice {
+    border: inset;
+    border: 1px solid #33cccc;
+}
+
+.input-line-event {
+    margin-left: 20px;
+    width: 836px;
+}
+
+.input-text-event {
+    margin-left: 20px;
+    width: 831px;
 
 }
 
-.send {
-    padding-top: 15px;
-
-}
-
-.send li {
-    height: 34px;
-    width: 220px;
+.input-text-title {
     position: relative;
-    background-image: url(/img/buttons/button.png);
-    background-repeat: no-repeat;
-    cursor: pointer;
-    list-style: none;
-    padding-top: 10px;
-    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 25px;
+    width: 310px;
+    background-color: #33cccc;
+    font-family: verdana;
+    font-size: 18px;
+    color: #FFFFFF;
     text-align: center;
-    margin-top: 6px;
-    margin-left: 9px;
-    color: #efefef;
-    font-family: arial, verdana, sans-serif;
+}
+
+.group-choice-title {
+    width: 280px;
+}
+
+.group-choice, .input-buttons-event {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.group-choice {
+     width: 95px;
+}
+
+.button-addevent {
+    line-height: 20px;
+    top: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 13px;
     font-weight: bold;
-    font-size: 16px;
-    left: 470px;
 }
 
-.send li:hover {
-    background-image: url(/img/buttons/button-hover.png);
+.button-addevent:hover{
+    background-color: #ff7400;
+    cursor: pointer;
 }
+
+.input-buttons-event {
+    margin-top: 30px;
+}
+ .input-buttons-event a:hover, .input-buttons-event a {
+    text-decoration: none;
+ }
+
+
+
+
+

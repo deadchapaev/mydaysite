@@ -4,7 +4,7 @@ if (null !== $data['user']->id) {
     <div class="userbar">
 
         <div class="eventbuttons">
-            <ul class=userbuttonadd>
+            <ul class=mainbutton>
                 <a href="/Event/Add">
                     <li>Новое событие</li>
                 </a>
