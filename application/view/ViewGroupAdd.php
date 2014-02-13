@@ -17,7 +17,7 @@
 
                     <li><input type="submit" value="Добавить"></li>
 
-                    <a href="/">
+                    <a href="/event">
                         <li>Назад</li>
                     </a>
                 </ul>

@@ -33,7 +33,7 @@
         </div>
 
         <div class="input-buttons-event">
-            <input type="submit" value="Принять"> <input class="button-addevent" type="button" value="Назад">
+            <input type="submit" value="Принять"> <a href="/"><input class="button-addevent" type="button" value="Назад"></a>
         </div>
 
     </form>

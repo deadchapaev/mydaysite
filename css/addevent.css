@@ -4,25 +4,29 @@
     margin-left: 20px;
     height: 25px;
     width: 350px;
-    background-color: #006363;
+    background-color: #33cccc;
     font-family: verdana;
     font-size: 18px;
     color: #FFFFFF;
     text-align: center;
 }
 
+input[type="text"], textarea, select{
+    border: none;
+}
+
+.input-line-event, .input-text-event, .group-choice {
+    border: inset;
+    border: 1px solid #33cccc;
+}
+
 .input-line-event {
     margin-left: 20px;
-    border: inset;
-    border-color: #33cccc;
-    width: 835px;
-
+    width: 836px;
 }
 
 .input-text-event {
     margin-left: 20px;
-    border: inset;
-    border-color: #33cccc;
     width: 831px;
 
 }
@@ -33,7 +37,7 @@
     margin-left: 20px;
     height: 25px;
     width: 310px;
-    background-color: #006363;
+    background-color: #33cccc;
     font-family: verdana;
     font-size: 18px;
     color: #FFFFFF;
@@ -50,9 +54,7 @@
 }
 
 .group-choice {
-    border: inset;
-    border-color: #33cccc;
-    width: 97px;
+     width: 95px;
 }
 
 .button-addevent {
@@ -73,6 +75,12 @@
     cursor: pointer;
 }
 
+.input-buttons-event {
+    margin-top: 30px;
+}
+ .input-buttons-event a:hover, .input-buttons-event a {
+    text-decoration: none;
+ }
 
 
 
