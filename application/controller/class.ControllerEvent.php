@@ -23,6 +23,7 @@ class ControllerEvent extends Controller
 
     function actionAdd()
     {
+        $this->getModel()->getUserGroups($this->data);
         $this->getView()->generate('ViewEventAdd.php', 'ViewMain.php', $this->data);
     }
 }

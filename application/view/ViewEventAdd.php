@@ -22,18 +22,24 @@
             Выберите группу событий
         </div>
 
+
         <div class="group-choice">
             <select>
-                <option value="1">Работа</option>
-                <option value="2">Дом</option>
-                <option value="3">Семья</option>
-                <option value="1">Без группы</option>
+                <?php
+                if (null != $data)
+                    foreach ($data['eventgroup'] as $eventgroup) {
+                        ?>
+                        <option value="<?php echo $eventgroup->id; ?>"><?php echo $eventgroup->groupname; ?></option>
+                    <?php
+                    }
+                ?>
             </select>
 
         </div>
 
         <div class="input-buttons-event">
-            <input type="submit" value="Принять"> <a href="/"><input class="button-addevent" type="button" value="Назад"></a>
+            <input type="submit" value="Принять"> <a href="/"><input class="button-addevent" type="button"
+                                                                     value="Назад"></a>
         </div>
 
     </form>
