@@ -2,56 +2,88 @@
 Данный модуль является выводом шапки сайта
 -->
 <?php
-//подключим стиль
-echo '<style>';
-include_once "/css/header.css";
-echo '</style>';
-?>
-<div class="header">
+require_once '/application/core/class.View.php';
+require_once '/application/view/ViewCalendar.php';
 
-    <?php include "ViewCalendar.php"; ?>
+class ViewHeader extends View
+{
+    private $viewCalendar;
 
-    <div class="logo"><b>MakeMy</b>Day</div>
-    <div class="logotxt"><b>Мы</b> поможем Вам <br>
-        максимально <b>эффективно</b><br>
-        <b>спланировать</b> свой день<br>
-    </div>
-    <div class="buttonbar-content">
-        <ul>
-            <a href="/">
-                <li>ГЛАВНАЯ</li>
-            </a>
-            <a href="#">
-                <li>КОНТАКТЫ</li>
-            </a>
-            <a href="#">
-                <li>О НАС</li>
-            </a>
+    function __construct($data = null)
+    {
+        $this->viewCalendar = new ViewCalendar($data);
+        parent::__construct($data);
+    }
+
+    function getBody()
+    {
+        ?>
+        <div class="header">
 
             <?php
-            if (null !== $data['user'] && null !== $data['user']->id) {
-                ?>
-                <a href="/User/Logout.ws">
-                    <li> ВЫЙТИ</li>
-                </a>
-            <?php
-            } else {
-                ?>
-                <a href="/User/">
-                    <li> ВОЙТИ</li>
-                </a>
-            <?php
-
-            }
+            $this->viewCalendar->getBody();
             ?>
 
-        </ul>
-    </div>
+            <div class="logo"><b>MakeMy</b>Day</div>
+            <div class="logotxt"><b>Мы</b> поможем Вам <br>
+                максимально <b>эффективно</b><br>
+                <b>спланировать</b> свой день<br>
+            </div>
+            <div class="buttonbar-content">
+                <ul>
+                    <a href="/">
+                        <li>ГЛАВНАЯ</li>
+                    </a>
+                    <a href="#">
+                        <li>КОНТАКТЫ</li>
+                    </a>
+                    <a href="#">
+                        <li>О НАС</li>
+                    </a>
 
+                    <?php
+                    if (null !== $this->data['user'] && null !== $this->data['user']->id) {
+                        ?>
+                        <a href="/User/Logout.ws">
+                            <li> ВЫЙТИ</li>
+                        </a>
+                    <?php
+                    } else {
+                        ?>
+                        <a href="/User/">
+                            <li> ВОЙТИ</li>
+                        </a>
+                    <?php
+
+                    }
+                    ?>
+
+                </ul>
+            </div>
+
+            <?php
+            if (null !== $this->data['user'] && null !== $this->data['user']->id) {
+                ?>
+                <div class="authorization"> Вы зашли как <a href="/User">
+                        <b><?php echo $this->data['user']->login; ?> </b>
+                    </a></div>
+            <?php } ?>
+
+        </div>
     <?php
-    if (null !== $data['user'] && null !== $data['user']->id) {
-        ?>
-        <div class="authorization"> Вы зашли как <a href="/User"> <b><?php echo $data['user']->login; ?> </b> </a></div>
-    <?php } ?>
+    }
 
-</div>
+    function getCss()
+    {
+        echo '<link rel="stylesheet" type="text/css" href="/css/header.css"/>';
+        echo '<link rel="stylesheet" type="text/css" href="/css/auth.css"/>';
+        $this->viewCalendar->getCss();
+    }
+
+    function getJs()
+    {
+        $this->viewCalendar->getJs();
+    }
+
+
+}

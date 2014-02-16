@@ -4,12 +4,12 @@ class ControllerInfo extends Controller
 {
     function actionDefault()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
+        $this->getView()->generate(new ViewInfo($this->data), 'ViewMain.php', $this->data);
     }
 
     function actionError()
     {
-        $this->getView()->generate('ViewInfo.php', 'ViewMain.php', $this->data);
+        $this->getView()->generate(new ViewInfo($this->data), 'ViewMain.php', $this->data);
     }
 
 }
