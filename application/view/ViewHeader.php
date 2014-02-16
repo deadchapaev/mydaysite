@@ -1,3 +1,12 @@
+<!--
+Данный модуль является выводом шапки сайта
+-->
+<?php
+//подключим стиль
+echo '<style>';
+include_once "/css/header.css";
+echo '</style>';
+?>
 <div class="header">
 
     <?php include "ViewCalendar.php"; ?>

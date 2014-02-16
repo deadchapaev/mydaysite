@@ -1,3 +1,12 @@
+<!--
+Данный модуль реализовывает функционал добавления события
+-->
+<?php
+//подключим стиль
+echo '<style>';
+include_once "/css/addevent.css";
+echo '</style>';
+?>
 <div class="addivent-block">
 
     <form action="/Event/Add.ws" method="post">

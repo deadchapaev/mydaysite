@@ -1,3 +1,16 @@
+<!--
+Данный модуль является выводом календаря в правом верхнем углу сайта
+-->
+<?php
+//подключим стиль
+echo '<style>';
+include_once "/css/calendar.css";
+echo '</style>';
+//подключим функционал
+echo '<script type="text/javascript">';
+include_once '/js/calendar.js';
+echo '</script>';
+?>
 <div class="calendarlayout">
     <div class="calendar-header">
         <div class="back-arrow"></div>
