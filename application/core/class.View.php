@@ -17,7 +17,7 @@ class View
 
     function generate($content_view, $template_view, $data = null)
     {
-        $template = new $template_view();
+        $template = new $template_view($data);
         $template->setContentView($content_view);
         $template->getBody();
 

@@ -11,8 +11,8 @@ class ViewHeader extends View
 
     function __construct($data = null)
     {
-        $this->viewCalendar = new ViewCalendar($data);
         parent::__construct($data);
+        $this->viewCalendar = new ViewCalendar($data);
     }
 
     function getBody()

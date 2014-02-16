@@ -9,7 +9,7 @@ class ViewUserAuth extends View
             <div class="content">
                 <div class="left-content">
                     <div class="left-title"><b> Вход</b></div>
-                    <div class="left-text"> если вы уже зарегистрированы введите пожалуйста свой < br>
+                    <div class="left-text"> если вы уже зарегистрированы введите пожалуйста свой <br>
                         e - mail и пароль для входа
                     </div>
 
@@ -32,7 +32,7 @@ class ViewUserAuth extends View
 
                 <div class="right-content">
                     <div class="right-title"><b> Регистрация</b></div>
-                    <div class="right-text"> заполните пожалуйста регистрационную форму, чтобы < br>
+                    <div class="right-text"> заполните пожалуйста регистрационную форму, чтобы <br>
                         зарегистрироваться на нашем сайте
                     </div>
 

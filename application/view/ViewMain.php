@@ -9,9 +9,10 @@ class ViewMain extends View
 
     function __construct($data = null)
     {
+        parent::__construct($data);
         $this->viewHeader = new ViewHeader($data);
         $this->viewFooter = new ViewFooter($data);
-        parent::__construct($data);
+
 
     }
 

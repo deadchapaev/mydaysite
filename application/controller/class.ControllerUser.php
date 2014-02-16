@@ -16,14 +16,12 @@ class ControllerUser extends Controller
 
     function actionDefault()
     {
-        $this->getView()->generate((null !== $this->getUser()->id ? new ViewUser() : new ViewUserAuth()), new ViewMain($this->data), $this->data);
+        $this->getView()->generate((null !== $this->getUser()->id ? new ViewUser($this->data) : new ViewUserAuth($this->data)), new ViewMain($this->data), $this->data);
     }
 
     function actionReg()
     {
-        //print_r($this->data);
         $this->getModel()->register($this->data);
-
         $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
     }
 
