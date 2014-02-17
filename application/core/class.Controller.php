@@ -14,7 +14,6 @@ class Controller
     private $user;
     private $modelUser;
     private $getPostAnalyzer;
-    private $authorized;
 
     function __construct()
     {
@@ -34,16 +33,11 @@ class Controller
     {
         $this->modelUser->findUser($this->data);
         $this->setUser($this->data['user']);
-        if (null !== $this->getUser()->id) {
-            $this->authorized = true;
-        } else {
-            $this->authorized = false;
-        }
     }
 
     protected function checkAuth()
     {
-        if (!$this->authorized) {
+        if (!$this->isAuthorized()) {
             $this->notAuthorized();
         }
     }
@@ -52,6 +46,14 @@ class Controller
     {
         $this->data['msg'] = 'Не авторизирован!';
         $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
+    }
+
+    public function isAuthorized()
+    {
+        if (null !== $this->getUser()->id) {
+            return true;
+        }
+        return false;
     }
 
     //-----------------------------Экшны-----------------------//
@@ -63,12 +65,6 @@ class Controller
     }
 
     //-----------------------------Сеттеры-геттеры-------------//
-
-    public function isAuthorized()
-    {
-        return $this->authorized;
-    }
-
     public function getInputVarArray()
     {
         return $this->inputVarArray;
