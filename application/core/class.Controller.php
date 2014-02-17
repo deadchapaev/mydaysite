@@ -53,9 +53,9 @@ class Controller
     public function setUser($user)
     {
         $this->user = $user;
+        $this->data['user'] = $user;
         if ($this->getModel() != null) {
             $this->getModel()->setUser($user);
-            $this->data['user'] = $user;
         }
     }
 
