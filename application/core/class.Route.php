@@ -1,6 +1,5 @@
 <?php
-require_once '/application/model/bl/class.GetPostAnalyzer.php';
-require_once '/application/model/class.ModelUser.php';
+require_once '/application/controller/class.ControllerInfo.php';
 class Route
 {
 
@@ -52,28 +51,14 @@ class Route
 
             include_once $controller_path;
 
-            //анализ входящих запросов
-            $getPostAnalyzer = new GetPostAnalyzer();
-            $inputVarArray = $getPostAnalyzer->getVarArray();
-            //$inputVarArray['userid'] = 0; //для временного юзера
-
             // создаем контроллер
             $controller = new $controller_name;
-            $user = Route::authorization($inputVarArray);
-            $controller->setUser($user);
-
             $action = $action_name;
-
-            if (method_exists($controller, 'setInputVarArray')) {
-                $controller->setInputVarArray($inputVarArray);
-
-            }
-
             if (method_exists($controller, $action)) {
                 // вызываем действие контроллера
+                $controller->init();
                 $controller->$action();
             } else {
-
                 Route::ErrorPage404();
             }
 
@@ -82,21 +67,12 @@ class Route
         }
     }
 
-    function authorization($inputVarArray)
-    {
-        $modelUser = new ModelUser();
-        $modelUser->setInputVarArray($inputVarArray);
-        $modelUser->findUser($data);
-        return $data['user'];
-
-    }
-
     function ErrorPage404()
     {
-        $_SESSION['msg'] = 'Страница не найдена!';
-        header('HTTP/1.1 404 Not Found');
-        header("Status: 404 Not Found");
-        header('Location:/Info/Error');
+        $data['msg'] = 'Страница не найдена!';
+        $controllerInfo  = new ControllerInfo();
+        $controllerInfo->setData($data);
+        $controllerInfo->actionError();
     }
 
 }

@@ -1,6 +1,3 @@
-<!--
-Данный модуль является выводом шапки сайта
--->
 <?php
 require_once '/application/core/class.View.php';
 require_once '/application/view/ViewCalendar.php';

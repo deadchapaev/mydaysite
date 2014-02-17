@@ -1,9 +1,7 @@
 <?php
 require_once '/application/core/class.Controller.php';
 require_once '/application/view/ViewGroupAdd.php';
-require_once '/application/view/ViewInfo.php';
 require_once '/application/view/ViewMain.php';
-
 class ControllerEventgroup extends Controller
 {
 

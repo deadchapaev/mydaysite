@@ -1,6 +1,3 @@
-<!--
-Данный модуль реализовывает функционал добавления события
--->
 <?php
 require_once "/application/core/class.View.php";
 class ViewEventAdd extends View

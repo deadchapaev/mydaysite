@@ -1,6 +1,3 @@
-<!--
-Данный модуль является выводом календаря в правом верхнем углу сайта
--->
 <?php
 require_once "/application/core/class.View.php";
 class ViewCalendar extends View

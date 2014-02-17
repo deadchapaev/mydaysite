@@ -1,6 +1,3 @@
-<!--
-Данный модуль реализовывает функционал добавления групп
--->
 <?php
 require_once '/application/core/class.View.php';
 class ViewGroupAdd extends View
