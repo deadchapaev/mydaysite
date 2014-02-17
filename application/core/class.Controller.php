@@ -23,18 +23,14 @@ class Controller
         $this->getPostAnalyzer = new GetPostAnalyzer();
     }
 
-    public function isAuthorized()
-    {
-        return $this->authorized;
-    }
-
+    //-----------------------------Служебные методы------------//
     public function init()
     {
         $this->setInputVarArray($this->getPostAnalyzer->getVarArray());
         $this->authorization();
     }
 
-    function authorization()
+    protected function authorization()
     {
         $this->modelUser->findUser($this->data);
         $this->setUser($this->data['user']);
@@ -45,18 +41,32 @@ class Controller
         }
     }
 
-    public function getUser()
+    protected function checkAuth()
     {
-        return $this->user;
+        if (!$this->authorized) {
+            $this->notAuthorized();
+        }
     }
 
-    public function setUser($user)
+    protected function notAuthorized()
     {
-        $this->user = $user;
-        $this->data['user'] = $user;
-        if ($this->getModel() != null) {
-            $this->getModel()->setUser($user);
-        }
+        $this->data['msg'] = 'Не авторизирован!';
+        $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
+    }
+
+    //-----------------------------Экшны-----------------------//
+    /**
+     * Будет вызываться по умолчанию
+     */
+    function actionDefault()
+    {
+    }
+
+    //-----------------------------Сеттеры-геттеры-------------//
+
+    public function isAuthorized()
+    {
+        return $this->authorized;
     }
 
     public function getInputVarArray()
@@ -78,29 +88,23 @@ class Controller
         return $this->model;
     }
 
-    public function setModel($model)
+    public function getUser()
     {
-        $this->model = $model;
+        return $this->user;
     }
 
-    /**
-     * Будет вызываться по умолчанию
-     */
-    function actionDefault()
+    public function setUser($user)
     {
-    }
-
-    function checkAuth()
-    {
-        if (!$this->authorized) {
-            $this->notAuthorized();
+        $this->user = $user;
+        $this->data['user'] = $user;
+        if ($this->getModel() != null) {
+            $this->getModel()->setUser($user);
         }
     }
 
-    function notAuthorized()
+    public function setModel($model)
     {
-        $this->data['msg'] = 'Не авторизирован!';
-        $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
+        $this->model = $model;
     }
 
     public function getView()
