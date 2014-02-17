@@ -1,0 +1,110 @@
+.addivent-block {
+    position: relative;
+    min-height: 200px;
+    background-color: #FFFFFF;
+    -moz-user-select: text;
+    -khtml-user-select: text;
+    user-select: text;
+}
+
+.left-block, .right-block {
+    float: left;
+    position: relative;
+    /*border: dotted;*/
+    min-height: 150px;
+    width: 500px;
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.right-block {
+    top: 20px;
+    background-color: #33cccc;
+}
+
+.right-text {
+    font-size: 16px;
+    font-style: italic;
+    font-family: Verdana;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.addlabel {
+    color: #FFFFFF;
+    text-align: center;
+    height: 25px;
+    width: 400px;
+    background-color: #33cccc;
+    position: relative;
+    top: 20px;
+    font-family: Verdana;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.input-title {
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    border: 1px solid #33cccc;
+    width: 469px;
+}
+
+.submit-but {
+    height: 25px;
+}
+
+.submit-buttons {
+    position: relative;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.submit-but li {
+    font-family: verdana;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    background-color: #006363;
+    margin-right: 1px;
+    position: relative;
+    line-height: 25px;
+    font-weight: bold;
+
+}
+
+.submit-but li:hover {
+    background-color: #ff7400;
+}
+
+.submit-but a:link, .submit-but a:visited, .submit-but a:active {
+    color: #efefef;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    line-height: 20px;
+    top: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff7400;
+    cursor: pointer;
+}
+
+
+
+
