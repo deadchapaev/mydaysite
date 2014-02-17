@@ -134,7 +134,7 @@ class ModelUser extends Model
         $data['user'] = $user;
         $data['msg'] = 'Вы вышли из системы!';
 
-        session_regenerate_id();
+        //session_regenerate_id();
         session_destroy();
 
 
