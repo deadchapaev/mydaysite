@@ -3,6 +3,7 @@
 -->
 <?php
 require_once "/application/core/class.View.php";
+
 class ViewCalendar extends View
 {
 
@@ -16,7 +17,7 @@ class ViewCalendar extends View
                 <div class="month-year-header">Сентябрь 2013</div>
                 <div class="forw-arrow"></div>
             </div>
-            <div class="calendar-welcome"></div>
+
             <table class="calendargrid">
                 <tr>
                     <th>ВС</th>
@@ -89,13 +90,13 @@ class ViewCalendar extends View
                 <H1>22</H1>
 
                 <H2>сентябрь 2013</H2>
-                <ul>
-                    <li>заварить чай</li>
-                    <li>дописать проект</li>
-                    <li>сходить к врачу</li>
-                    <li>побегать</li>
-                </ul>
-                <H3>больше событий</H3>
+
+                <H3>текущая дата:</H3>
+
+                <div class="curdate">
+                    <a href="/">18.02.2014</a>
+                </div>
+
             </div>
         </div>
     <?php

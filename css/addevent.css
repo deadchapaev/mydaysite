@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-input[type="text"], textarea, select{
+input[type="text"], textarea, select {
     border: none;
 }
 
@@ -48,13 +48,13 @@ input[type="text"], textarea, select{
     width: 280px;
 }
 
+.group-choice, select {
+    width: 278px;
+}
+
 .group-choice, .input-buttons-event {
     margin-left: 20px;
     margin-bottom: 20px;
-}
-
-.group-choice {
-     width: 95px;
 }
 
 .button-addevent {
@@ -70,7 +70,7 @@ input[type="text"], textarea, select{
     font-weight: bold;
 }
 
-.button-addevent:hover{
+.button-addevent:hover {
     background-color: #ff7400;
     cursor: pointer;
 }
@@ -78,9 +78,29 @@ input[type="text"], textarea, select{
 .input-buttons-event {
     margin-top: 30px;
 }
- .input-buttons-event a:hover, .input-buttons-event a {
+
+.input-buttons-event a:hover, .input-buttons-event a {
     text-decoration: none;
- }
+}
+
+input[type="submit"] {
+    line-height: 20px;
+    top: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff7400;
+    cursor: pointer;
+}
+
 
 
 
