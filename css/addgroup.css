@@ -26,7 +26,8 @@
     font-size: 16px;
     font-style: italic;
     font-family: Verdana;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-left: 15px;
     color: #FFFFFF;
 }
 
@@ -48,7 +49,7 @@
     margin-top: 20px;
     position: relative;
     border: 1px solid #33cccc;
-    width: 469px;
+    width: 470px;
 }
 
 .submit-but {
@@ -103,6 +104,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ff7400;
     cursor: pointer;
+}
+
+input[type="text"] {
+    border: none;
 }
 
 
