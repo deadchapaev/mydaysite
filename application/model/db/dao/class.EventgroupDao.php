@@ -79,7 +79,7 @@ class EventgroupDao
                  ORDER BY g.groupname";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('is', $userid, $date);
+        $stmt->bind_param('is', $userid, $date->format('Y-m-d'));
         $stmt->execute();
         $result = $this->getEventgroupArray($stmt->get_result());
         $stmt->close;

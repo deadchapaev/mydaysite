@@ -144,17 +144,26 @@ function operation(day) {
 }
 
 $(document).ready(function () {
-    var currentDay = localStorage.getItem('selectedDay');
-    if (null == currentDay) {
-        currentDay = new Date();
+
+    var currentDay;
+    if ("" !== getParameterByName("sdate")) {
+        currentDay = new Date(getParameterByName("sdate"));
     } else {
-        currentDay = new Date(currentDay);
+
+        if (!isEventPage()) {
+            currentDay = new Date(localStorage.getItem('selectedDay'));
+            if (null === currentDay) {
+                currentDay = new Date();
+            }
+        } else {
+            currentDay = new Date();
+        }
     }
 
-    //currentDay = new Date("23 Jan 2013");
+
     localStorage.setItem('currentDay', new Date());
     localStorage.setItem('selectedDay', currentDay);
-    //var month = infillMonth(currentDay);
+
     var day = new Day(currentDay);
 
     operation(day);
@@ -207,4 +216,18 @@ function infillRightBar(day) {
     $('.calendar-selecteddate > h1').text(day.getDay());
     $('.calendar-selecteddate > h2').text(day.getMonthName() + ' ' + day.getDateObj().getFullYear());
 
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function isEventPage() {
+    if (window.location.href.toLocaleLowerCase().indexOf("event") > -1 || window.location.href.toLocaleLowerCase().indexOf("event") > -1) {
+        return true;
+    }
+    return false;
 }

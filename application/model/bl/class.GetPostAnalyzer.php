@@ -91,12 +91,24 @@ class GetPostAnalyzer
         if (isset($_GET['sdate'])) {
             $sdate = $_GET['sdate'];
             if (null != $sdate && "" != $sdate) {
-                $this->var['sdate'] = $sdate;
+                $this->var['sdate'] = $this->getDateFromString($sdate,'Y-m-d');
+            } else {
+                $this->var['sdate'] = $this->getDateFromString(null, 'Y-m-d');
             }
+        } else {
+            $this->var['sdate'] = $this->getDateFromString(null, 'Y-m-d');
         }
 
 
         return $this->var;
+    }
+
+    private function getDateFromString($date, $mask) {
+        $dateRez = DateTime::createFromFormat($mask, $date);
+        if (!$dateRez) {
+            $dateRez = new DateTime();
+        }
+        return $dateRez;
     }
 
 }

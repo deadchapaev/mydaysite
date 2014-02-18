@@ -15,7 +15,7 @@ class EventDao
                     and date(e.eventdate) = date(?)";
 
         $stmt = Db::getInstance()->getDbConnect()->prepare($sql);
-        $stmt->bind_param('ss', $userid, $date);
+        $stmt->bind_param('ss', $userid, $date->format('Y-m-d'));
         $stmt->execute();
         $result = $this->getEventArray($stmt->get_result());
         $stmt->close;
