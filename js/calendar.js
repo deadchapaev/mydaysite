@@ -145,6 +145,18 @@ function operation(day) {
 
 $(document).ready(function () {
 
+    var curDay = new Date(localStorage.getItem('currentDay'));
+    if (null === curDay) {
+        curDay = new Date();
+    }
+    var date_day = (curDay.getDate() < 10 ? '0' + curDay.getDate() : curDay.getDate());
+    var date_month = (curDay.getMonth() < 9 ? '0' + (curDay.getMonth() + 1) : curDay.getMonth() + 1 );
+    var date_year = curDay.getFullYear();
+
+    var textDate = date_year + '-' + date_month + '-' + date_day;
+    $('.calendar-selecteddate > .curdate > a').text(textDate);
+    $('.calendar-selecteddate > .curdate > a').attr("href", "/Event?sdate=" + textDate);
+
     var currentDay;
     if ("" !== getParameterByName("sdate")) {
         currentDay = new Date(getParameterByName("sdate"));
