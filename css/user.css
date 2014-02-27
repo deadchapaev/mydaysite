@@ -1,0 +1,17 @@
+.messarea {
+    height: 120px;
+    width: 400px;
+    border: 1px solid #33cccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    font-family: verdana;
+    font-size: 18px;
+    color: #006363;
+}
+
+.messtext {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

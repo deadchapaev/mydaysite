@@ -3,7 +3,7 @@ require_once '/application/core/class.Controller.php';
 require_once '/application/view/ViewEvent.php';
 require_once '/application/view/ViewEventAdd.php';
 require_once '/application/view/ViewMain.php';
-
+require_once '/application/view/ViewInfo.php';
 class ControllerEvent extends Controller
 {
 

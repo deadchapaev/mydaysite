@@ -26,12 +26,12 @@
     list-style: none;
     display: block;
     text-align: center;
-    font-size: 13px;
+    font-size: 18px;
+    font-family: verdana;
     background-color: #006666;
     margin-right: 1px;
     position: relative;
     line-height: 45px;
-    font-weight: bold;
 }
 
 .mainbutton li:hover {
