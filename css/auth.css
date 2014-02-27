@@ -1,5 +1,8 @@
-.header-up, .buttonbar-content, .content {
-    width: 1020px;
+.contentauth {
+    position: relative;
+    height: 550px;
+    color: #006666;
+    font-family: verdana;
 }
 
 .authorization {
@@ -8,7 +11,7 @@
     float: left;
     position: absolute;
     right: 60px;
-    /*top: 53px;*/
+    top: 40px;
     font-family: verdana, arial, sans-serif;
     display: inline-block;
     text-align: right;
@@ -16,131 +19,97 @@
     color: #efefef;
 }
 
-.content, .left-content, .right-content, .left-title, .left-text, .auth-email, .auth-password {
-    font-family: "Verdana";
-}
-
-.content {
-    background-color: #e8e8e8;
-    min-height: 500;
+.left-content, .right-content {
+    position: relative;
+    float: left;
+    width: 450px;
 }
 
 .left-content {
-    background-color: #FFF;
-    width: 440px;
-    height: 275px;
-    position: absolute;
-    margin-left: 45px;
-    margin-top: 85px;
-    border-radius: 10px;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px;
+    margin-top: 20px;
+    margin-left: 40px;
+    height: 250px;
+    border: 1px solid #33cccc;
 }
 
 .right-content {
-    background-color: #FFF;
-    width: 440px;
-    height: 525px;
+    margin-left: 40px;
+    border: 1px solid #33cccc;
+    margin-top: 20px;
+    height: 500px;
     position: relative;
-    border-radius: 10px;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px;
-    left: 240px;
 }
 
-.left-title {
+.left-title, .right-title {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    font-family: verdana;
     font-size: 24px;
-    position: relative;
-    width: 440px;
-    height: 50px;
-    text-align: center;
-    padding-top: 10px;
 }
 
-.left-text {
-    font-size: 12px;
-    text-align: center;
-    width: 440px;
-    height: 50px;
+.left-text, .right-text {
     position: relative;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.input, .input-right {
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
 }
 
 .input {
-    position: relative;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    width: 241px;
-    height: 100px;
-}
-
-.right-title {
-    font-size: 24px;
-    text-align: center;
-    height: 45px;
-    width: 440px;
-    padding-top: 10px;
-}
-
-.right-text {
-    font-size: 12px;
-    height: 45px;
-    text-align: center;
-    width: 440px;
-    position: relative;
-    padding-top: 5px;
-
-}
-
-.right-text-bottom {
-    font-size: 12px;
-    text-align: center;
-    width: 440px;
-    position: relative;
-    height: 105px;
-
+    margin-top: 15px;
+    left: -110px;
 }
 
 .input-right {
-    position: relative;
-    text-align: right;
-    font-size: 12px;
-    font-weight: bold;
-    height: 277px;
-    width: 440px;
-    right: 100px;
     margin-top: -15px;
+    right: 120px;
 }
 
-button.submitb, button.submit-r {
-    height: 42px;
-    width: 215px;
-    background-image: url(/img/buttons/button.png);
-    background-repeat: no-repeat;
-    cursor: pointer;
-    text-align: center;
-    color: #efefef;
-    font-family: arial, verdana, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    border: none;
-    position: relative;
-}
-
-button.submitb {
-    top: 10px;
-    left: 110px;
+.submitb {
+    left: 175px;
+    width: 100px;
 }
 
 button.submit-r {
-    top: 120px;
-
+    top: -15px;
+    width: 170px;
+    right: 20px;
 }
 
-button.submitb:hover, button.submit-r:hover {
-    background-image: url(/img/buttons/button-hover.png);
+button.submit-r:hover {
+    background-color: #ff7400;
 }
 
-button.submitb:link, button.submitb:visited, button.submitb:hover, button.submitb:active, button.submit-r:link, button.submit-r:visited, button.submit-r:hover, button.submit-r:active, {
-    color: #efefef;
-    text-decoration: none;
+.submitb, button.submit-r {
+    margin-top: 20px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    font-family: arial, verdana, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
 }
 
+.submitb:hover {
+    background-color: #ff7400;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    border: 1px solid #33cccc;
+}
+
+.right-text-bottom {
+    font-size: 14px;
+    text-align: center;
+}

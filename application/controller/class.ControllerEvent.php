@@ -3,6 +3,7 @@ require_once '/application/core/class.Controller.php';
 require_once '/application/view/ViewEvent.php';
 require_once '/application/view/ViewEventAdd.php';
 require_once '/application/view/ViewMain.php';
+require_once '/application/view/ViewInfo.php';
 class ControllerEvent extends Controller
 {
 
@@ -14,7 +15,7 @@ class ControllerEvent extends Controller
 
     function actionDefault()
     {
-        //ĞµÑĞ»Ğ¸ Ğ´Ğ°Ğ½Ğ½Ğ¾Ğµ Ğ´ĞµĞ¹ÑÑ‚Ğ²Ğ¸Ğµ Ñ‚Ñ€ĞµĞ±ÑƒĞµÑ‚ Ğ°Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ğ·Ğ°Ñ†Ğ¸Ğ¸ - Ñ‡ĞµĞºĞ½ĞµĞ¼ ĞµÑ‘
+        //åñëè äàííîå äåéñòâèå òğåáóåò àâòîğèçàöèè - ÷åêíåì å¸
         $this->checkAuth();
         $this->getModel()->getAllDayEvents($this->data);
         $this->getView()->generate(new ViewEvent($this->data), new ViewMain($this->data), $this->data);

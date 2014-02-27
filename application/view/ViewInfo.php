@@ -1,5 +1,6 @@
 <?php
 require_once "/application/core/class.View.php";
+
 class ViewInfo extends View
 {
     function getBody()

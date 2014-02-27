@@ -1,54 +1,47 @@
 .message {
-    background-color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
     width: 440px;
     height: 275px;
     position: relative;
-    border-radius: 10px;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px;
-    /*top: 150px;*/
+    border: 1px solid #33cccc;
 }
 
 .messagetxt {
-    padding-top: 50px;
-    font-size: 24px;
+    padding-top: 80px;
+    font-family: verdana;
+    font-size: 20px;
     position: relative;
     text-align: center;
     margin-left: 5px;
     margin-right: 5px;
+    color: #006363;
 }
 
 .messagebutton {
     list-style: none;
     position: relative;
-    left: 60px;
-    top: 25px;
-
+    margin-top: 20px;
+    margin-right: 40px;
 }
 
 .messagebutton li {
-    height: 34px;
-    width: 220px;
+    height: 50px;
+    width: 200px;
     position: relative;
-    background-image: url(/img/buttons/button.png);
     background-repeat: no-repeat;
     cursor: pointer;
     list-style: none;
-    padding-top: 10px;
-    display: inline-block;
     text-align: center;
-    font-size: 14px;
-    margin-top: 6px;
-    margin-left: 9px;
-    color: #efefef;
-    font-family: arial, verdana, sans-serif;
-    font-weight: bold;
-    color: #efefef;
-    font-size: 16px;
-
+    background-color: #006363;
+    font-family: verdana;
+    font-size: 18px;
+    line-height: 45px;
 }
 
 .messagebutton li:hover {
-    background-image: url(/img/buttons/button-hover.png);
+    background-color: #ff7400;
 }
 
 .messagebutton a:link, .messagebutton a:visited, .messagebutton a:hover, .messagebutton a:active {
