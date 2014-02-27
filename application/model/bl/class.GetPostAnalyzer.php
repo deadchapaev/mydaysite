@@ -61,7 +61,6 @@ class GetPostAnalyzer
             }
         }
 
-        //print_r($_POST);
         if (isset($_POST['event'])) {
 
             $event = $_POST['event'];
@@ -81,6 +80,13 @@ class GetPostAnalyzer
             $groupname = $_POST['groupname'];
             if (null != $groupname && "" != $groupname) {
                 $this->var['groupname'] = $groupname;
+            }
+        }
+
+        if (isset($_POST['groupid'])) {
+            $groupid = $_POST['groupid'];
+            if (null != $groupid && "" != $groupid) {
+                $this->var['groupid'] = $groupid;
             }
         }
 

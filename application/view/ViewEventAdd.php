@@ -32,7 +32,7 @@ class ViewEventAdd extends View
 
 
                 <div class="group-choice">
-                    <select>
+                    <select name="groupid">
                         <?php
                         if (null != $this->data)
                             foreach ($this->data['eventgroup'] as $eventgroup) {
