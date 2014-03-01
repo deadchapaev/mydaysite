@@ -61,7 +61,6 @@ class ModelEvent extends Model
 
     public function getAllDayEvents(&$data)
     {
-        //$date = '2013-11-17';
         $date = $this->getInputVarArray();
         $date = $date['sdate'];
         $data['event'] = $this->eventDao->getAllDayEvents($this->getUser()->id, $date);

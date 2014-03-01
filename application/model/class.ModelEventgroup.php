@@ -2,7 +2,6 @@
 require_once "/application/model/db/dao/class.EventgroupDao.php";
 class ModelEventgroup extends Model
 {
-
     private $eventgroupDao;
 
     function __construct()
@@ -13,7 +12,6 @@ class ModelEventgroup extends Model
     function addEventgroup(&$data)
     {
         $data['err'] = false;
-
         $eventgroup = $this->getInputEventgroup();
         if ($eventgroup->groupname !== null && $eventgroup->userid !== null) {
             $rez = $this->eventgroupDao->addEventgroup($eventgroup);

@@ -12,13 +12,10 @@ class ViewUser extends View
                 <div class="messtext">
                     <?php $user = $this->data['user']; ?>
                     Доброго времени суток, <?php echo $user->login; ?>!<br>
-                    Вы на нашем сайте с <?php echo $user->regdate; ?> .
+                    Ваш последний визит:  <?php echo $user->regdate; ?>.
                 </div>
-
             </div>
-
         </div>
-
 
     <?php
     }

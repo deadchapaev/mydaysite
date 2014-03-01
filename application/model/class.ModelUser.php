@@ -42,7 +42,6 @@ class ModelUser extends Model
         if (isset($var['passr'])) {
             $user->passr = $var['passr'];
         }
-
         if (isset($var['name'])) {
             $user->name = $var['name'];
         }
@@ -76,28 +75,23 @@ class ModelUser extends Model
         if (null != $user->email && null != $user->passr && null != $user->login) {
             if (!$this->userDao->checkPresentUserName($user)) {
                 $rez = $this->userDao->registerUser($user);
-                if ($rez !== null ) {
+                if ($rez !== null) {
                     $data['msg'] = 'Вы успешно зарегистрировались, ' . $user->login . '!';
                     $this->findUser($data);
                 } else {
                     $data['msg'] = 'Ошибка регистрации!';
                     $data['err'] = true;
                     $data['user'] = null;
-
                 }
             } else {
                 $data['msg'] = 'Ошибка регистрации! Такой пользователь уже есть!';
                 $data['err'] = true;
-                //$data['user'] = null;
-
             }
         } else {
             $data['msg'] = 'Вы ввели не всю информацию, вернитесь назад и заполните все поля!';
             $data['err'] = true;
             $data['user'] = null;
-
         }
-
     }
 
     public function findUser(&$data)
@@ -107,7 +101,6 @@ class ModelUser extends Model
         $dbuser = $this->userDao->getUserBySession($user);
         if (null === $dbuser) {
             $dbuser = $this->userDao->userAuthentication($user);
-
         }
 
         if ($dbuser !== null) {
@@ -117,7 +110,6 @@ class ModelUser extends Model
         }
 
         $data['user'] = $user;
-
     }
 
     public function logout(&$data)
@@ -136,11 +128,6 @@ class ModelUser extends Model
 
         //session_regenerate_id();
         session_destroy();
-
-
-
-
-
     }
 }
 

@@ -11,7 +11,7 @@ class ViewCalendar extends View
         <div class="calendarlayout">
             <div class="calendar-header">
                 <div class="back-arrow"></div>
-                <div class="month-year-header">Сентябрь 2013</div>
+                <div class="month-year-header">JSIsDisabled</div>
                 <div class="forw-arrow"></div>
             </div>
 
@@ -84,14 +84,14 @@ class ViewCalendar extends View
                 <div class="line"></div>
                 <br>
 
-                <H1>22</H1>
+                <H1>JSIsDisabled</H1>
 
-                <H2>сентябрь 2013</H2>
+                <H2>JSIsDisabled</H2>
 
                 <H3>текущая дата:</H3>
 
                 <div class="curdate">
-                    <a href="/">18.02.2014</a>
+                    <a href="/">JSIsDisabled</a>
                 </div>
 
             </div>
