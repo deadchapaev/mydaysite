@@ -70,7 +70,6 @@ class ModelEvent extends Model
     public function getUserGroups(&$data)
     {
         $data['eventgroup'] = $this->eventgroupDao->getEventgroups($this->getUser()->id);
-        return $data['eventgroup'];
     }
 }
 

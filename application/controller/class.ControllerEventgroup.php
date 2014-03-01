@@ -13,11 +13,13 @@ class ControllerEventgroup extends Controller
 
     function actionDefault()
     {
+        $this->checkAuth();
         $this->getView()->generate(new ViewGroupAdd($this->data), new ViewMain($this->data), $this->data);
     }
 
     function actionAddWs()
     {
+        $this->checkAuth();
         $this->getModel()->addEventgroup($this->data);
         $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
     }

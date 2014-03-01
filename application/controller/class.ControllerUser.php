@@ -33,6 +33,7 @@ class ControllerUser extends Controller
 
     function actionLogoutWs()
     {
+        $this->checkAuth();
         $this->getModel()->logout($this->data);
         $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
     }
