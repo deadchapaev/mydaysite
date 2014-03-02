@@ -97,7 +97,7 @@ class UserDao
         $stmt->store_result();
         $result = $stmt->num_rows;
         $stmt->close;
-        return ($result == 1 ? true : true);
+        return ($result == 1 ? true : false);
 
     }
 
