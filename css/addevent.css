@@ -15,7 +15,7 @@ input[type="text"], textarea, select {
     border: none;
 }
 
-.input-line-event, .input-text-event, .group-choice {
+.input-line-event, .input-text-event, .group-choice, .date-choice {
     border: inset;
     border: 1px solid #33cccc;
 }
@@ -52,7 +52,7 @@ input[type="text"], textarea, select {
     width: 278px;
 }
 
-.group-choice, .input-buttons-event {
+.group-choice, .input-buttons-event, .date-choice {
     margin-left: 20px;
     margin-bottom: 20px;
 }
@@ -99,6 +99,22 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ff7400;
     cursor: pointer;
+}
+
+.date-choice {
+    width: 278px;
+}
+
+.date-choice select {
+    width: 40px;
+}
+
+.date-choice .month {
+    width: 87px;
+}
+
+.date-choice .year {
+    width: 55px;
 }
 
 

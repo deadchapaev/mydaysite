@@ -25,7 +25,6 @@ class ViewEventAdd extends View
                 <div class="input-text-event">
                     <textarea rows="10" cols="110" name="detail"></textarea>
                 </div>
-
                 <div class="group-choice-title">
                     Выберите группу событий
                 </div>
@@ -45,6 +44,27 @@ class ViewEventAdd extends View
                     </select>
 
                 </div>
+                <div class="group-choice-title">
+                    Выберите дату события
+                </div>
+                <div class="date-choice">
+                    <select class="year" name="year">
+                        <option value="0">0</option>
+                    </select>
+                    <select class="month" name="month">
+                        <option value="0">0</option>
+                    </select>
+                    <select class="day" name="day">
+                        <option value="0">0</option>
+                    </select>
+                    <select class="hour" name="hour">
+                        <option value="0">0</option>
+                    </select>
+                    <select class="minute" name="minute">
+                        <option value="0">0</option>
+                    </select>
+                </div>
+
 
                 <div class="input-buttons-event">
                     <input type="submit" value="Принять"> <a href="/"><input class="button-addevent" type="button"
@@ -62,6 +82,11 @@ class ViewEventAdd extends View
     {
         //подключим стиль
         echo '<link rel="stylesheet" type="text/css" href="/css/addevent.css"/>';
+    }
+
+    function getJs()
+    {
+        echo '<script type="text/javascript" src="/js/dateinput.js" charset="utf-8"></script>';
     }
 
 
