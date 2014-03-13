@@ -10,7 +10,6 @@
 
 .messagetxt {
     padding-top: 80px;
-    font-family: verdana;
     font-size: 20px;
     position: relative;
     text-align: center;
@@ -35,7 +34,6 @@
     list-style: none;
     text-align: center;
     background-color: #006363;
-    font-family: verdana;
     font-size: 18px;
     line-height: 45px;
 }

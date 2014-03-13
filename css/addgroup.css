@@ -25,7 +25,6 @@
 .right-text {
     font-size: 16px;
     font-style: italic;
-    font-family: Verdana;
     margin-top: 25px;
     margin-left: 15px;
     color: #FFFFFF;
@@ -39,7 +38,6 @@
     background-color: #33cccc;
     position: relative;
     top: 20px;
-    font-family: Verdana;
     font-size: 18px;
     margin-left: 20px;
 }
@@ -63,7 +61,6 @@
 }
 
 .submit-but li {
-    font-family: verdana;
     width: 100px;
     height: 25px;
     cursor: pointer;
@@ -96,7 +93,6 @@ input[type="submit"] {
     background-color: #006666;
     border: none;
     color: #FFFFFF;
-    font-family: verdana;
     font-size: 13px;
     font-weight: bold;
 }

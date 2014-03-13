@@ -163,10 +163,18 @@ function operation(day) {
     for (var row = 1; row < 7; row++) {
         for (var col = 0; col < 7; col++) {
             var curDayFlag = (day.getDateObj().getMonth() != inputDay.getDateObj().getMonth());
+            var selDayFlag = day.getDay() == inputDay.getDay() & day.getDateObj().getMonth() == inputDay.getDateObj().getMonth();
             var item = $('.calendargrid tr').eq(row).find('td').eq(col);
             item.attr('class', curDayFlag ? 'nocur' : '');
             item.text("").append(day.isCurDate() ? '<b>' + day.getDay() + '</b>' : day.getDay());
+
+            if (selDayFlag) {
+                item.attr('class', 'dayhover');
+            }
+
             day = day.getNextDay();
+
+
         }
     }
 }
@@ -216,6 +224,13 @@ $(document).ready(function () {
     //заполним грид
     operation(new Day(selectedDay));
 
+    /*
+     * Окрашиваем выбранный день
+     */
+    $(".calendargrid tbody tr td").click(function () {
+        $(this).toggleClass('dayhover');
+    });
+
 });
 
 //на правую стрелочку календаря
@@ -236,6 +251,8 @@ $(".calendargrid td ").live('click', function () {
         saveSelectedDate(day);
         window.location = "/Event?sdate=" + getCurrentDateInStr(day);
     }
+
+
 });
 
 //-----------------------Набор вспомогательных функций-------------------------------
@@ -310,3 +327,4 @@ function extractSelectedDate() {
 function saveSelectedDate(date) {
     localStorage.setItem('selectedDay', date);
 }
+

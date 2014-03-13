@@ -4,10 +4,10 @@
     -khtml-user-select: text;
     user-select: text;
     overflow: hidden;
-    padding-top: 0px;
-    margin-top: 0px;
+    padding-top: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
     height: auto;
-
 }
 
 .content {
@@ -16,31 +16,34 @@
 
 .userspace {
     background-color: #FFFFFF;
-    min-height: 160px;
     padding-left: 20px;
-    margin-top: 20px;
+    /*padding-top: 25px;*/
     position: relative;
     float: left;
-
 }
 
-.usrsp-content {
+.usrsp-head {
+    background-color: #66cccc;
     width: 600px;
-    min-height: 150px;
-    background-color: #FFFFFF;
-    /*border: dotted;*/
-    position: relative;
+    min-height: 35px;
 }
 
-.usrsp-title {
+.usrsp-head:hover {
+    cursor: pointer;
+    background-color: #006363;
+}
+
+.userspace h3 {
+    height: 35px;
     color: #006363;
     margin-bottom: 1px;
     width: 600px;
-    min-height: 35px;
-    background-color: #66cccc;
-    font-size: 20px;
-    font-weight: bold;
     position: relative;
+    line-height: 30px;
+}
+
+.userspace h3:hover {
+    color: #FFFFFF;
 }
 
 .usrsp-comment {
@@ -54,17 +57,28 @@
     left: -200px;
 }
 
+.usrsp-comment p {
+    position: relative;
+    left: 15px;
+    top: 10px;
+}
+
 .usrsp-text {
-    /*text-indent: 1em;*/
     margin-top: 1px;
     min-height: 77px;
     font-size: 14px;
     background-color: rgba(51, 204, 204, 0.14);
 }
 
+.usrsp-text p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .usrsp-buttons {
     min-height: 25px;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .usrsp-but li {
@@ -92,11 +106,5 @@
     text-decoration: none;
 }
 
-.user-statistic-container {
-    min-height: 200px;
 
-    background-color: #33cccc;
-    float: left;
-
-}
 

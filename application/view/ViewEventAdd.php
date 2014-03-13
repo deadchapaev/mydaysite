@@ -1,5 +1,6 @@
 <?php
 require_once "/application/core/class.View.php";
+
 class ViewEventAdd extends View
 {
     function getBody()
@@ -15,7 +16,7 @@ class ViewEventAdd extends View
                 </div>
 
                 <div class="input-line-event">
-                    <INPUT type="text" name="event" size="127">
+                    <INPUT type="text" name="event" size="91">
                 </div>
 
                 <div class="input-text-title">
@@ -23,7 +24,7 @@ class ViewEventAdd extends View
                 </div>
 
                 <div class="input-text-event">
-                    <textarea rows="10" cols="110" name="detail"></textarea>
+                    <textarea rows="10" cols="89" name="detail"></textarea>
                 </div>
                 <div class="group-choice-title">
                     Выберите группу событий
@@ -44,19 +45,28 @@ class ViewEventAdd extends View
                     </select>
 
                 </div>
+
                 <div class="group-choice-title">
                     Выберите дату события
                 </div>
+
                 <div class="date-choice">
-                    <select class="year" name="year">
+                    <select class="day" name="day">
                         <option value="0">0</option>
                     </select>
                     <select class="month" name="month">
                         <option value="0">0</option>
                     </select>
-                    <select class="day" name="day">
+                    <select class="year" name="year">
                         <option value="0">0</option>
                     </select>
+                </div>
+
+                <div class="group-choice-time">
+                    Выберите время события
+                </div>
+
+                <div class="time-choice">
                     <select class="hour" name="hour">
                         <option value="0">0</option>
                     </select>
@@ -87,6 +97,7 @@ class ViewEventAdd extends View
     function getJs()
     {
         echo '<script type="text/javascript" src="/js/dateinput.js" charset="utf-8"></script>';
+        echo '<script type="text/javascript" src="/js/jquery.selectbox-0.2.js" charset="utf-8"></script>';
     }
 
 

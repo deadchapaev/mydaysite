@@ -12,7 +12,6 @@
     position: absolute;
     left: 110px;
     top: 50px;
-    font-family: verdana, arial, sans-serif;
     display: inline-block;
     text-align: center;
     font-size: 60px;
@@ -26,7 +25,6 @@
     position: absolute;
     left: 150px;
     top: 180px;
-    font-family: verdana, arial, sans-serif;
     display: inline-block;
     text-align: right;
     font-size: 24px;
@@ -51,7 +49,6 @@
     cursor: pointer;
     list-style: none;
     padding-top: 8px;
-    font-family: verdana, arial, sans-serif;
     display: inline-block;
     text-align: center;
     font-size: 13px;

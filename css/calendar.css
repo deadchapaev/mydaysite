@@ -20,7 +20,7 @@
     background-color: #009999;
     border: 1px #bbb solid;
     color: rgb(255, 255, 255);
-    font-family: "Arial";
+
     font-size: 16px;
     font-weight: bold;
     height: 38px;
@@ -33,6 +33,7 @@
 }
 
 .calendarlayout {
+    font-family: arial, verdana, sans-serif;
     border: solid 3px rgba(255, 255, 255, 0.3);
     border-radius: 3px;
     height: 239px;
@@ -51,6 +52,7 @@
     border-style: solid;
     border-width: 1px;
 }
+
 .calendarlayout td:hover {
     font-size: 14px;
     font-weight: bold;
@@ -63,7 +65,6 @@
     background-image: -webkit-linear-gradient(90deg, rgb(224, 224, 224) 0%, rgb(249, 249, 249) 100%);
     border: 1px solid #bbbbbb;
     color: rgb(61, 61, 61);
-    font-family: "Arial";
     font-size: 12px;
     height: 28px;
     padding: 0;
@@ -75,7 +76,6 @@
 .calendarlayout th {
     background-color: white;
     color: rgb(73, 73, 73);
-    font-family: "Arial";
     font-size: 10px;
     height: 18px;
     text-align: center;
@@ -109,7 +109,6 @@
 .calendar-selecteddate H1 {
     background: url(/img/mypart.png);
     color: #006666;
-    font-family: "Arial";
     font-size: 30px;
     font-weight: bold;
     position: relative;
@@ -120,7 +119,6 @@
 .calendar-selecteddate H2 {
     background: url(/img/mypart.png);
     color: #009999;
-    font-family: "Arial";
     font-size: 14px;
     font-weight: bold;
     position: relative;
@@ -130,7 +128,6 @@
 
 .calendar-selecteddate H3 {
     color: #33cccc;
-    font-family: "Arial";
     font-size: 10px;
     line-height: 2;
     padding-top: 30px;
@@ -150,7 +147,6 @@
     background: transparent;
     color: #009999;
     display: list-item;
-    font-family: "Arial";
     font-size: 12px;
     font-weight: bold;
     height: 12px;
@@ -168,7 +164,6 @@
     border-right-width: 1px;
     border-style: solid;
     border-top-width: 1px;
-    font-family: "Arial";
     font-size: 12px;
     font-weight: bold;
     height: 38px;
@@ -219,4 +214,9 @@
 .curdate a:hover {
     text-decoration: none;
     color: #ff7400;
+}
+
+.calendarlayout .dayhover {
+    background-image: -moz-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
 }

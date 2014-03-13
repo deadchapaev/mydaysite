@@ -5,7 +5,6 @@
     height: 25px;
     width: 350px;
     background-color: #33cccc;
-    font-family: verdana;
     font-size: 18px;
     color: #FFFFFF;
     text-align: center;
@@ -13,9 +12,12 @@
 
 input[type="text"], textarea, select {
     border: none;
+    resize: none;
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
 }
 
-.input-line-event, .input-text-event, .group-choice, .date-choice {
+.input-line-event, .input-text-event, .group-choice, .date-choice, .group-choice-time, .time-choice {
     border: inset;
     border: 1px solid #33cccc;
 }
@@ -27,8 +29,7 @@ input[type="text"], textarea, select {
 
 .input-text-event {
     margin-left: 20px;
-    width: 831px;
-
+    width: 837px;
 }
 
 .input-text-title {
@@ -38,7 +39,6 @@ input[type="text"], textarea, select {
     height: 25px;
     width: 310px;
     background-color: #33cccc;
-    font-family: verdana;
     font-size: 18px;
     color: #FFFFFF;
     text-align: center;
@@ -65,7 +65,6 @@ input[type="text"], textarea, select {
     background-color: #006666;
     border: none;
     color: #FFFFFF;
-    font-family: verdana;
     font-size: 13px;
     font-weight: bold;
 }
@@ -76,7 +75,7 @@ input[type="text"], textarea, select {
 }
 
 .input-buttons-event {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .input-buttons-event a:hover, .input-buttons-event a {
@@ -91,7 +90,6 @@ input[type="submit"] {
     background-color: #006666;
     border: none;
     color: #FFFFFF;
-    font-family: verdana;
     font-size: 13px;
     font-weight: bold;
 }
@@ -102,11 +100,12 @@ input[type="submit"]:hover {
 }
 
 .date-choice {
-    width: 278px;
+    width: 214px;
+    text-align: left;
 }
 
-.date-choice select {
-    width: 40px;
+.date-choice .day {
+    width: 50px;
 }
 
 .date-choice .month {
@@ -114,7 +113,33 @@ input[type="submit"]:hover {
 }
 
 .date-choice .year {
-    width: 55px;
+    width: 65px;
+}
+
+.group-choice-time {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 25px;
+    width: 310px;
+    background-color: #33cccc;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.time-choice {
+    width: 106px;
+    position: absolute;
+    margin-left: 20px;
+}
+
+.time-choice .hour{
+    width: 50px;
+}
+
+.time-choice .minute{
+    width: 50px;
 }
 
 

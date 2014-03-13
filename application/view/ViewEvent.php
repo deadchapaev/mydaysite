@@ -1,6 +1,7 @@
 <?php
 require_once "/application/core/class.View.php";
 require_once "/application/view/ViewUserbar.php";
+
 class ViewEvent extends View
 {
     private $userBar;
@@ -21,40 +22,32 @@ class ViewEvent extends View
             <div style="clear: both"></div>
 
             <div class="contentcontent">
+
                 <?php
                 if (null != $this->data)
                     foreach ($this->data['event'] as $event) {
                         ?>
                         <div class="userspace" groupid="<?php echo $event->groupid; ?>">
-                            <div class="usrsp-content">
-                                <div class="usrsp-textblock">
-                                    <div class="usrsp-title"><b><?php echo $event->event; ?></b></div>
-                                    <div class="usrsp-comment"><b>ежедневно</b>
-
-                                        <p><b>10:00, 15:00, 21:00</b></p>
-                                    </div>
-                                    <div class="usrsp-text">
-                                        <?php echo $event->detail; ?>
-                                    </div>
+                            <div class="usrsp-head"><h3><b>&nbsp;&nbsp;&nbsp;<?php echo $event->event; ?></b></h3></div>
+                            <div class="usrsp-textblock">
+                                <div class="usrsp-comment"><p>place for time</p></div>
+                                <div class="usrsp-text"><p><?php echo $event->detail; ?></p></div>
+                                <div class="usrsp-buttons">
+                                    <ul class="usrsp-but">
+                                        <a href="/">
+                                            <li>Просмотр</li>
+                                        </a>
+                                        <a href="/">
+                                            <li>Удалить</li>
+                                        </a>
+                                    </ul>
                                 </div>
-
                             </div>
-                            <div class="usrsp-buttons">
-                                <ul class="usrsp-but">
-                                    <a href="/">
-                                        <li>Просмотр</li>
-                                    </a>
-
-                                    <a href="/">
-                                        <li>Удалить</li>
-                                    </a>
-                                </ul>
-                            </div>
-                            <div style="clear: both"></div>
                         </div>
                     <?php
                     }
                 ?>
+
                 <div style="clear: both"></div>
             </div>
             <div style="clear: both"></div>
@@ -70,6 +63,7 @@ class ViewEvent extends View
 
     function getJs()
     {
+        echo '<script type="text/javascript" src="/js/event.js" charset="utf-8"></script>';
         $this->userBar->getJs();
     }
 
