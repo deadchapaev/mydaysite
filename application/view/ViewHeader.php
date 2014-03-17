@@ -80,6 +80,7 @@ class ViewHeader extends View
     function getJs()
     {
         $this->viewCalendar->getJs();
+       
     }
 
 

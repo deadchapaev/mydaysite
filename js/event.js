@@ -1,16 +1,8 @@
 $(document).ready(function () {
-
-//    $('.spoiler').hide();
-//    $('<span class="revealer"></span>')
-//        .insertBefore('.spoiler');
-//    $('.revealer').click(function () {
-//        $('.spoiler').toggle('slow');
-//    });
-
+//гармошка ивентов
     $('.usrsp-textblock').hide();
-
     $('.usrsp-head').click(function () {
-        $(this).siblings('.usrsp-textblock').toggle('slow');
+        $(this).siblings('.usrsp-textblock').toggle('fast');
     });
 
 

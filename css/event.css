@@ -40,6 +40,7 @@
     width: 600px;
     position: relative;
     line-height: 30px;
+    font-size: 12px;
 }
 
 .userspace h3:hover {

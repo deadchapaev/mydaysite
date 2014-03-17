@@ -51,15 +51,16 @@ class ViewEventAdd extends View
                 </div>
 
                 <div class="date-choice">
-                    <select class="day" name="day">
-                        <option value="0">0</option>
-                    </select>
-                    <select class="month" name="month">
-                        <option value="0">0</option>
-                    </select>
-                    <select class="year" name="year">
-                        <option value="0">0</option>
-                    </select>
+                    <!--                    <select class="day" name="day">-->
+                    <!--                        <option value="0">0</option>-->
+                    <!--                    </select>-->
+                    <!--                    <select class="month" name="month">-->
+                    <!--                        <option value="0">0</option>-->
+                    <!--                    </select>-->
+                    <!--                    <select class="year" name="year">-->
+                    <!--                        <option value="0">0</option>-->
+                    <!--                    </select>-->
+                    <input type="text" name="date" id="date"/>
                 </div>
 
                 <div class="group-choice-time">
@@ -96,8 +97,9 @@ class ViewEventAdd extends View
 
     function getJs()
     {
-        echo '<script type="text/javascript" src="/js/dateinput.js" charset="utf-8"></script>';
-        echo '<script type="text/javascript" src="/js/jquery.selectbox-0.2.js" charset="utf-8"></script>';
+        echo '<script type="text/javascript" src="/js/addevent.js" charset="utf-8"></script>';
+//        echo '<script type="text/javascript" src="/js/dateinput.js" charset="utf-8"></script>';
+//        echo '<script type="text/javascript" src="/js/jquery.selectbox-0.2.js" charset="utf-8"></script>';
     }
 
 

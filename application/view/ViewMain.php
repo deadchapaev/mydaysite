@@ -50,6 +50,8 @@ class ViewMain extends View
     function getCss()
     {
         echo '<link rel="stylesheet" type="text/css" href="/css/style.css"/>';
+        echo '<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.4.custom.css"/>';
+
         $this->viewHeader->getCss();
         $this->viewFooter->getCss();
         if (null != $this->content_view) {
@@ -59,7 +61,10 @@ class ViewMain extends View
 
     function getJs()
     {
-        echo '<script type="text/javascript" src="/js/jquery-1.3.min.js" charset="utf-8"></script>';
+//        echo '<script type="text/javascript" src="/js/jquery-1.3.min.js" charset="utf-8"></script>';
+        echo '<script type="text/javascript" src="js/jquery-1.10.2.js" charset="utf-8"></script>';
+        echo '<script type="text/javascript" src="/js/jquery-ui-1.10.4.custom.js" charset="utf-8"></script>';
+
         $this->viewHeader->getJs();
         $this->viewFooter->getJs();
         if (null != $this->content_view) {
