@@ -11,12 +11,12 @@ $(document).ready(function () {
 });
 
 //на смену месяца
-$('.month').live('change', function () {
+$(document).on('change', '.month', function () {
     infillDayCb();
 
 });
 //на смену года
-$('.year').live('change', function () {
+$(document).on('change', '.year', function () {
     infillDayCb();
 
 });

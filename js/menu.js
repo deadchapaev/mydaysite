@@ -1,7 +1,7 @@
 /**
  * Функция для работы меню
  */
-$('.usergroup > li').live('click', function ($this) {
+$(document).on('click', '.usergroup > li', function ($this) {
 
     //получим идентификтаор группы
     $groupid = $(this).attr('groupid');
@@ -33,15 +33,16 @@ $('.usergroup > li').live('click', function ($this) {
     });
 });
 
-$(".rightarrow").live('click', function () {
+$(document).on('click', '.rightarrow', function () {
     right_carusel();
     addMenuActions();
 });
 
-$(".leftarrow").live('click', function () {
+$(document).on('click', '.leftarrow', function () {
     left_carusel();
     addMenuActions();
 });
+
 function left_carusel() {
     $a = $(".usergroup  li").size();
     $(".usergroup  li").eq($a - 1).clone().prependTo(".usergroup");
