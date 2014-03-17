@@ -230,30 +230,29 @@ $(document).ready(function () {
     $(".calendargrid tbody tr td").click(function () {
         $(this).toggleClass('dayhover');
     });
-
 });
+
 
 //на правую стрелочку календаря
-$(".forw-arrow").live('click', function () {
-    infillNeighbourMonth('next');
-});
-
-//на левую стрелочку календаря
-$(".back-arrow").live('click', function () {
+$(document).on('click', '.back-arrow', function () {
     infillNeighbourMonth('prev');
 });
 
+//на левую стрелочку календаря
+$(document).on('click', '.forw-arrow', function () {
+    infillNeighbourMonth('next');
+});
+
 //на грид
-$(".calendargrid td ").live('click', function () {
+$(document).on('click', '.calendargrid td', function () {
     if ($(this).attr('class') != 'nocur') {
         var day = extractSelectedDate();
         day = new Date(day.getFullYear(), day.getMonth(), $(this).text());
         saveSelectedDate(day);
         window.location = "/Event?sdate=" + getCurrentDateInStr(day);
     }
-
-
 });
+
 
 //-----------------------Набор вспомогательных функций-------------------------------
 /**
