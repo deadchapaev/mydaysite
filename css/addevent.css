@@ -1,4 +1,4 @@
-.input-title-event, .group-choice-title {
+.input-title-event, .group-choice-title, .date-choice-title {
     position: relative;
     margin-top: 20px;
     margin-left: 20px;
@@ -10,14 +10,19 @@
     text-align: center;
 }
 
+.date-choice-title {
+    width: 216px;
+}
+
 input[type="text"], textarea, select {
     border: none;
     resize: none;
     font-family: verdana, arial, sans-serif;
     font-size: 14px;
+
 }
 
-.input-line-event, .input-text-event, .group-choice, .date-choice, .group-choice-time, .time-choice {
+.input-line-event, .date-choice{
     border: inset;
     border: 1px solid #33cccc;
 }
@@ -29,7 +34,8 @@ input[type="text"], textarea, select {
 
 .input-text-event {
     margin-left: 20px;
-    width: 837px;
+    width: 838px;
+ 
 }
 
 .input-text-title {
@@ -46,13 +52,10 @@ input[type="text"], textarea, select {
 
 .group-choice-title {
     width: 280px;
+    position: relative;
 }
 
-.group-choice, select {
-    width: 278px;
-}
-
-.group-choice, .input-buttons-event, .date-choice {
+.input-buttons-event, .date-choice {
     margin-left: 20px;
     margin-bottom: 20px;
 }
@@ -102,18 +105,16 @@ input[type="submit"]:hover {
 .date-choice {
     width: 214px;
     text-align: left;
+    position: relative;
 }
 
-.date-choice .day {
-    width: 50px;
+.dateblock {
+    position: relative;
+    margin-top: 20px;
 }
 
-.date-choice .month {
-    width: 87px;
-}
-
-.date-choice .year {
-    width: 65px;
+.groupblock {
+    position: relative;
 }
 
 .group-choice-time {
@@ -129,18 +130,92 @@ input[type="submit"]:hover {
 }
 
 .time-choice {
-    width: 106px;
+    width: 110px;
     position: absolute;
     margin-left: 20px;
 }
 
-.time-choice .hour{
+.time-choice .hour {
     width: 50px;
 }
 
-.time-choice .minute{
+.time-choice .minute {
     width: 50px;
+    float: left;
 }
+
+/*TEST*/
+.group-choice {
+    position: relative;
+    margin-left: 20px;
+}
+
+.selectBox {
+    border: 1px solid #33cccc;
+    display: inline-block;
+    position: relative;
+    width: 278px;
+    height: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.selectBox:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.selectBox-label {
+    padding: 0 0px 0 5px;
+    font-size: 14px;
+}
+
+.selectBox-arrow {
+    position: absolute;
+    left: auto;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(/css/images/strelka.png);
+}
+
+/*.selectBox-arrow:hover{*/
+/*background: url(/css/images/strelka-hover.png);*/
+/*}*/
+
+.selectBox-dropdown-menu {
+    position: absolute;
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #33cccc;
+}
+
+.selectBox-dropdown-menu li {
+    display: block;
+}
+
+.selectBox-dropdown-menu li a {
+    display: block;
+    padding: 0 2px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectBox-dropdown-menu li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #e17009;
+}
+
 
 
 

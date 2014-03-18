@@ -24,8 +24,9 @@ class ViewEventAdd extends View
                 </div>
 
                 <div class="input-text-event">
-                    <textarea rows="10" cols="89" name="detail"></textarea>
+                    <textarea rows="10" cols="89" name="detail" id="area1"></textarea>
                 </div>
+
                 <div class="group-choice-title">
                     Выберите группу событий
                 </div>
@@ -46,8 +47,8 @@ class ViewEventAdd extends View
 
                 </div>
 
-                <div class="group-choice-title">
-                    Выберите дату события
+                <div class="date-choice-title">
+                    Выберите дату
                 </div>
 
                 <div class="date-choice">
@@ -98,6 +99,8 @@ class ViewEventAdd extends View
     function getJs()
     {
         echo '<script type="text/javascript" src="/js/addevent.js" charset="utf-8"></script>';
+        echo '<script type="text/javascript" src="/js/jquery.selectBox.js" charset="utf-8"></script>';
+        echo '<script type="text/javascript" src="/js/nicEdit.js" charset="utf-8"></script>';
 //        echo '<script type="text/javascript" src="/js/dateinput.js" charset="utf-8"></script>';
 //        echo '<script type="text/javascript" src="/js/jquery.selectbox-0.2.js" charset="utf-8"></script>';
     }
