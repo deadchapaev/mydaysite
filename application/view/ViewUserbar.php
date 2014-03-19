@@ -17,7 +17,7 @@ class ViewUserbar extends View
                     <li class="poplight" rel="popup_addgroup" href="#?w=480">Новая группа</li>
                 </ul>
             </div>
-
+            </div>
             <?php
             if (null !== $this->data && null !== $this->data['eventgroup'] && count($this->data['eventgroup']) > 0 && count($this->data['event']) > 0) {
                 //Выводить ли стрелочки :)
