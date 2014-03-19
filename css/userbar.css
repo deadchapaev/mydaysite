@@ -27,7 +27,7 @@
     list-style: none;
     display: block;
     text-align: center;
-
+    color: #efefef;
     background-color: #006666;
     margin-right: 1px;
     position: relative;
@@ -111,4 +111,112 @@
     cursor: pointer;
 }
 
+/*
+Стили для всплывающих окон
+*/
 
+#fade {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .60; /* Полупрозрачность элемента */
+    z-index: 9999;
+}
+
+.popup_block {
+    display: none;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 10px solid #006363;
+    float: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    width: 470px;
+}
+
+/*--Фиксированное позиционирование для тупого IE6--*/
+* html #fade {
+    position: absolute;
+}
+
+* html #fade {
+    position: absolute;
+}
+
+* html .popup_block {
+    position: absolute;
+}
+
+/* Контактная форма */
+.addlabel {
+    color: #006363;
+    text-align: center;
+    height: 25px;
+    width: 400px;
+    position: relative;
+    font-size: 18px;
+}
+
+.input-title {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.submit-but {
+    height: 25px;
+}
+
+.submit-buttons {
+    position: relative;
+    left: -30px;
+    padding-top: 15px;
+}
+
+.submit-but li {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    background-color: #006363;
+    margin-right: 1px;
+    position: relative;
+    line-height: 25px;
+    font-weight: bold;
+
+}
+
+.submit-but li:hover {
+    background-color: #ff7400;
+}
+
+.submit-but a:link, .submit-but a:visited, .submit-but a:active {
+    color: #efefef;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    line-height: 20px;
+    top: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff7400;
+    cursor: pointer;
+}
