@@ -57,7 +57,7 @@ class ViewUserbar extends View
                 </div>
                 <form id="form" action="/Eventgroup/Add.ws" method="post">
                     <div class="input-title">
-                        <INPUT id="name" type="text" name="name" size="70">
+                        <INPUT id="name" type="text" name="groupname" size="70">
                     </div>
 
                     <div class="submit-buttons">
