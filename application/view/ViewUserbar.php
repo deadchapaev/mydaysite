@@ -9,47 +9,48 @@ class ViewUserbar extends View
             ?>
             <div class="userbar">
 
-            <div class="eventbuttons">
-                <ul class=mainbutton>
-                    <!--                        <a href="/Event/Add">-->
-                    <li>Новое событие</li>
-                    <!--                        <a href="/Eventgroup">-->
-                    <li class="poplight" rel="popup_addgroup" href="#?w=480">Новая группа</li>
-                </ul>
-            </div>
-            </div>
-            <?php
-            if (null !== $this->data && null !== $this->data['eventgroup'] && count($this->data['eventgroup']) > 0 && count($this->data['event']) > 0) {
-                //Выводить ли стрелочки :)
-                $drowArrows = (count($this->data['eventgroup']) > 4);
+                <div class="eventbuttons">
+                    <ul class=mainbutton>
+                        <!--                        <a href="/Event/Add">-->
+                        <li>Новое событие</li>
+                        <!--                        <a href="/Eventgroup">-->
+                        <li class="poplight" rel="popup_addgroup" href="#?w=480">Новая группа</li>
+                    </ul>
+                </div>
 
-                if ($drowArrows) {
-                    ?>
-                    <div class="leftarrow">
-                        <a href=""></a>
-                    </div>
-                <?php } ?>
-                <ul class="usergroup">
+                <?php
+                if (null !== $this->data && null !== $this->data['eventgroup'] && count($this->data['eventgroup']) > 0 && count($this->data['event']) > 0) {
+                    //Выводить ли стрелочки :)
+                    $drowArrows = (count($this->data['eventgroup']) > 4);
 
-                    <li class="checked">Все</li>
-
-                    <?php foreach ($this->data['eventgroup'] as $eventgroup) { ?>
-
-                        <li groupid="<?php echo $eventgroup->id; ?>"><?php echo $eventgroup->groupname; ?></li>
-
+                    if ($drowArrows) {
+                        ?>
+                        <div class="leftarrow">
+                            <a href=""></a>
+                        </div>
                     <?php } ?>
-                </ul>
+                    <ul class="usergroup">
 
-                <?php if ($drowArrows) {
-                    ?>
-                    <div class="rightarrow">
-                        <a href=""></a>
-                    </div>
-                <?php } ?>
+                        <li class="checked">Все</li>
 
-            <?php
-            }
-            ?>
+                        <?php foreach ($this->data['eventgroup'] as $eventgroup) { ?>
+
+                            <li groupid="<?php echo $eventgroup->id; ?>"><?php echo $eventgroup->groupname; ?></li>
+
+                        <?php } ?>
+                    </ul>
+
+                    <?php if ($drowArrows) {
+                        ?>
+                        <div class="rightarrow">
+                            <a href=""></a>
+                        </div>
+                    <?php } ?>
+
+                <?php
+                }
+                ?>
+            </div>
             <!--Встроенная разметка для всплівающего окна-->
             <div id="popup_addgroup" class="popup_block">
                 <div class="addlabel">
