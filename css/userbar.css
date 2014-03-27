@@ -127,7 +127,7 @@
     z-index: 9999;
 }
 
-.popup_block {
+.popup_add_block {
     display: none;
     background-color: #ffffff;
     padding: 20px;
@@ -140,6 +140,19 @@
     width: 470px;
 }
 
+.popup_event_block {
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #006363;
+    float: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    width: 600px;
+    height: 600px;
+}
+
 /*--Фиксированное позиционирование для тупого IE6--*/
 * html #fade {
     position: absolute;
@@ -149,7 +162,7 @@
     position: absolute;
 }
 
-* html .popup_block {
+* html .popup_add_block {
     position: absolute;
 }
 
@@ -219,4 +232,178 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #ff7400;
     cursor: pointer;
+}
+
+/*
+***********************ADD_EVENT***************************************
+*/
+
+.input-title-event, .input-text-title, .group-choice-title, .date-choice-title, .group-choice-time {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    color: #006363;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+#lineevent_input, #addevent_textarea {
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    width: 563px;
+    border: 1px solid #33cccc;
+    resize: none;
+    margin-left: 20px;
+
+}
+
+.group-choice {
+    position: relative;
+    margin-left: 20px;
+}
+
+#date {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.selectBox {
+    border: 1px solid #33cccc;
+    display: inline-block;
+    position: relative;
+    width: 278px;
+    height: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.selectBox:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.selectBox-label {
+    padding: 0 0px 0 5px;
+    font-size: 14px;
+}
+
+.selectBox-arrow {
+    position: absolute;
+    left: auto;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(/css/images/strelka.png);
+}
+
+.selectBox-dropdown-menu {
+    position: absolute;
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #33cccc;
+}
+
+.selectBox-dropdown-menu li {
+    display: block;
+}
+
+.selectBox-dropdown-menu li a {
+    display: block;
+    padding: 0 2px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectBox-dropdown-menu li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #e17009;
+}
+
+.time-choice{
+    margin-left: 20px;
+}
+
+.time-choice .hour {
+    width: 50px;
+}
+
+.time-choice .minute {
+    width: 50px;
+    float: left;
+}
+
+.button-addevent {
+    line-height: 20px;
+    top: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: #006666;
+    border: none;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.button-addevent:hover {
+    background-color: #ff7400;
+    cursor: pointer;
+}
+
+.input-buttons-event a:hover, .input-buttons-event a {
+    text-decoration: none;
+}
+
+.input-buttons-event {
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.popup_header {
+    position: relative;
+    height: 35px;
+    background-color: #006363;
+    margin: 0;
+}
+
+.popup_header_title {
+    margin-left: 20px;
+    position: relative;
+    top: 6px;
+    color: #ffffff;
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#close_window {
+    position: relative;
+    float: right;
+    z-index: 99999;
+    height: 30px;
+    width: 30px;
+    top: -17px;
+    left: 2px;
+    /*background-image: url("/img/close_window.png");*/
+}
+
+#close_window a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#close_window a:hover {
+    color: #e17009;
 }
