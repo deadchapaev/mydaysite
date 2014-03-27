@@ -7,9 +7,11 @@
 
 .eventbuttons {
     height: 50px;
-    width: inherit;
     font-size: 14px;
     font-weight: bold;
+    position: relative;
+    left: 620px;
+
 }
 
 .mainbutton {
@@ -48,7 +50,7 @@
     padding: 0;
     margin: 0;
     bottom: 0;
-    left: 455px !important;
+    left: 21px !important;
     top: -33px;
     height: 33px;
     width: 505px;
@@ -69,11 +71,14 @@
     position: relative;
     line-height: 30px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #006363;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .checked {
-    background-color: #ff7400 !important;
+    background-color: #ffffff !important;
+
 }
 
 .usergroup li:hover {
@@ -82,6 +87,7 @@
 
 .usergroup li:active {
     background-color: #ff7400;
+
 }
 
 .usergroup a:link, .usergroup a:visited {
@@ -92,23 +98,29 @@
 .leftarrow {
     background-image: url(/img/arrow-left.png);
     position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 425px;
-    top: 20px;
+    width: 20px;
+    height: 33px;
+
+    top: 17px;
 }
 
 .rightarrow {
     background-image: url(/img/arrow-right.png);
     position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 20px;
-    left: 965px;
+    width: 20px;
+    height: 33px;
+    top: 17px;
+    left: 526px;
 }
 
-.leftarrow:hover, .rightarrow:hover {
+.leftarrow:hover {
     cursor: pointer;
+    background-image: url(/img/arrow-left-hover.png);
+}
+
+.rightarrow:hover {
+    cursor: pointer;
+    background-image: url(/img/arrow-right-hover.png);
 }
 
 /*
@@ -130,8 +142,7 @@
 .popup_add_block {
     display: none;
     background-color: #ffffff;
-    padding: 20px;
-    border: 10px solid #006363;
+    border: 1px solid #006363;
     float: left;
     position: fixed;
     top: 50%;
@@ -169,27 +180,35 @@
 /* Контактная форма */
 .addlabel {
     color: #006363;
-    text-align: center;
+    text-align: left;
     height: 25px;
     width: 400px;
     position: relative;
-    font-size: 18px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 0;
+    font-weight: bold;
 }
 
 .input-title {
     position: relative;
-    padding-top: 15px;
-    padding-left: 10px;
+    padding-left: 20px;
+}
+
+#name {
+    width: 445px;
 }
 
 .submit-but {
     height: 25px;
+    margin-bottom: 20px;
 }
 
 .submit-buttons {
     position: relative;
-    left: -30px;
     padding-top: 15px;
+    left: -19px;
 }
 
 .submit-but li {
@@ -201,7 +220,6 @@
     text-align: center;
     font-size: 13px;
     background-color: #006363;
-    margin-right: 1px;
     position: relative;
     line-height: 25px;
     font-weight: bold;
@@ -246,7 +264,6 @@ input[type="submit"]:hover {
     font-size: 14px;
     font-weight: bold;
 }
-
 
 #lineevent_input, #addevent_textarea {
     font-family: verdana, arial, sans-serif;
@@ -330,7 +347,7 @@ input[type="submit"]:hover {
     background: #e17009;
 }
 
-.time-choice{
+.time-choice {
     margin-left: 20px;
 }
 
@@ -405,5 +422,44 @@ input[type="submit"]:hover {
 }
 
 #close_window a:hover {
+    color: #e17009;
+}
+
+.popup_group_header {
+    position: relative;
+    height: 35px;
+    background-color: #006363;
+    margin: 0;
+}
+
+.popupg_header_title {
+    margin-left: 20px;
+    position: relative;
+    top: 6px;
+    color: #ffffff;
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#close_window_g {
+    position: relative;
+    float: right;
+    z-index: 99999;
+    height: 30px;
+    width: 30px;
+    top: -17px;
+    left: 2px;
+    /*background-image: url("/img/close_window.png");*/
+}
+
+#close_window_g a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#close_window_g a:hover {
     color: #e17009;
 }

@@ -53,6 +53,12 @@ class ViewUserbar extends View
             </div>
             <!--Встроенная разметка для всплывающего окна добавления группы-->
             <div id="popup_addgroup" class="popup_add_block">
+
+                <div class="popup_group_header">
+                    <div class="popupg_header_title"> Добавление новой группы</div>
+                    <div id="close_window_g"><a href="/">x</a></div>
+                </div>
+
                 <div class="addlabel">
                     Введите название новой группы событий
                 </div>
@@ -65,7 +71,7 @@ class ViewUserbar extends View
                         <ul class="submit-but">
                             <li><input type="submit" value="Добавить"></li>
                             <a href="/event">
-                                <li>Закрыть</li>
+                                <li>Назад</li>
                             </a>
                         </ul>
                     </div>
