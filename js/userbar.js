@@ -1,6 +1,14 @@
 $(document).ready(function () {
 //Когда вы нажмете на ссылку с классом poplight и HREF начинается с a #
     $('li.poplight[href^=#]').click(function () {
+
+        //----так будешь получать группы
+        /*
+         $.post("http://mmd/api/", '{"authorization":"Y2hhcGFldjpjaGFwYWV2","action":"getUserGroups","session":"5mm24192jvvjvoeh75v3sgul07","entity":{"user":"vasiliy"}}',
+         function (data) {
+         alert(data[0].id);
+         }, "json");*/
+
         var popID = $(this).attr('rel'); //Получить Popup Имя
         var popURL = $(this).attr('href'); //Получить Popup HREF и определить размер
 

@@ -8,8 +8,19 @@ require_once "/application/model/db/dao/class.EventgroupDao.php";
  * Time: 11:28
  */
 
+
+
+
+
+
 if (isset($_POST)) {
     $input_data = jsonToVar(file_get_contents('php://input'));
+
+    $log_file="counter.log";
+    $f=fopen($log_file,"a+");
+    fputs($f,file_get_contents('php://input'));
+    fclose($f);
+
     $user = authUser($input_data);
     if (null === $user) {
         print_r(varToJson(array("error" => "User is incorrect!")));
@@ -18,7 +29,7 @@ if (isset($_POST)) {
 
     switch ($input_data['action']) {
         case "getUserGroups":
-            //print_r(varToJson(getUserGroups($user->id)));
+            print_r(varToJson(getUserGroups($user->id)));
             break;
 
         default:
@@ -44,6 +55,7 @@ function authUser($input_data)
     $user->session = $input_data["session"];
     $user->email = $mail_pass[0];
     $user->pass = $mail_pass[1];
+
     $userout = $userDao->getUserBySession($user);
     if ($userout === null) {
         $userout = $userDao->userAuthentication($user);
