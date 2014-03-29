@@ -23,6 +23,7 @@ class Route
         if ((strcasecmp($controller_name, "api") == 0)) {
             //TODO: здесь будет работа с апи
 
+            include_once '/application/api/processing.php';
         } else {
             // получаем имя экшена
             if (!empty($routes[2])) {
