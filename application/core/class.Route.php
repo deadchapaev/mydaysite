@@ -43,7 +43,6 @@ class Route
             $controller_name = 'application\controller\Controller' . $controller_name;
             // создаем контроллер
             if (class_exists($controller_name)) {
-
                 $controller = new $controller_name;
                 $action = 'action' . $action_name;
 
@@ -57,7 +56,6 @@ class Route
             } else {
                 Route::ErrorPage404();
             }
-
 
         }
     }
