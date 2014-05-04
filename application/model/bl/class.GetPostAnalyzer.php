@@ -1,10 +1,14 @@
 <?php
+namespace application\model\bl;
+
 /**
  * Created by PhpStorm.
  * User: chapaev
  * Date: 21.01.14
  * Time: 20:28
  */
+use DateTime;
+
 class GetPostAnalyzer
 {
     private $var;

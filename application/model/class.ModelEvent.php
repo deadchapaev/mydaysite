@@ -1,6 +1,11 @@
 <?php
-require_once "/application/model/db/dao/class.EventDao.php";
-require_once "/application/model/db/dao/class.EventgroupDao.php";
+namespace application\model;
+
+use application\core\Model;
+use application\model\db\dao\EventDao;
+use application\model\db\dao\EventgroupDao;
+
+
 class ModelEvent extends Model
 {
     private $eventDao;
@@ -71,6 +76,8 @@ class ModelEvent extends Model
     {
         $data['eventgroup'] = $this->eventgroupDao->getEventgroups($this->getUser()->id);
     }
+
+
 }
 
 

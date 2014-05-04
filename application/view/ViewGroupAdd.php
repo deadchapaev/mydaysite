@@ -1,5 +1,8 @@
 <?php
-require_once '/application/core/class.View.php';
+namespace application\view;
+
+use application\core\View;
+
 class ViewGroupAdd extends View
 {
     function getBody()

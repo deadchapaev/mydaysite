@@ -1,7 +1,9 @@
 <?php
-require_once '/application/core/class.Controller.php';
-require_once '/application/view/ViewGroupAdd.php';
-require_once '/application/view/ViewMain.php';
+namespace application\controller;
+use application\core\Controller;
+use application\view\ViewGroupAdd;
+use application\view\ViewMain;
+
 class ControllerEventgroup extends Controller
 {
 

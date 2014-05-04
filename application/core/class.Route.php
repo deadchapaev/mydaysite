@@ -1,5 +1,8 @@
 <?php
-require_once '/application/controller/class.ControllerInfo.php';
+namespace application\core;
+
+use application\controller\ControllerInfo;
+
 class Route
 {
 
@@ -36,37 +39,21 @@ class Route
                 }
             }
 
-            // подцепляем файл с классом модели (файла модели может и не быть)
-            $model_path = "application/model/class.Model" . $controller_name . '.php';
-            if (file_exists($model_path)) {
-                include_once $model_path;
-            }
-
             // подцепляем файл с классом контроллера
-            $controller_name = 'Controller' . $controller_name;
-            $controller_path = "application/controller/class." . $controller_name . '.php';
-            if (file_exists($controller_path)) {
+            $controller_name = 'application\controller\Controller' . $controller_name;
+            // создаем контроллер
+            $controller = new $controller_name;
+            $action = 'action' . $action_name;
 
-                include_once $controller_path;
-
-                // создаем контроллер
-                $controller = new $controller_name;
-                $action = 'action' . $action_name;
-                if (method_exists($controller, $action)) {
-                    // вызываем действие контроллера
-                    $controller->init();
-                    $controller->$action();
-                } else {
-                    Route::ErrorPage404();
-                }
-
+            if (method_exists($controller, $action)) {
+                // вызываем действие контроллера
+                $controller->init();
+                $controller->$action();
             } else {
                 Route::ErrorPage404();
             }
 
         }
-
-
     }
 
     function ErrorPage404()

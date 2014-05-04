@@ -1,6 +1,8 @@
 <?php
-require_once "application/model/db/connect/class.Db.php";
-require_once "application/model/db/entity/class.Event.php";
+namespace application\model\db\dao;
+
+use application\model\db\connect\Db;
+use application\model\db\entity\Event;
 
 class EventDao
 {

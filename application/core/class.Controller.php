@@ -1,8 +1,10 @@
 <?php
-require_once 'application/core/class.Model.php';
-require_once '/application/model/bl/class.GetPostAnalyzer.php';
-require_once '/application/model/class.ModelUser.php';
-require_once '/application/view/ViewInfo.php';
+namespace application\core;
+
+use application\model\bl\GetPostAnalyzer;
+use application\model\ModelUser;
+use application\view\ViewInfo;
+use application\view\ViewMain;
 
 class Controller
 {

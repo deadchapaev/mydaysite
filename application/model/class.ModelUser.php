@@ -1,5 +1,10 @@
 <?php
-require_once "/application/model/db/dao/class.UserDao.php";
+namespace application\model;
+
+use application\core\Model;
+use application\model\db\dao\UserDao;
+use application\model\db\entity\User;
+
 class ModelUser extends Model
 {
     private $userDao;

@@ -1,5 +1,5 @@
 <?php
-
+namespace application\core;
 class Model
 {
     private $inputVarArray;

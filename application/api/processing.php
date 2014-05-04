@@ -1,6 +1,9 @@
 <?php
-require_once "/application/model/db/dao/class.UserDao.php";
-require_once "/application/model/db/dao/class.EventgroupDao.php";
+
+use application\model\db\dao\EventgroupDao;
+use application\model\db\dao\UserDao;
+use application\model\db\entity\User;
+
 /**
  * Created by PhpStorm.
  * User: Администратор
@@ -9,16 +12,12 @@ require_once "/application/model/db/dao/class.EventgroupDao.php";
  */
 
 
-
-
-
-
 if (isset($_POST)) {
     $input_data = jsonToVar(file_get_contents('php://input'));
 
-    $log_file="counter.log";
-    $f=fopen($log_file,"a+");
-    fputs($f,file_get_contents('php://input'));
+    $log_file = "counter.log";
+    $f = fopen($log_file, "a+");
+    fputs($f, file_get_contents('php://input'));
     fclose($f);
 
     $user = authUser($input_data);

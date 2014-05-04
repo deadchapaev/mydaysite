@@ -1,6 +1,9 @@
 <?php
-require_once 'application/core/class.Controller.php';
-require_once '/application/view/ViewMain.php';
+namespace application\controller;
+use application\core\Controller;
+use application\view\ViewInfo;
+use application\view\ViewMain;
+
 class ControllerInfo extends Controller
 {
     function actionDefault()

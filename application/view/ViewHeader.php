@@ -1,6 +1,7 @@
 <?php
-require_once '/application/core/class.View.php';
-require_once '/application/view/ViewCalendar.php';
+namespace application\view;
+
+use application\core\View;
 
 class ViewHeader extends View
 {
@@ -80,7 +81,7 @@ class ViewHeader extends View
     function getJs()
     {
         $this->viewCalendar->getJs();
-       
+
     }
 
 

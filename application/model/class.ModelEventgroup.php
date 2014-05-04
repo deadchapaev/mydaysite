@@ -1,5 +1,8 @@
 <?php
-require_once "/application/model/db/dao/class.EventgroupDao.php";
+namespace application\model;
+
+use application\model\db\dao\EventgroupDao;
+
 class ModelEventgroup extends Model
 {
     private $eventgroupDao;

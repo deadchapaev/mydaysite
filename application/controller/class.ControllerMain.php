@@ -1,6 +1,8 @@
 <?php
-require_once 'application/core/class.Controller.php';
-require_once '/application/view/ViewMain.php';
+namespace application\controller;
+
+use application\core\Controller;
+
 class ControllerMain extends Controller
 {
 

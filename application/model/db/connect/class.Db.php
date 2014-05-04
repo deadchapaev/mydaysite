@@ -1,4 +1,8 @@
 <?php
+namespace application\model\db\connect;
+
+use mysqli;
+
 class Db
 {
 

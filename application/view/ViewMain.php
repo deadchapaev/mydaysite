@@ -1,7 +1,8 @@
 <?php
-require_once "/application/core/class.View.php";
-include_once "ViewHeader.php";
-include_once "ViewFooter.php";
+namespace application\view;
+
+use application\core\View;
+
 class ViewMain extends View
 {
     private $viewHeader;
@@ -12,8 +13,6 @@ class ViewMain extends View
         parent::__construct($data);
         $this->viewHeader = new ViewHeader($data);
         $this->viewFooter = new ViewFooter($data);
-
-
     }
 
     function getBody()

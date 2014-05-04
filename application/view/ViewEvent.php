@@ -1,6 +1,7 @@
 <?php
-require_once "/application/core/class.View.php";
-require_once "/application/view/ViewUserbar.php";
+namespace application\view;
+
+use application\core\View;
 
 class ViewEvent extends View
 {

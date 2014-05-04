@@ -1,9 +1,12 @@
 <?php
-require_once '/application/core/class.Controller.php';
-require_once '/application/view/ViewEvent.php';
-require_once '/application/view/ViewEventAdd.php';
-require_once '/application/view/ViewMain.php';
-require_once '/application/view/ViewInfo.php';
+namespace application\controller;
+use application\core\Controller;
+use application\model\ModelEvent;
+use application\view\ViewEvent;
+use application\view\ViewEventAdd;
+use application\view\ViewInfo;
+use application\view\ViewMain;
+
 class ControllerEvent extends Controller
 {
 

@@ -1,8 +1,12 @@
 <?php
-require_once '/application/core/class.Controller.php';
-require_once '/application/view/ViewUser.php';
-require_once '/application/view/ViewUserAuth.php';
-require_once '/application/view/ViewMain.php';
+namespace application\controller;
+
+use application\core\Controller;
+use application\model\ModelUser;
+use application\view\ViewInfo;
+use application\view\ViewMain;
+use application\view\ViewUser;
+use application\view\ViewUserAuth;
 
 class ControllerUser extends Controller
 {
