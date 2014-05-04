@@ -42,16 +42,22 @@ class Route
             // подцепляем файл с классом контроллера
             $controller_name = 'application\controller\Controller' . $controller_name;
             // создаем контроллер
-            $controller = new $controller_name;
-            $action = 'action' . $action_name;
+            if (class_exists($controller_name)) {
 
-            if (method_exists($controller, $action)) {
-                // вызываем действие контроллера
-                $controller->init();
-                $controller->$action();
+                $controller = new $controller_name;
+                $action = 'action' . $action_name;
+
+                if (method_exists($controller, $action)) {
+                    // вызываем действие контроллера
+                    $controller->init();
+                    $controller->$action();
+                } else {
+                    Route::ErrorPage404();
+                }
             } else {
                 Route::ErrorPage404();
             }
+
 
         }
     }

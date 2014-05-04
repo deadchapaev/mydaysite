@@ -33,7 +33,6 @@ function autoLoader($className)
 
     //для других случаев
     foreach ($directories as $directory) {
-        echo 'Нестандартный случай';
         foreach ($fileNameFormats as $fileNameFormat) {
             $path = $pathToFile . sprintf($fileNameFormat, $fileName);
             if (file_exists($path)) {
