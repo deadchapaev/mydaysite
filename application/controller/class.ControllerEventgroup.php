@@ -2,7 +2,7 @@
 namespace application\controller;
 use application\core\Controller;
 use application\view\ViewGroupAdd;
-use application\view\ViewMain;
+use application\view\ViewTemplateMain;
 
 class ControllerEventgroup extends Controller
 {
@@ -16,14 +16,14 @@ class ControllerEventgroup extends Controller
     function actionDefault()
     {
         $this->checkAuth();
-        $this->getView()->generate(new ViewGroupAdd($this->data), new ViewMain($this->data), $this->data);
+        $this->getView()->generate(new ViewGroupAdd($this->data), new ViewTemplateMain($this->data), $this->data);
     }
 
     function actionAddWs()
     {
         $this->checkAuth();
         $this->getModel()->addEventgroup($this->data);
-        $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
+        $this->getView()->generate(new ViewInfo($this->data), new ViewTemplateMain($this->data), $this->data);
     }
 }
 

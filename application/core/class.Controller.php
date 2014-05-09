@@ -4,7 +4,7 @@ namespace application\core;
 use application\model\bl\GetPostAnalyzer;
 use application\model\ModelUser;
 use application\view\ViewInfo;
-use application\view\ViewMain;
+use application\view\ViewTemplateMain;
 
 class Controller
 {
@@ -47,12 +47,13 @@ class Controller
     protected function notAuthorized()
     {
         $this->data['msg'] = 'Не авторизирован!';
-        $this->getView()->generate(new ViewInfo($this->data), new ViewMain($this->data), $this->data);
+        $this->getView()->generate(new ViewInfo($this->data), new ViewTemplateMain($this->data), $this->data);
+        die();
     }
 
     public function isAuthorized()
     {
-        if (null !== $this->getUser()->id) {
+        if (null !== $this->getUser() && null !== $this->getUser()->id) {
             return true;
         }
         return false;
@@ -71,6 +72,15 @@ class Controller
     {
         return $this->inputVarArray;
     }
+
+    /**
+     * @return \application\model\bl\GetPostAnalyzer
+     */
+    protected function getGetPostAnalyzer()
+    {
+        return $this->getPostAnalyzer;
+    }
+
 
     public function setInputVarArray($inputVarArray)
     {

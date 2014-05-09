@@ -3,7 +3,7 @@ namespace application\view;
 
 use application\core\View;
 
-class ViewMain extends View
+class ViewTemplateMain extends View
 {
     private $viewHeader;
     private $viewFooter;

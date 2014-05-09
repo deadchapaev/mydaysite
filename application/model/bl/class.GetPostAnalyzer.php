@@ -190,4 +190,15 @@ class GetPostAnalyzer
         unset($_GET);
         unset($_POST);
     }
+
+    public function getInputJson()
+    {
+        $input_data = JsonUtils::jsonToVar(file_get_contents('php://input'));
+        /*$log_file = "counter.log";
+        $f = fopen($log_file, "a+");
+        fputs($f, file_get_contents('php://input'));
+        fclose($f);*/
+        return $input_data;
+
+    }
 }
