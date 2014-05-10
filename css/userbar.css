@@ -411,7 +411,6 @@ input[type="submit"]:hover {
     width: 30px;
     top: -17px;
     left: 2px;
-    /*background-image: url("/img/close_window.png");*/
 }
 
 #close_window a {
@@ -450,7 +449,6 @@ input[type="submit"]:hover {
     width: 30px;
     top: -17px;
     left: 2px;
-    /*background-image: url("/img/close_window.png");*/
 }
 
 #close_window_g a {

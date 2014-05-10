@@ -168,7 +168,6 @@ class ViewUserbar extends View
         echo '<script type="text/javascript" src="/js/menu.js" charset="utf-8"></script>';
         echo '<script type="text/javascript" src="/js/userbar.js" charset="utf-8"></script>';
         echo '<script type="text/javascript" src="/js/jquery.selectBox.js" charset="utf-8"></script>';
-        echo '<script type="text/javascript" src="/js/nicEdit.js" charset="utf-8"></script>';
     }
 
 
