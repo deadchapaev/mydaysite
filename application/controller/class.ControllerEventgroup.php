@@ -1,8 +1,10 @@
 <?php
 namespace application\controller;
 use application\core\Controller;
-use application\view\ViewGroupAdd;
+use application\model\ModelEventgroup;
 use application\view\template\ViewTemplateMain;
+use application\view\ViewGroupAdd;
+use application\view\ViewInfo;
 
 class ControllerEventgroup extends Controller
 {
@@ -11,6 +13,7 @@ class ControllerEventgroup extends Controller
     {
         parent::__construct();
         $this->setModel(new ModelEventgroup());
+
     }
 
     function actionDefault()

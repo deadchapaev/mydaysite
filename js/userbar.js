@@ -8,6 +8,15 @@ $(document).ready(function () {
         doSomeWork($(this));
     });
 
+    $('#close_window_g, #close_window, .button-addevent').click(function () {
+        $('#fade').css({'filter': 'alpha(opacity=80)'}).fadeOut(0);
+        $('#popup_addgroup').css({'filter': 'alpha(opacity=80)'}).fadeOut(0);
+        $('#popup_addevent').css({'filter': 'alpha(opacity=80)'}).fadeOut(0);
+        $('body').remove('<div id="fade"></div>')
+    });
+
+
+
     /*выпадающий календарь*/
     $("#date").datepicker();
 
@@ -32,13 +41,13 @@ function doSomeWork(elem) {
     //Получить Popup HREF и определить размер
     var popURL = $(elem).attr('href');
     //Запрос и  Переменные от HREF URL
-    var query = popURL.split('?');
-    var dim = query[1].split('&');
+    var dim = popURL.split('?')[1].split('&');
     //Возвращает первое значение строки запроса
     var popWidth = dim[0].split('=')[1];
 
     // Добавить кнопку "Закрыть" в наше окно, прописываете прямой путь к картинке
     $('#' + popID).fadeIn().css({ 'width': Number(popWidth) });
+
     //Определяет запас на выравнивание по центру (по вертикали по горизонтали)мы добавим 80px к высоте / ширине,
     // значение полей вокруг содержимого (padding) и ширину границы устанавливаем в CSS
     var popMargTop = ($('#' + popID).height() + 80) / 2;
@@ -53,7 +62,7 @@ function doSomeWork(elem) {
     //Фоновый режим полупрозрачного слоя
     $('body').append('<div id="fade"></div>');
     //Постепенное исчезание слоя
-    $('#fade').css({'filter': 'alpha(opacity=80)'}).fadeIn(1);
+    $('#fade').css({'filter': 'alpha(opacity=80)'}).fadeIn(0);
 
     return false;
 }

@@ -2,6 +2,8 @@
 namespace application\model;
 
 use application\model\db\dao\EventgroupDao;
+use application\core\Model;
+use application\model\db\entity\Eventgroup;
 
 class ModelEventgroup extends Model
 {
