@@ -2,7 +2,7 @@
 namespace application\controller;
 use application\core\Controller;
 use application\view\ViewGroupAdd;
-use application\view\ViewTemplateMain;
+use application\view\template\ViewTemplateMain;
 
 class ControllerEventgroup extends Controller
 {

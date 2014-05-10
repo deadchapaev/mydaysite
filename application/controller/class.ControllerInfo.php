@@ -2,7 +2,7 @@
 namespace application\controller;
 use application\core\Controller;
 use application\view\ViewInfo;
-use application\view\ViewTemplateMain;
+use application\view\template\ViewTemplateMain;
 
 class ControllerInfo extends Controller
 {

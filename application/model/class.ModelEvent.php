@@ -16,6 +16,7 @@ class ModelEvent extends Model
         $this->eventDao = new EventDao();
         $this->eventgroupDao = new EventgroupDao();
     }
+
     /**
      * Добавляет событие в базу и возвращает результат согласно стандарту
      * @return mixed

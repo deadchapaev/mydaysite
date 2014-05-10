@@ -5,7 +5,7 @@ use application\model\ModelEvent;
 use application\view\ViewEvent;
 use application\view\ViewEventAdd;
 use application\view\ViewInfo;
-use application\view\ViewTemplateMain;
+use application\view\template\ViewTemplateMain;
 
 class ControllerEvent extends Controller
 {

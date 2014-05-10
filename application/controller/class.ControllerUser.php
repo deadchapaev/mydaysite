@@ -4,7 +4,7 @@ namespace application\controller;
 use application\core\Controller;
 use application\model\ModelUser;
 use application\view\ViewInfo;
-use application\view\ViewTemplateMain;
+use application\view\template\ViewTemplateMain;
 use application\view\ViewUser;
 use application\view\ViewUserAuth;
 

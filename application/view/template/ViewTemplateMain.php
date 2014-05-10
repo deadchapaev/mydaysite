@@ -1,7 +1,9 @@
 <?php
-namespace application\view;
+namespace application\view\template;
 
 use application\core\View;
+use application\view\ViewHeader;
+use application\view\ViewFooter;
 
 class ViewTemplateMain extends View
 {

@@ -1,5 +1,5 @@
 <?php
-namespace application\view;
+namespace application\view\template;
 
 use application\core\View;
 

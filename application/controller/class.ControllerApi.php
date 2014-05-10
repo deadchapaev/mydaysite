@@ -5,7 +5,7 @@ use application\core\Controller;
 use application\model\bl\JsonUtils;
 use application\model\ModelApi;
 use application\view\ViewApiJson;
-use application\view\ViewTemplateApiJson;
+use application\view\template\ViewTemplateApiJson;
 
 
 class ControllerApi extends Controller
