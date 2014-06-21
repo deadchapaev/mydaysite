@@ -6,6 +6,18 @@ $(document).ready(function () {
 
     $('.poplight-event[href^=#]').click(function () {
         doSomeWork($(this));
+        //----так будешь получать группы
+
+        /*$.post("http://mmd/Api/getUserGroups", '',
+            function (data) {
+                alert(data[0].id);
+            }, "json");*/
+
+        /*выпадающий календарь*/
+        $("#date").datepicker();
+
+        /*стилизация select*/
+        $("select").selectBox();
     });
 
     $('#close_window_g, #close_window, .button-addevent').click(function () {
@@ -16,22 +28,7 @@ $(document).ready(function () {
     });
 
 
-
-    /*выпадающий календарь*/
-    $("#date").datepicker();
-
-    /*стилизация select*/
-    $("select").selectBox();
-
 });
-
-
-//----так будешь получать группы
-/*
- $.post("http://mmd/api/", '{"authorization":"Y2hhcGFldjpjaGFwYWV2","action":"getUserGroups","session":"5mm24192jvvjvoeh75v3sgul07","entity":{"user":"vasiliy"}}',
- function (data) {
- alert(data[0].id);
- }, "json");*/
 
 
 function doSomeWork(elem) {
@@ -60,9 +57,16 @@ function doSomeWork(elem) {
     });
 
     //Фоновый режим полупрозрачного слоя
-    $('body').append('<div id="fade"></div>');
+    $('.container').prepend('<div id="fade"></div>');
     //Постепенное исчезание слоя
     $('#fade').css({'filter': 'alpha(opacity=80)'}).fadeIn(0);
 
     return false;
 }
+
+/*
+ $.post("http://mmd/Api/getUserGroups", '{"authorization":"Y2hhcGFldjpjaGFwYWV2","action":"getUserGroups","session":"5mm24192jvvjvoeh75v3sgul07","entity":{"user":"vasiliy"}}',
+ function (data) {
+ alert(data[0].id);
+ }, "json");
+ */

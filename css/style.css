@@ -1,5 +1,6 @@
 * {
     margin: 0 auto;
+    z-index: 0;
 }
 
 body {
@@ -19,8 +20,7 @@ body {
     position: relative;
     box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 1);
     background-color: #FFFFFF;
-    font-family: Verdana, Helvetica, Arial, sans-serif;;
-
+    font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 
 

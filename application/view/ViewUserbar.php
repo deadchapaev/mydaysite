@@ -94,16 +94,8 @@ class ViewUserbar extends View
                     <div class="group-choice-title">Выберите группу событий</div>
                     <div class="group-choice">
                         <select name="groupid" id="group-choice">
-                            <?php
-                            if (null != $this->data)
-                                foreach ($this->data['eventgroup'] as $eventgroup) {
-                                    ?>
-                                    <option
-                                        value="<?php echo $eventgroup->id; ?>"><?php echo $eventgroup->groupname; ?>
-                                    </option>
-                                <?php
-                                }
-                            ?>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
                         </select>
                     </div>
 
